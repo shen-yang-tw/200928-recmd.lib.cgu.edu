@@ -1,0 +1,184 @@
+@import 'functions', 'variables', 'mixin';
+
+// body {background-color: #FEFDF9;} //light yellow
+
+// .logo {
+//   background: url("../img/logo.svg#svgView(preserveAspectRatio(xMinYMid))") left center no-repeat;
+//   //Or set the attribute [preserveAspectRatio:"xMinYMid"] to the svg tag
+// }
+
+#{$focus-visible},
+a:focus,
+button:focus {
+  // border: 1px solid $color-border-focus !important;
+  //Don't use the [border] or got more space outside the element
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  outline-width: 0 !important;
+}
+
+em,
+strong {
+  color: $color-primary
+}
+
+.logo>* {
+  min-width: 200px;
+  max-height: 70px;
+  width: calc(1313px/141*70) !important; //Original aspact:1313/141, Final needed height:70px
+}
+
+/*---------- IE10+ ------------------------------*/
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+  // .logo>img {
+  //   width: 927px;
+  //   height: 153px;
+  // }
+}
+
+body::before,
+header::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+body::before {
+  // background: url(../img/bg.png) no-repeat center center;
+  background-size: 100% 100%;
+  background-position: center top;
+  // transform: scaleX(-1);
+  // opacity: .15;
+}
+
+
+@media (min-width: 960px) {
+  header::before {
+    background: url(../img/header.png) no-repeat center center;
+    background-size: contain;
+    background-position: 0 0;
+    max-height: 244px;
+    // opacity: .15;
+  }
+}
+
+// #footer {
+//   background-color: $color-primary-lighter !important;
+
+//   *:not([class*=bg_]) {
+//     color: darken(text-color($color-primary-lighter), 5%) !important;
+//   }
+// }
+
+#footer,
+footer {
+  background: none;
+
+  // & * {color: $color-text !important;}
+  & * {
+    color: $color-text-dark !important;
+  }
+}
+
+#banner {
+  background-image: url(../img/banner.jpg);
+  background-position: right bottom;
+}
+
+#offcanvas * {
+  color: white !important;
+}
+
+.sub_nav [uk-dropdown] {
+  z-index: 2;
+}
+
+//Small Slideshow
+// .smallslide .uk-overlay-primary {
+//   background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 1) 100%);
+// }
+
+// .smallslide .uk-slideshow-items .uk-overlay {
+//   padding-left: 10px;
+//   padding-right: 10px;
+// }
+
+// .smallslide .uk-slideshow-items h2 {
+//   font-size: 0.8rem !important;
+//   max-width: 100%;
+//   overflow: hidden;
+//   max-height: 50px;
+//   position: relative;
+//   padding-bottom: 15px !important;
+// }
+
+// .smallslide .uk-slideshow-items h2::after {
+//   content: "";
+//   position: absolute;
+//   right: 0;
+//   bottom: 0;
+//   width: 50px;
+//   height: 18px;
+//   background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1) 65%);
+//   pointer-events: none;
+// }
+
+// .smallslide .uk-dotnav>*>* {
+//   width: 10px;
+//   height: 10px;
+// }
+
+// body>.uk-position-top-left[title="跳到主要內容"] {
+//   z-index: 2;
+// }
+
+@media (max-width: 959px) {}
+
+@media (max-width: 1119px) {}
+
+@media (min-width: 480px) {}
+
+@media (min-width: 640px) {}
+
+@media (min-width: 960px) {}
+
+@media (min-width: 1200px) {}
+
+@media (min-width: 1600px) {}
+
+/*---------- Only landscape in mobile ------------------------------*/
+@media screen and (orientation:landscape) and (max-device-width: 959px) {}
+
+/*---------- IE10+ ------------------------------*/
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {}
+
+/* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {}
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {}

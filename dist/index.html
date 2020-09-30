@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html class="text-m" lang="zh-Hant-TW">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+	<!-- Fix phone number style for MS Edge -->
+	<meta name="Designer&Developer" content="楊軒羽 Shen Yang | Graphic Web Designer & Front-end Developer | 前端設計工程師">
+	<title>長庚科技大學圖書資訊處-圖書推薦系統</title>
+	<!-- uk:css -->
+	<link rel="stylesheet" href="../dist/css/uikit.min.css">
+	<!-- endinject -->
+	<!-- tw:css -->
+	<link rel="stylesheet" href="../dist/css/tailwind.min.css">
+	<!-- endinject -->
+	<!-- fa:css -->
+	<link rel="stylesheet" href="../dist/css/fontawesome.min.css">
+	<!-- endinject -->
+	<!-- main:css -->
+	<link rel="stylesheet" href="../dist/css/main.min.css">
+	<!-- endinject -->
+	<!-- colors:css -->
+	<link rel="stylesheet" href="../dist/css/colors.min.css">
+	<!-- endinject -->
+	<!-- style:css -->
+	<link rel="stylesheet" href="../dist/css/style.min.css">
+	<!-- endinject -->
+	<!-- style2:css -->
+	<!-- endinject -->
+	<!-- head:js -->
+	<script src="../dist/js/uikit-icons.min.js"></script>
+	<script src="../dist/js/uikit.min.js"></script>
+	<!-- endinject -->
+	<!-- inject:js -->
+	<script src="../dist/js/nav-menu.min.js" defer></script>
+	<script src="../dist/js/script.min.js" defer></script>
+	<!-- endinject --></head>
+
+<body id="top" class="index">
+	<!-- header -->
+	<header class="shadow">
+		<div class="shadow-xl uk-sticky" uk-sticky="media: (max-width: 959px)">
+			<nav>
+				<div class="relative">
+					<div class="bg-white opacity-85 uk-position-cover"></div>
+					<div class="px-4 py-1 uk-container">
+						<div class="uk-flex-middle uk-grid uk-grid-small uk-grid-match uk-child-width-expand" uk-grid>
+							<div class="uk-position-z-index">
+								<h1 class="m-0 uk-flex uk-flex-middle">
+									<a class="logo" href="index.html" title="長庚科技大學圖書資訊處-圖書推薦系統">
+										<img class="uk-preserve" data-src="img/logo.svg" data-width data-height alt="長庚科技大學圖書資訊處-圖書推薦系統" uk-img uk-svg>
+									</a>
+								</h1>
+							</div>
+							<div class="m-0 relative uk-width-auto uk-visible@m">
+								<div class="sub_nav text-sm uk-flex uk-flex-middle">
+									<div>
+										<span><a class="px-2" href="index.html">首頁</a></span>
+										<span><a class="px-2" href="#">我要推薦</a></span>
+										<div class="min_width-50 uk-dropdown" uk-dropdown>
+											<ul class="uk-nav uk-dropdown-nav">
+												<li><a class="hover:underline py-2 uk-toggle" href="#search" uk-toggle>推薦資料</a></li>
+												<li><a class="hover:underline py-2" href="#">推薦資料總覽</a></li>
+											</ul>
+										</div>
+										<span><a class="px-2" href="#">個人推薦資料</a></span>
+										<span><a class="px-2" href="#">English</a></span>
+									</div>
+									<span><button class="color_primary border-none l:pr-0 uk-button uk-button-default" type="button" title="註冊/登入/登出"><i
+												class="-mb-1 fas fa-user-circle fa-lg"></i></button></span>
+									<div class="min_width-50 uk-dropdown" uk-dropdown>
+										<ul class="uk-nav uk-dropdown-nav">
+											<li><a class="hover:underline py-2 uk-toggle" href="#register" uk-toggle>註冊</a></li>
+											<li><a class="hover:underline py-2 uk-toggle" href="#login" uk-toggle>登入</a></li>
+											<li><a class="hover:underline py-2" href="index.html">登出</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="uk-flex-nowrap uk-width-auto uk-hidden@m">
+								<div class="uk-inline">
+									<button class="color_primary border-none h-full uk-button uk-button-default" type="button"
+										title="註冊/登入/登出"><i class="-mb-1 fas fa-user-circle fa-lg"></i></button>
+									<div class="min_width-50 uk-dropdown" uk-dropdown="pos: bottom-right">
+										<ul class="uk-nav uk-dropdown-nav">
+											<li><a class="hover:underline py-2 uk-toggle" href="#register" uk-toggle>註冊</a></li>
+											<li><a class="hover:underline py-2 uk-toggle" href="#login" uk-toggle>登入</a></li>
+											<li><a class="hover:underline py-2" href="index.html">登出</a></li>
+										</ul>
+									</div>
+								</div>
+								<button class="min_width-30! color_primary px-0 uk-flex uk-flex-right uk-navbar-toggle"
+									uk-navbar-toggle-icon uk-toggle="target: #offcanvas"></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+			<hr class="border_black_opacity-20 m-0">
+		</div>
+		<div id="offcanvas" class="uk-offcanvas" uk-offcanvas>
+			<div class="bg_primary py-5 uk-offcanvas-bar">
+				<button class="uk-offcanvas-close" type="button" title="刪除" uk-close></button>
+				<ul class="pt-6 uk-nav uk-nav-default">
+					<li class="py-1 uk-parent">
+						<a class="p-0" href="index.html"><span class="text-white">首頁</span></a>
+					</li>
+					<li class="py-1 uk-parent">
+						<div class="flex justify-between">
+							<a class="flex flex-1 items-center" href="#"><span class="text-white">我要推薦</span></a>
+							<a class="flex flex-none items-start justify-end pt-px w-16" href="javascript:void(0)" title="展開/收合選單"><span
+									class="toggle uk-icon" uk-icon="icon: chevron-right"></span><span class="toggle hidden uk-icon"
+									uk-icon="icon: chevron-down"></span class="toggle"></a>
+						</div>
+						<ul class="toggle hidden uk-nav-sub">
+							<li class="pr-5"><a class="uk-toggle" href="#search" uk-toggle><span
+										class="text-white text-opacity-50">推薦資料</span></a>
+							</li>
+							<li class="pr-5"><a href="#"><span class="text-white text-opacity-50">推薦資料總覽</span></a>
+							</li>
+						</ul>
+					</li>
+					<li class="py-1 uk-parent">
+						<a class="p-0" href="#"><span class="text-white">個人推薦資料</span></a>
+					</li>
+					<li class="uk-nav-divider"></li>
+					<li><a href="#">English</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	
+	
+	<!-- uk-modal-login -->
+	<div id="login" class="uk-flex-top" uk-modal>
+	  <div class="uk-modal-dialog uk-margin-auto-vertical">
+	    <button class="uk-modal-close-default" type="button" title="刪除" uk-close></button>
+	    <div class="uk-modal-header">
+	      <h2 class="uk-modal-title">會員登入</h2>
+	    </div>
+	    <div class="uk-modal-body">
+	      <form>
+	        <div class="uk-grid-small uk-child-width-expand@m uk-grid" uk-grid>
+	          <div class="space-y-1 min_width-1/2!@m">
+	            <input class="uk-input" type="email" placeholder="請輸入個人信箱">
+	            <p class="color_secondary-text uk-text-small">驗證提示語</p>
+	          </div>
+	          <div class="space-y-1 min_width-1/2!@m">
+	            <input class="uk-input" type="password" placeholder="6-15碼英數混合密碼">
+	            <p class="color_secondary-text uk-text-small">驗證提示語</p>
+	          </div>
+	          <div><label class="mr-2"><input class="mr-1 uk-checkbox" type="checkbox">記住我的帳號</label></div>
+	        </div>
+	      </form>
+	    </div>
+	    <div class="uk-modal-footer">
+	      <div class="uk-grid-small uk-child-width-expand@m uk-grid" uk-grid>
+	        <div class="min_width-1/2!@m">
+	          
+	          <a class="" href="#">忘記密碼</a>
+	        </div>
+	        <div class="margin_y_child-all min_width-1/2!@m s:text-right">
+	          <a href="#" class="btn_primary min_width-120 uk-button uk-button-primary">登　　入</a>
+	          <button class="min_width-120 uk-button uk-button-default uk-modal-close" type="button">取　　消</button>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- uk-modal-login -->
+	
+	<!-- uk-modal-register -->
+	<div id="register" class="uk-flex-top uk-modal" uk-modal>
+		<div class="uk-modal-dialog uk-margin-auto-vertical">
+			<button class="uk-modal-close-default" type="button" title="刪除" uk-close></button>
+			<div class="uk-modal-header">
+				<h2 class="uk-modal-title">會員註冊</h2>
+			</div>
+			<div class="uk-modal-body">
+				<form>
+					<div class="margin_y_child-even-m uk-grid uk-grid-collapse uk-flex-middle uk-child-width-expand@s"
+						uk-grid uk-height-match="target: .match">
+						<div class="match min_width-1/3!@s flex uk-flex-middle">
+							<label class="font_size-10 font-bold uk-form-label" for="form_name">姓名</label>
+						</div>
+						<div class="space-y-1 min_width-2/3!@s">
+							<input id="form_name" class="match uk-input" type="text" placeholder="">
+						</div>
+						<div class="match min_width-1/3!@s flex uk-flex-middle">
+							<label class="font_size-10 font-bold uk-form-label" for="form_email">Email</label>
+						</div>
+						<div class="space-y-1 min_width-2/3!@s">
+							<input id="form_email" class="match uk-input" type="text" placeholder="">
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="text-center uk-margin uk-modal-footer" uk-margin>
+				<a href="#" class="btn_primary min_width-100 m-0 uk-button uk-button-primary">註　　冊</a>
+				<button class="min_width-100 uk-button uk-button-default uk-modal-close" type="button">取　　消</button>
+			</div>
+		</div>
+	</div>
+	<!-- uk-modal-register -->
+	
+	<!-- uk-modal-search -->
+	<div id="search" class="uk-flex-top uk-modal" uk-modal>
+		<div class="uk-modal-dialog uk-margin-auto-vertical uk-width-2-3@l uk-width-1-2@xl">
+			<button class="uk-modal-close-default" type="button" title="刪除" uk-close></button>
+			<div class="uk-modal-header">
+				<h2 class="uk-modal-title">推薦搜尋</h2>
+			</div>
+			<div class="uk-modal-body">
+				<form>
+					<ul class="tab_buttons tab_buttons-txt-white mb-8 uk-tab" uk-tab uk-margin>
+						<li class="uk-active"><a href="#">圖書資料</a></li>
+						<li><a href="#">視聽資料</a></li>
+						<li><a href="#">期刊雜誌</a></li>
+						<li><a href="#">資料庫</a></li>
+					</ul>
+	
+					<div class="margin_y_child-even-m uk-grid uk-grid-collapse uk-flex-middle uk-child-width-expand@s"
+						uk-grid uk-height-match="target: .match">
+						<div class="match min_width-1/5!@s flex uk-flex-middle"><label class="font_size-10 font-bold uk-form-label" for="form_lan">出版語文</label>
+						</div>
+						<div class="min_width-4/5!@s">
+							<div class="uk-margin uk-grid-small uk-child-width-expand@m" uk-margin uk-grid>
+								<div class="min_width1_2!@m">
+									<select id="form_lan" class="match uk-select">
+										<option>-請選擇語文-</option>
+										<option>正體中文</option>
+										<option>簡體中文</option>
+										<option>英文</option>
+										<option>日文</option>
+										<option>韓文</option>
+										<option>其它</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="match min_width-1/5!@s flex uk-flex-middle">
+							<label class="font_size-10 font-bold uk-form-label" for="form_title">題名</label>
+						</div>
+						<div class="min_width-4/5!@s">
+							<input id="form_title" class="match uk-input" type="text" placeholder="">
+						</div>
+						<div class="match min_width-1/5!@s flex uk-flex-middle">
+							<label class="font_size-10 font-bold uk-form-label" for="form_name">作者</label>
+						</div>
+						<div class="min_width-4/5!@s">
+							<input id="form_name" class="match uk-input" type="text" placeholder="">
+						</div>
+						<div class="match min_width-1/5!@s flex uk-flex-middle">
+							<label class="font_size-10 font-bold uk-form-label" for="form_isbn">ISBN</label>
+						</div>
+						<div class="min_width-4/5!@s">
+							<input id="form_isbn" class="match uk-input" type="text" placeholder="">
+						</div>
+					</div>
+					<div class="text-right mt-3"><a href="#" class="min_width-100 uk-button uk-button-default"><i class="mr-2 fas fa-edit"></i>手動建立資料</a></div>
+				</form>
+			</div>
+			<div class="uk-margin uk-modal-footer" uk-margin>
+				<div class="justify-between uk-grid uk-grid-small" uk-grid uk-margin>
+					<div uk-margin>
+						<a href="#" class="btn_primary min_width-100 uk-button uk-button-primary"><i
+								class="mr-2 fas fa-search"></i>博客來網路書店</a>
+						<a href="#" class="btn_primary min_width-100 uk-button uk-button-primary"><i
+								class="mr-2 fas fa-search"></i>Amazon Books</a>
+						<a href="#" class="btn_primary min_width-100 uk-button uk-button-primary"><i
+								class="mr-2 fas fa-search"></i>三民網路書店</a>
+						<a href="#" class="btn_primary min_width-100 uk-button uk-button-primary"><i
+								class="mr-2 fas fa-search"></i>紀伊國屋書店</a>
+					</div>
+					<div><button class="min_width-100 uk-button uk-button-default uk-modal-close" type="button">取　　消</button></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- uk-modal-search -->
+	
+	<!-- header -->
+	<!-- index main content -->
+	<section id="content" class="space-y-4 relative" uk-height-viewport="expand: true">
+	  <div class="p-2 m:p-4 m:mt-10 l:mt-20 xl:mt-40 m-auto uk-width-3-4@l uk-width-2-3@xl">
+	    <div class="container_responsive@s uk-container">
+	      <div class="uk-grid uk-grid-small uk-child-width-expand@s" uk-grid uk-height-match="target: > div > .uk-card">
+	        <div class="uk-width-1-1">
+	          <div class="uk-flex uk-flex-between uk-flex-middle uk-flex-right">
+	            <h2 class="bg_primary text-sm m-0 p-2">新書推介</h2>
+	          </div>
+	          <div class="bg_primary p-3">
+	            <div class="uk-position-relative uk-visible-toggle uk-light uk-slider" uk-slider="autoplay: true"
+	              tabindex="-1">
+	              <ul
+	                class="uk-slider-items uk-child-width-1-2 uk-child-width-1-4@s uk-child-width-1-6@l uk-grid uk-grid-small">
+	                <li>
+	                  <div class="text-center hover:shadow-2xl uk-card">
+	                    <a class="block" href="">
+	                      <div class="aspect ratio-3/4 bg_primary">
+	                        <div class="uk-background-contain uk-flex uk-flex-center uk-flex-middle"
+	                          style="background-image: url(img/book_01.jpg);"></div>
+	                      </div>
+	                    </a>
+	                  </div>
+	                </li>
+	                <li>
+	                  <div class="text-center hover:shadow-2xl uk-card">
+	                    <a class="block" href="">
+	                      <div class="aspect ratio-3/4 bg_primary">
+	                        <div class="uk-background-contain uk-flex uk-flex-center uk-flex-middle"
+	                          style="background-image: url(img/book_02.jpg);"></div>
+	                      </div>
+	                    </a>
+	                  </div>
+	                </li>
+	                <li>
+	                  <div class="text-center hover:shadow-2xl uk-card">
+	                    <a class="block" href="">
+	                      <div class="aspect ratio-3/4 bg_primary">
+	                        <div class="uk-background-contain uk-flex uk-flex-center uk-flex-middle"
+	                          style="background-image: url(img/book_03.jpg);"></div>
+	                      </div>
+	                    </a>
+	                  </div>
+	                </li>
+	                <li>
+	                  <div class="text-center hover:shadow-2xl uk-card">
+	                    <a class="block" href="">
+	                      <div class="aspect ratio-3/4 bg_primary">
+	                        <div class="uk-background-contain uk-flex uk-flex-center uk-flex-middle"
+	                          style="background-image: url(img/book_04.jpg);"></div>
+	                      </div>
+	                    </a>
+	                  </div>
+	                </li>
+	                <li>
+	                  <div class="text-center hover:shadow-2xl uk-card">
+	                    <a class="block" href="">
+	                      <div class="aspect ratio-3/4 bg_primary">
+	                        <div class="uk-background-contain uk-flex uk-flex-center uk-flex-middle"
+	                          style="background-image: url(img/book_05.jpg);"></div>
+	                      </div>
+	                    </a>
+	                  </div>
+	                </li>
+	                <li>
+	                  <div class="text-center hover:shadow-2xl uk-card">
+	                    <a class="block" href="">
+	                      <div class="aspect ratio-3/4 bg_primary">
+	                        <div class="uk-background-contain uk-flex uk-flex-center uk-flex-middle"
+	                          style="background-image: url(img/book_06.jpg);"></div>
+	                      </div>
+	                    </a>
+	                  </div>
+	                </li>
+	                <li>
+	                  <div class="text-center hover:shadow-2xl uk-card">
+	                    <a class="block" href="">
+	                      <div class="aspect ratio-3/4 bg_primary">
+	                        <div class="uk-background-contain uk-flex uk-flex-center uk-flex-middle"
+	                          style="background-image: url(img/book_07.jpg);"></div>
+	                      </div>
+	                    </a>
+	                  </div>
+	                </li>
+	              </ul>
+	              <a class="w-50 px-lg-5 uk-position-left uk-flex uk-flex-middle uk-slidenav-large uk-hidden-hover" href="#"
+	                uk-slidenav-previous uk-slider-item="previous"><span class="sr-only">前一個</span></a>
+	              <a class="w-50 px-lg-5 uk-position-right uk-flex uk-flex-right uk-flex-middle uk-slidenav-large uk-hidden-hover"
+	                href="#" uk-slidenav-next uk-slider-item="next"><span class="sr-only">下一個</span></a>
+	            </div>
+	          </div>
+	        </div>
+	        <div class="uk-width-1-1">
+	          <div class="uk-flex uk-flex-between uk-flex-middle uk-flex-right">
+	            <h2 class="bg_primary text-sm m-0 p-2">最新公告</h2>
+	          </div>
+	          <div class="p-3 hover:shadow-2xl uk-card uk-card-default">
+	            <div class="overflow-auto max_height-300">
+	              <div class="min_height-100@m p-3 pb-0">
+	                <ul class="text-justify uk-list">
+	                  <li>
+	                    <div class="uk-grid uk-grid-collapse uk-child-width-expand" uk-grid>
+	                      <div class="min_width-100 uk-width-auto">
+	                        <i class="color_primary fas fa-angle-right fa-fw"></i>
+	                        <time class="text-sm mr-2">2020-09-30</time>
+	                      </div>
+	                      <div class="uk-width-expand">
+	                        <a class="inline uk-text-break" href="#">高國節頭氣然取求王我告是人那學立班。色集國接，備其夫沒聲同主</a>
+	                      </div>
+	                    </div>
+	                  </li>
+	                  <li>
+	                    <div class="uk-grid uk-grid-collapse uk-child-width-expand" uk-grid>
+	                      <div class="min_width-100 uk-width-auto">
+	                        <i class="color_primary fas fa-angle-right fa-fw"></i>
+	                        <time class="text-sm mr-2">2020-09-30</time>
+	                      </div>
+	                      <div class="uk-width-expand">
+	                        <a class="inline uk-text-break" href="#">高國節頭氣然取求王我告是人那學立班。色集國接，備其夫沒聲同主</a>
+	                      </div>
+	                    </div>
+	                  </li>
+	                  <li>
+	                    <div class="uk-grid uk-grid-collapse uk-child-width-expand" uk-grid>
+	                      <div class="min_width-100 uk-width-auto">
+	                        <i class="color_primary fas fa-angle-right fa-fw"></i>
+	                        <time class="text-sm mr-2">2020-09-30</time>
+	                      </div>
+	                      <div class="uk-width-expand">
+	                        <a class="inline uk-text-break" href="#">高國節頭氣然取求王我告是人那學立班。色集國接，備其夫沒聲同主</a>
+	                      </div>
+	                    </div>
+	                  </li>
+	                  <li>
+	                    <div class="uk-grid uk-grid-collapse uk-child-width-expand" uk-grid>
+	                      <div class="min_width-100 uk-width-auto">
+	                        <i class="color_primary fas fa-angle-right fa-fw"></i>
+	                        <time class="text-sm mr-2">2020-09-30</time>
+	                      </div>
+	                      <div class="uk-width-expand">
+	                        <a class="inline uk-text-break" href="#">高國節頭氣然取求王我告是人那學立班。色集國接，備其夫沒聲同主</a>
+	                      </div>
+	                    </div>
+	                  </li>
+	                  <li>
+	                    <div class="uk-grid uk-grid-collapse uk-child-width-expand" uk-grid>
+	                      <div class="min_width-100 uk-width-auto">
+	                        <i class="color_primary fas fa-angle-right fa-fw"></i>
+	                        <time class="text-sm mr-2">2020-09-30</time>
+	                      </div>
+	                      <div class="uk-width-expand">
+	                        <a class="inline uk-text-break" href="#">高國節頭氣然取求王我告是人那學立班。色集國接，備其夫沒聲同主</a>
+	                      </div>
+	                    </div>
+	                  </li>
+	                  <li>
+	                    <div class="uk-grid uk-grid-collapse uk-child-width-expand" uk-grid>
+	                      <div class="min_width-100 uk-width-auto">
+	                        <i class="color_primary fas fa-angle-right fa-fw"></i>
+	                        <time class="text-sm mr-2">2020-09-30</time>
+	                      </div>
+	                      <div class="uk-width-expand">
+	                        <a class="inline uk-text-break" href="#">高國節頭氣然取求王我告是人那學立班。色集國接，備其夫沒聲同主</a>
+	                      </div>
+	                    </div>
+	                  </li>
+	                  <li>
+	                    <div class="uk-grid uk-grid-collapse uk-child-width-expand" uk-grid>
+	                      <div class="min_width-100 uk-width-auto">
+	                        <i class="color_primary fas fa-angle-right fa-fw"></i>
+	                        <time class="text-sm mr-2">2020-09-30</time>
+	                      </div>
+	                      <div class="uk-width-expand">
+	                        <a class="inline uk-text-break" href="#">高國節頭氣然取求王我告是人那學立班。色集國接，備其夫沒聲同主</a>
+	                      </div>
+	                    </div>
+	                  </li>
+	                  <li>
+	                    <div class="uk-grid uk-grid-collapse uk-child-width-expand" uk-grid>
+	                      <div class="min_width-100 uk-width-auto">
+	                        <i class="color_primary fas fa-angle-right fa-fw"></i>
+	                        <time class="text-sm mr-2">2020-09-30</time>
+	                      </div>
+	                      <div class="uk-width-expand">
+	                        <a class="inline uk-text-break" href="#">高國節頭氣然取求王我告是人那學立班。色集國接，備其夫沒聲同主</a>
+	                      </div>
+	                    </div>
+	                  </li>
+	                  <li>
+	                    <div class="uk-grid uk-grid-collapse uk-child-width-expand" uk-grid>
+	                      <div class="min_width-100 uk-width-auto">
+	                        <i class="color_primary fas fa-angle-right fa-fw"></i>
+	                        <time class="text-sm mr-2">2020-09-30</time>
+	                      </div>
+	                      <div class="uk-width-expand">
+	                        <a class="inline uk-text-break" href="#">高國節頭氣然取求王我告是人那學立班。色集國接，備其夫沒聲同主</a>
+	                      </div>
+	                    </div>
+	                  </li>
+	                </ul>
+	              </div>
+	            </div>
+	          </div>
+	        </div>
+	        <div class="min_width-1/2!@s">
+	          <div class="uk-flex uk-flex-between uk-flex-middle uk-flex-right">
+	            <h2 class="bg_primary text-sm m-0 p-2">最新推薦</h2>
+	          </div>
+	          <div class="p-3 hover:shadow-2xl uk-card uk-card-default">
+	            <div class="uk-position-relative uk-visible-toggle uk-light uk-slider" uk-slider tabindex="-1">
+	              <ul class="uk-slider-items uk-child-width-1-3 uk-child-width-1-4@l uk-grid uk-grid-small">
+	                <li>
+	                  <div class="text-center hover:shadow-2xl uk-card">
+	                    <a class="block" href="">
+	                      <div class="aspect ratio-3/4 bg_primary">
+	                        <div class="uk-background-contain uk-flex uk-flex-center uk-flex-middle"
+	                          style="background-image: url(https://picsum.photos/300/400);"></div>
+	                      </div>
+	                    </a>
+	                    <div class="p-0 uk-card-body">
+	                      <time class="color_default text-xs">2020-09-30</time>
+	                      <h3 class="truncate text-sm text-black m-0 uk-card-title">Title</h3>
+	                    </div>
+	                  </div>
+	                </li>
+	                <li>
+	                  <div class="text-center hover:shadow-2xl uk-card">
+	                    <a class="block" href="">
+	                      <div class="aspect ratio-3/4 bg_primary">
+	                        <div class="uk-background-contain uk-flex uk-flex-center uk-flex-middle"
+	                          style="background-image: url(https://picsum.photos/330/440);"></div>
+	                      </div>
+	                    </a>
+	                    <div class="p-0 uk-card-body">
+	                      <time class="color_default text-xs">2020-09-30</time>
+	                      <h3 class="truncate text-sm text-black m-0 uk-card-title">Title</h3>
+	                    </div>
+	                  </div>
+	                </li>
+	                <li>
+	                  <div class="text-center hover:shadow-2xl uk-card">
+	                    <a class="block" href="">
+	                      <div class="aspect ratio-3/4 bg_primary">
+	                        <div class="uk-background-contain uk-flex uk-flex-center uk-flex-middle"
+	                          style="background-image: url(https://picsum.photos/360/480);"></div>
+	                      </div>
+	                    </a>
+	                    <div class="p-0 uk-card-body">
+	                      <time class="color_default text-xs">2020-09-30</time>
+	                      <h3 class="truncate text-sm text-black m-0 uk-card-title">Title</h3>
+	                    </div>
+	                  </div>
+	                </li>
+	                <li>
+	                  <div class="text-center hover:shadow-2xl uk-card">
+	                    <a class="block" href="">
+	                      <div class="aspect ratio-3/4 bg_primary">
+	                        <div class="uk-background-contain uk-flex uk-flex-center uk-flex-middle"
+	                          style="background-image: url(https://picsum.photos/390/520);"></div>
+	                      </div>
+	                    </a>
+	                    <div class="p-0 uk-card-body">
+	                      <time class="color_default text-xs">2020-09-30</time>
+	                      <h3 class="truncate text-sm text-black m-0 uk-card-title">Title</h3>
+	                    </div>
+	                  </div>
+	                </li>
+	                <li>
+	                  <div class="text-center hover:shadow-2xl uk-card">
+	                    <a class="block" href="">
+	                      <div class="aspect ratio-3/4 bg_primary">
+	                        <div class="uk-background-contain uk-flex uk-flex-center uk-flex-middle"
+	                          style="background-image: url(https://picsum.photos/420/560);"></div>
+	                      </div>
+	                    </a>
+	                    <div class="p-0 uk-card-body">
+	                      <time class="color_default text-xs">2020-09-30</time>
+	                      <h3 class="truncate text-sm text-black m-0 uk-card-title">Title</h3>
+	                    </div>
+	                  </div>
+	                </li>
+	              </ul>
+	              <a class="w-50 px-lg-5 uk-position-left uk-flex uk-flex-middle uk-slidenav-large uk-hidden-hover" href="#"
+	                uk-slidenav-previous uk-slider-item="previous"><span class="sr-only">前一個</span></a>
+	              <a class="w-50 px-lg-5 uk-position-right uk-flex uk-flex-right uk-flex-middle uk-slidenav-large uk-hidden-hover"
+	                href="#" uk-slidenav-next uk-slider-item="next"><span class="sr-only">下一個</span></a>
+	            </div>
+	          </div>
+	        </div>
+	        <div class="min_width-1/2!@s">
+	          <div class="uk-flex uk-flex-between uk-flex-middle uk-flex-right">
+	            <h2 class="bg_primary text-sm m-0 p-2">最新到館</h2>
+	          </div>
+	          <div class="p-3 hover:shadow-2xl uk-card uk-card-default">
+	            <div class="uk-position-relative uk-visible-toggle uk-light uk-slider" uk-slider tabindex="-1">
+	              <ul class="uk-slider-items uk-child-width-1-3 uk-child-width-1-4@l uk-grid uk-grid-small">
+	                <li>
+	                  <div class="text-center hover:shadow-2xl uk-card">
+	                    <a class="block" href="">
+	                      <div class="aspect ratio-3/4 bg_primary">
+	                        <div class="uk-background-contain uk-flex uk-flex-center uk-flex-middle"
+	                          style="background-image: url(https://picsum.photos/303/404);"></div>
+	                      </div>
+	                    </a>
+	                    <div class="p-0 uk-card-body">
+	                      <time class="color_default text-xs">2020-09-30</time>
+	                      <h3 class="truncate text-sm text-black m-0 uk-card-title">Title</h3>
+	                    </div>
+	                  </div>
+	                </li>
+	                <li>
+	                  <div class="text-center hover:shadow-2xl uk-card">
+	                    <a class="block" href="">
+	                      <div class="aspect ratio-3/4 bg_primary">
+	                        <div class="uk-background-contain uk-flex uk-flex-center uk-flex-middle"
+	                          style="background-image: url(https://picsum.photos/306/408);"></div>
+	                      </div>
+	                    </a>
+	                    <div class="p-0 uk-card-body">
+	                      <time class="color_default text-xs">2020-09-30</time>
+	                      <h3 class="truncate text-sm text-black m-0 uk-card-title">Title</h3>
+	                    </div>
+	                  </div>
+	                </li>
+	                <li>
+	                  <div class="text-center hover:shadow-2xl uk-card">
+	                    <a class="block" href="">
+	                      <div class="aspect ratio-3/4 bg_primary">
+	                        <div class="uk-background-contain uk-flex uk-flex-center uk-flex-middle"
+	                          style="background-image: url(https://picsum.photos/309/412);"></div>
+	                      </div>
+	                    </a>
+	                    <div class="p-0 uk-card-body">
+	                      <time class="color_default text-xs">2020-09-30</time>
+	                      <h3 class="truncate text-sm text-black m-0 uk-card-title">Title</h3>
+	                    </div>
+	                  </div>
+	                </li>
+	                <li>
+	                  <div class="text-center hover:shadow-2xl uk-card">
+	                    <a class="block" href="">
+	                      <div class="aspect ratio-3/4 bg_primary">
+	                        <div class="uk-background-contain uk-flex uk-flex-center uk-flex-middle"
+	                          style="background-image: url(https://picsum.photos/312/416);"></div>
+	                      </div>
+	                    </a>
+	                    <div class="p-0 uk-card-body">
+	                      <time class="color_default text-xs">2020-09-30</time>
+	                      <h3 class="truncate text-sm text-black m-0 uk-card-title">Title</h3>
+	                    </div>
+	                  </div>
+	                </li>
+	                <li>
+	                  <div class="text-center hover:shadow-2xl uk-card">
+	                    <a class="block" href="">
+	                      <div class="aspect ratio-3/4 bg_primary">
+	                        <div class="uk-background-contain uk-flex uk-flex-center uk-flex-middle"
+	                          style="background-image: url(https://picsum.photos/315/420);"></div>
+	                      </div>
+	                    </a>
+	                    <div class="p-0 uk-card-body">
+	                      <time class="color_default text-xs">2020-09-30</time>
+	                      <h3 class="truncate text-sm text-black m-0 uk-card-title">Title</h3>
+	                    </div>
+	                  </div>
+	                </li>
+	              </ul>
+	              <a class="w-50 px-lg-5 uk-position-left uk-flex uk-flex-middle uk-slidenav-large uk-hidden-hover" href="#"
+	                uk-slidenav-previous uk-slider-item="previous"><span class="sr-only">前一個</span></a>
+	              <a class="w-50 px-lg-5 uk-position-right uk-flex uk-flex-right uk-flex-middle uk-slidenav-large uk-hidden-hover"
+	                href="#" uk-slidenav-next uk-slider-item="next"><span class="sr-only">下一個</span></a>
+	            </div>
+	          </div>
+	        </div>
+	        <div class="uk-width-1-1">
+	          <div class="uk-flex uk-flex-between uk-flex-middle uk-flex-right">
+	            <h2 class="bg_primary text-sm m-0 p-2">推薦資料處理說明</h2>
+	          </div>
+	          <div class="p-5 hover:shadow-2xl uk-card uk-card-default">
+	            <p>◎ 購置資料處理為依「長庚大學圖書館管理辦法」辦理。</p>
+	            <ul class="list_initial">
+	              <li>推薦範圍：符合教學研究需求，且可以提昇全校教職員生學養的資料皆符合館藏政策之收錄範疇。</li>
+	              <li>資料型態：圖書、視聽資料、期刊、資料庫和各式電子媒體等。</li>
+	              <li>審查流程：系所單位主管→院長等一級主管→圖諮會→校長。</li>
+	              <li>經費支出：由圖書館依照相關辦法編列預算統籌支付。</li>
+	              <li>收錄管理：圖書館負責收藏和借閱管理。</li>
+	            </ul>
+	            <div class="uk-overflow-auto">
+	              <table class="min_width-1000 text-center l:min-w-0 uk-table uk-table-middle uk-table-striped">
+	                <thead>
+	                  <tr>
+	                    <th class="border border-solid text-center align-middle">資料型態</th>
+	                    <th class="border border-solid text-center align-middle">圖書</th>
+	                    <th class="border border-solid text-center align-middle">視聽資料</th>
+	                    <th class="border border-solid text-center align-middle">單種期刊雜誌<br>(紙本或電子期刊)</th>
+	                    <th class="border border-solid text-center align-middle">資料庫<br>(成套之電子期刊)</th>
+	                  </tr>
+	                </thead>
+	                <tbody>
+	                  <tr>
+	                    <td class="border border-solid">介購時程</td>
+	                    <td class="border border-solid" colspan="2">隨時接件</td>
+	                    <td class="border border-solid" colspan="2">一年一次 (每年十二月開辦) 次年審查通過後隔年起訂</td>
+	                  </tr>
+	                  <tr>
+	                    <td class="border border-solid">訂購原則</td>
+	                    <td class="border border-solid" colspan="2">符合館藏政策</td>
+	                    <td class="border border-solid" colspan="2">符合館藏政策年度續訂配合使用狀況與需求檢討 (<a class="color_secondary"
+	                        href="https://library.cgu.edu.tw/var/file/18/1018/img/450/JsubReg.pdf"
+	                        target="_blank">期刊訂購原則</a>)</td>
+	                  </tr>
+	                  <tr>
+	                    <td class="border border-solid">業務負責</td>
+	                    <td class="border border-solid"><a class="color_secondary" href="mailto:libacq@mail.cgu.edu.tw"
+	                        target="_blank">圖採組</a>
+	                      分機3600</td>
+	                    <td class="border border-solid"><a class="color_secondary" href="mailto:libmedia@mail.cgu.edu.tw"
+	                        target="_blank">視聽組</a>
+	                      分機5976</td>
+	                    <td class="border border-solid" colspan="2"><a class="color_secondary"
+	                        href="mailto:libdb@mail.cgu.edu.tw" target="_blank">參考組</a> 分機5622</td>
+	                  </tr>
+	                </tbody>
+	              </table>
+	            </div>
+	            <p>資料購入後，將置於圖書館供全校教職員生使用。若資料將放置於各單位，購置資料須符合「資料放置於各單位原則」，服務聯絡校內分機 5278。</p>
+	            <p>◎ Recommendation of Library Materials<br>You are welcome to make recommendations for new library
+	              materials.<br>You can recommend:</p>
+	            <ul class="list_initial">
+	              <li>Materials that support the University's curriculum and the research needs of its faculty, students,
+	                and staff.</li>
+	              <li>Material types include books, audiovisual materials, journals and databases.</li>
+	            </ul>
+	            <p>If you have any questions, please contact the Monograph Acquisition/Cataloging Section on extension 3600,
+	              or via e-mail libacq@mail.cgu.edu.tw</p>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</section>
+	<!-- index main content -->
+	<!-- footer -->
+	<div id="footer" class="mt-4 relative">
+		<hr class="opacity-15 border-black">
+		<div class="p-3">
+			<div class="container_responsive@s uk-container relative">
+				<footer class="text-center uk-flex-top uk-grid uk-grid-small" uk-grid>
+					<div class="uk-width-1-1" uk-margin>
+						<div class="uk-grid uk-grid-small uk-child-width-expand" uk-grid uk-margin>
+							<div class="min_width-140! min_width-1/6!@l"><a href="http://webpac.cgu.edu.tw:81/ipac20/ipac.jsp?profile=cgul">館藏資料 iPac</a></div>
+							<div class="uk-visible@s">|</div>
+							<div class="min_width-140! min_width-1/6!@l"><a href="http://db.lib.cgu.edu.tw/">資料庫總覽</a></div>
+							<div class="uk-visible@s">|</div>
+							<div class="min_width-140! min_width-1/6!@l"><a href="http://meta.cgu.edu.tw:3210/sfx_cgu3/az/default?&param_perform_value=citation">全文期刊 SFX</a></div>
+							<div class="uk-visible@s">|</div>
+							<div class="min_width-140! min_width-1/6!@l"><a href="mailto:libwww@mail.cgu.edu.tw">詢問館員 Ask Us</a></div>
+							<div class="uk-visible@s">|</div>
+							<div class="min_width-140! min_width-1/6!@l"><a href="http://recmd.lib.cgu.edu.tw/RAMS_CGUST/%E9%95%B7%E5%BA%9A%E5%A4%A7%E5%AD%B8%E5%9C%96%E6%9B%B8%E9%A4%A8%E8%96%A6%E8%B3%BC%E7%B3%BB%E7%B5%B1_%E8%AE%80%E8%80%85%E6%93%8D%E4%BD%9C%E6%89%8B%E5%86%8A_1070601%E4%BF%AE%E8%A8%82.pdf">讀者操作手冊</a></div>
+						</div>
+					</div>
+					<div class="uk-width-1-1" uk-margin>
+						<div class="uk-flex-center uk-grid uk-grid-small" uk-grid uk-margin>
+							<div><a class="px-2" href="">圖書資料推薦 (圖採組分機 3600)</a></div>
+							<div class="uk-visible@s">·</div>
+							<div><a class="px-2" href="">視聽資料推薦 (視聽組分機 5976)</a></div>
+							<div class="uk-visible@s">·</div>
+							<div><a class="px-2" href="">資料庫推薦 (參考組分機 5622)</a></div>
+						</div>
+					</div>
+					<div class="uk-width-1-1" uk-margin>
+						<small class="text-xs">長庚科技大學 圖書資訊處 Copyright © 2020 All rights reserved</small>
+					</div>
+				</footer>
+			</div>
+			<!-- End container_responsive@s uk-container -->
+		</div>
+	</div>
+	<!-- footer -->
+	
+	<a id="gototop"
+		class="color_white bg_black_opacity-50 hover:bg_black_opacity-70 opacity-0 no-underline p-2 rounded uk-text-center uk-position-fixed uk-position-small uk-position-bottom-right"
+		href="#top" title="回到最上" uk-scroll uk-totop><span class="sr-only">回到最上</span></a></body>
+
+</html>

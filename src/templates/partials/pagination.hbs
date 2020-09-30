@@ -1,0 +1,40 @@
+<!-- pagination / select number -->
+<div class="pagination">
+	<div class="uk-grid uk-grid-collapse uk-child-width-auto uk-flex-auto uk-flex-middle uk-flex-center">
+		<div>
+			<a class="color_grey hover:bg-transparent btn btn-flat disabled" href="#" title="首頁"><i
+					class="fas fa-angle-double-left fa-fw"></i></a>
+			<a class="color_grey hover:bg-transparent btn btn-flat" href="#" title="首頁" hidden><i
+					class="fas fa-angle-double-left fa-fw"></i></a>
+			<a class="color_grey hover:bg-transparent btn btn-flat disabled" href="#" title="上一頁"><i
+					class="fas fa-angle-left fa-fw"></i></a>
+			<a class="color_grey hover:bg-transparent btn btn-flat" href="#" title="上一頁" hidden><i
+					class="fas fa-angle-left fa-fw"></i></a>
+		</div>
+		{{#if select}}
+		<div class="uk-grid uk-grid-collapse uk-child-width-auto uk-flex-middle uk-margin">
+			<select class="w-auto uk-select uk-form-small" onChange="window.location.href=this.value">
+				{{!-- {{#each page}}
+				<option value={{this.value}} {{this.selected}}>{{this.number}}</option>
+				{{/each}} --}}
+				<option value="#" selected>1</option>
+				<option value="#">2</option>
+			</select>
+			<span class="mx-1">/<span class="pl-1">{{pageSum}}</span></span>
+		</div>
+		{{else}}
+		<div class="min_width-200"></div>
+		{{/if}}
+		<div>
+			<a class="color_grey hover:bg-transparent btn btn-flat" href="#" title="下一頁"><i
+					class="fas fa-angle-right fa-fw"></i></a>
+			<a class="color_grey hover:bg-transparent btn btn-flat disabled" href="#" title="下一頁" hidden><i
+					class="fas fa-chevron-right fa-fw"></i></a>
+			<a class="color_grey hover:bg-transparent btn btn-flat" href="#" title="末頁"><i
+					class="fas fa-angle-double-right fa-fw"></i></a>
+			<a class="color_grey hover:bg-transparent btn btn-flat disabled" href="#" title="末頁" hidden><i
+					class="fas fa-chevron-double-right fa-fw"></i></a>
+		</div>
+	</div>
+</div>
+<!-- pagination / select number -->

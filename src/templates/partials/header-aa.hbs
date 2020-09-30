@@ -1,0 +1,315 @@
+<div class="uk-position-top-left"><a href="#content" id="gotocenter" title="跳到主要內容"
+		class="sr-only sr-only-focusable">跳到主要內容</a></div>
+
+<!-- header -->
+<header class="shadow">
+	{{!-- <nav class="bg_primary py-1 text-center relative uk-visible@m" uk-margin>
+		<div class="px-4 py-1 uk-container">
+			<div class="sub_nav margin_x_child text-sm h-full uk-flex uk-flex-center uk-flex-middle" uk-margin>
+				<span class="uk-visible@m"><a class="px-2" href="#U" id="AU" name="U" title="上方功能區塊" accesskey="U"
+						style="padding-bottom: 3px;">:::</a></span>
+				<span><a class="px-2" href="index.html">回首頁</a></span>
+				<span><a class="px-2" href="#">常見問題</a></span>
+				<span><a class="px-2" href="#">聯絡我們</a></span>
+			</div>
+		</div>
+	</nav> --}}
+	<div class="shadow-xl uk-sticky" uk-sticky="media: (max-width: 959px)">
+		<nav>
+			<div class="relative">
+				<div class="bg-white opacity-80 uk-position-cover"></div>
+				<div class="px-4 py-1 uk-container">
+					<div class="uk-flex-middle uk-grid uk-grid-small uk-grid-match uk-child-width-expand" uk-grid>
+						<div class="uk-position-z-index">
+							<h1 class="m-0 uk-flex uk-flex-middle">
+								<a class="logo" href="index.html" title="{{title}}">
+									<img class="uk-preserve" data-src="img/logo.svg" data-width data-height alt="{{title}}" uk-img uk-svg>
+								</a>
+							</h1>
+						</div>
+						<div class="m-0 relative uk-width-auto uk-visible@m">
+							<div class="sub_nav text-sm uk-flex uk-flex-middle">
+								<span class="uk-visible@m"><a class="px-2" href="#U" id="AU" name="U" title="上方功能區塊" accesskey="U"
+										style="padding-bottom: 3px;">:::</a></span>
+								<div>
+									<span class="pseudo:comma_dot"><a class="px-2" href="index.html">回首頁</a></span>
+									<span class="pseudo:comma_dot"><a class="px-2" href="#">網站導覽</a></span>
+									<span class="pseudo:comma_dot"><a class="px-2" href="#">回本所</a></span>
+									<span class="pseudo:comma_dot"><a class="px-2" href="#">中研院圖書館</a></span>
+									<span class="pseudo:comma_dot"><a class="px-2" href="#">English</a></span>
+								</div>
+								{{!-- <span class="text-white">|</span> --}}
+								<span><button class="border-none uk-button uk-button-default" type="button" title="註冊/登入/登出"><i
+											class="-mb-1 fas fa-user-circle fa-lg"></i></button></span>
+								<div class="min_width-50 uk-dropdown" uk-dropdown>
+									<ul class="uk-nav uk-dropdown-nav">
+										<li><a class="hover:underline py-2" href="00register.html">註冊</a></li>
+										<li><a class="hover:underline py-2" href="00login.html">登入</a></li>
+										<li><a class="hover:underline py-2" href="index.html">登出</a></li>
+										{{#if logInOn}}
+										{{/if}}
+										{{#if logOutOn}}
+										{{/if}}
+									</ul>
+								</div>
+								{{!-- <span class="text-white">|</span> --}}
+								<span class="text_size text_size-s hover_bg"><button class="px-2 uk-button"
+										title="縮小字級">A-</button></span>
+								<span class="text_size text_size-m hover_bg active"><button class="px-2 uk-button"
+										title="適中字級">A</button></span>
+								<span class="text_size text_size-l hover_bg"><button class="px-2 uk-button"
+										title="加大字級">A+</button></span>
+							</div>
+						</div>
+						<div class="uk-flex-nowrap uk-width-auto uk-hidden@m">
+							<div class="uk-inline">
+								<button class="text-white border-none h-full uk-button uk-button-default" type="button"
+									title="註冊/登入/登出"><i class="-mb-1 fas fa-user-circle fa-lg"></i></button>
+								<div class="min_width-50 uk-dropdown" uk-dropdown="pos: bottom-right">
+									<ul class="uk-nav uk-dropdown-nav">
+										<li><a class="hover:underline py-2" href="00register.html">註冊</a></li>
+										<li><a class="hover:underline py-2" href="00login.html">登入</a></li>
+										<li><a class="hover:underline py-2" href="index.html">登出</a></li>
+									</ul>
+								</div>
+							</div>
+							<button class="min_width-30! text-white px-0 uk-flex uk-flex-right uk-navbar-toggle" uk-navbar-toggle-icon
+								uk-toggle="target: #offcanvas"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="relative">
+				<div class="bg_primary opacity-85 uk-position-cover"></div>
+				<div class="container_responsive@s uk-flex uk-visible@m uk-container uk-navbar" uk-navbar>
+					<div class="uk-navbar-center">
+						<ul class="nav_bar nav_bar-secondary uk-tab">
+							<li hidden></li>
+							<li>
+								<a class="text-base font-bold color_black!" href="#"
+									onmouseover="viewHeight('.nav_bar [uk-dropdown]', 'header')">關於本館</a>
+								<div class="bg_white_opacity-90 uk-overflow-auto uk-dropdown" uk-dropdown="offset: 0">
+									<ul class="nav_header-dotted uk-nav uk-dropdown-nav">
+										{{!-- <li class="mt-0 uk-nav-header"><a class="hover:underline text-base" href="01about01.html">登錄系統介紹</a></li> --}}
+										<li class="mt-0 uk-nav-header"><a class="hover:underline text-base" href="#">登錄系統介紹</a>
+										</li>
+										<li class="mt-0 uk-nav-header">
+											<a class="hover:underline text-base" href="#">組織架構</a>
+											<ul class="uk-nav-sub">
+												<li><a class="hover:underline text-base" href="#">主持人</a></li>
+												<li><a class="hover:underline text-base" href="#">委員會</a></li>
+											</ul>
+										</li>
+										<li class="mt-0 uk-nav-header"><a class="hover:underline text-base" href="#">相關法規</a>
+										</li>
+										<li class="mt-0 uk-nav-header"><a class="hover:underline text-base" href="#">合作醫院或診所</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a class="text-base font-bold color_black!" href="#"
+									onmouseover="viewHeight('.nav_bar [uk-dropdown]', 'header')">最新消息</a>
+								<div class="bg_white_opacity-90 uk-overflow-auto uk-dropdown" uk-dropdown="offset: 0">
+									<ul class="nav_header-dotted uk-nav uk-dropdown-nav">
+										<li class="mt-0 uk-nav-header"><a class="hover:underline text-base" href="#">病人登錄的好處</a></li>
+										<li class="mt-0 uk-nav-header">
+											<a class="hover:underline text-base" href="#">病人登錄方式</a>
+											<ul class="hidden_ie uk-nav-sub">
+												<li><a class="hover:underline text-base" href="#">登錄流程</a></li>
+												<li><a class="hover:underline text-base" href="#">查資料流程</a></li>
+												<li><a class="hover:underline text-base" href="#">相關表單</a></li>
+											</ul>
+										</li>
+										<li class="mt-0 uk-nav-header"><a class="hover:underline text-base" href="#">隱私保護</a>
+										</li>
+										<li class="mt-0 uk-nav-header"><a class="hover:underline text-base" href="#">病人端常見問題</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a class="text-base font-bold color_black!" href="#"
+									onmouseover="viewHeight('.nav_bar [uk-dropdown]', 'header')">閱覽服務</a>
+								<div class="bg_white_opacity-90 uk-overflow-auto uk-dropdown" uk-dropdown="offset: 0">
+									<ul class="nav_header-dotted uk-nav uk-dropdown-nav">
+										<li class="mt-0 uk-nav-header"><a class="hover:underline text-base" href="#">醫療人員登陸的好處</a></li>
+										<li class="mt-0 uk-nav-header">
+											<a class="hover:underline text-base" href="#">醫療人員登錄方式</a>
+											<ul class="hidden_ie uk-nav-sub">
+												<li><a class="hover:underline text-base" href="#">登錄流程</a></li>
+												<li><a class="hover:underline text-base" href="#">查資料流程</a></li>
+												<li><a class="hover:underline text-base" href="#">相關表單</a></li>
+											</ul>
+										</li>
+										<li class="mt-0 uk-nav-header"><a class="hover:underline text-base" href="#">醫護人員常見問題</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a class="text-base font-bold color_black!" href="#"
+									onmouseover="viewHeight('.nav_bar [uk-dropdown]', 'header')">資源查詢</a></li>
+							<li><a class="text-base font-bold color_black!" href="#"
+									onmouseover="viewHeight('.nav_bar [uk-dropdown]', 'header')">我的圖書館</a></li>
+							<li><a class="text-base font-bold color_black!" href="#"
+									onmouseover="viewHeight('.nav_bar [uk-dropdown]', 'header')">Facebook</a></li>
+							<li><a class="text-base font-bold color_black!" href="#"
+									onmouseover="viewHeight('.nav_bar [uk-dropdown]', 'header')">參考部落格</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<hr class="border_black_opacity-20 m-0">
+	</div>
+	<div id="offcanvas" class="uk-offcanvas" uk-offcanvas>
+		<div class="bg_primary-darker py-5 uk-offcanvas-bar">
+			<button class="uk-offcanvas-close" type="button" title="刪除" uk-close></button>
+			<ul class="pt-6 uk-nav uk-nav-default">
+				<li class="py-1 uk-parent">
+					<div class="flex justify-between">
+						<a class="flex flex-1 items-center" href="#"><span class="text-white">關於我們</span></a>
+						<a class="flex flex-none items-start justify-end pt-px w-16" href="javascript:void(0)" title="展開/收合選單"><span
+								class="toggle uk-icon" uk-icon="icon: chevron-right"></span><span class="toggle hidden uk-icon"
+								uk-icon="icon: chevron-down"></span class="toggle"></a>
+					</div>
+					<ul class="toggle hidden uk-nav-sub">
+						<li class="pr-5"><a href="01about01.html"><span class="text-white text-opacity-50">登錄系統介紹</span></a></li>
+						<li class="mt-0 uk-nav-header uk-parent">
+							<div class="flex justify-between">
+								<a class="flex flex-1 items-center" href="#"><span class="text-white">組織架構</span></a>
+								<a class="flex flex-none items-start justify-end pt-px w-16" href="javascript:void(0)"
+									title="展開/收合選單"><span class="toggle uk-icon" uk-icon="icon: chevron-right"></span><span
+										class="toggle hidden uk-icon" uk-icon="icon: chevron-down"></span class="toggle"></a>
+							</div>
+							<ul class="toggle hidden uk-nav-sub">
+								<li class="pr-5"><a href="01about0201.html"><span class="text-white text-opacity-50">主持人</span></a></li>
+								<li class="pr-5"><a href="01about0202.html"><span class="text-white text-opacity-50">委員會</span></a></li>
+							</ul>
+						</li>
+						<li class="pr-5"><a href="01about03.html"><span class="text-white text-opacity-50">相關法規</span></a></li>
+						<li class="pr-5"><a href="01about04.html"><span class="text-white text-opacity-50">合作醫院或診所</span></a></li>
+					</ul>
+				</li>
+				<li class="py-1 uk-parent">
+					<div class="flex justify-between">
+						<a class="flex flex-1 items-center" href="#"><span class="text-white">給病人端的資訊</span></a>
+						<a class="flex flex-none items-start justify-end pt-px w-16" href="javascript:void(0)" title="展開/收合選單"><span
+								class="toggle uk-icon" uk-icon="icon: chevron-right"></span><span class="toggle hidden uk-icon"
+								uk-icon="icon: chevron-down"></span class="toggle"></a>
+					</div>
+					<ul class="toggle hidden uk-nav-sub">
+						<li class="pr-5"><a href="02patinfo01.html"><span class="text-white text-opacity-50">病人登錄的好處</span></a></li>
+						<li class="mt-0 uk-nav-header uk-parent">
+							<div class="flex justify-between">
+								<a class="flex flex-1 items-center" href="02patinfo02.html"><span class="text-white">病人登錄方式</span></a>
+								<a class="flex flex-none items-start justify-end pt-px w-16" href="javascript:void(0)"
+									title="展開/收合選單"><span class="toggle uk-icon" uk-icon="icon: chevron-right"></span><span
+										class="toggle hidden uk-icon" uk-icon="icon: chevron-down"></span class="toggle"></a>
+							</div>
+							<ul class="toggle hidden uk-nav-sub">
+								<li class="pr-5"><a href="02patinfo02.html#1"><span class="text-white text-opacity-50">登錄流程</span></a>
+								</li>
+								<li class="pr-5"><a href="02patinfo02.html#2"><span class="text-white text-opacity-50">查資料流程</span></a>
+								</li>
+								<li class="pr-5"><a href="02patinfo02.html#3"><span class="text-white text-opacity-50">相關表單</span></a>
+								</li>
+							</ul>
+						</li>
+						<li class="pr-5"><a href="02patinfo03.html"><span class="text-white text-opacity-50">隱私保護</span></a></li>
+						<li class="pr-5"><a href="02patinfo04.html"><span class="text-white text-opacity-50">病人端常見問題</span></a></li>
+					</ul>
+				</li>
+				<li class="py-1 uk-parent">
+					<div class="flex justify-between">
+						<a class="flex flex-1 items-center" href="#"><span class="text-white">給醫療人員的資訊</span></a>
+						<a class="flex flex-none items-start justify-end pt-px w-16" href="javascript:void(0)" title="展開/收合選單"><span
+								class="toggle uk-icon" uk-icon="icon: chevron-right"></span><span class="toggle hidden uk-icon"
+								uk-icon="icon: chevron-down"></span class="toggle"></a>
+					</div>
+					<ul class="toggle hidden uk-nav-sub">
+						<li class="pr-5"><a href="03docinfo01.html"><span class="text-white text-opacity-50">醫療人員登陸的好處</span></a>
+						</li>
+						<li class="mt-0 uk-nav-header uk-parent">
+							<div class="flex justify-between">
+								<a class="flex flex-1 items-center" href="03docinfo02.html"><span class="text-white">醫療人員登錄方式</span></a>
+								<a class="flex flex-none items-start justify-end pt-px w-16" href="javascript:void(0)"
+									title="展開/收合選單"><span class="toggle uk-icon" uk-icon="icon: chevron-right"></span><span
+										class="toggle hidden uk-icon" uk-icon="icon: chevron-down"></span class="toggle"></a>
+							</div>
+							<ul class="toggle hidden uk-nav-sub">
+								<li class="pr-5"><a href="03docinfo02.html#1"><span class="text-white text-opacity-50">登錄流程</span></a>
+								</li>
+								<li class="pr-5"><a href="03docinfo02.html#2"><span class="text-white text-opacity-50">查資料流程</span></a>
+								</li>
+								<li class="pr-5"><a href="03docinfo02.html#3"><span class="text-white text-opacity-50">相關表單</span></a>
+								</li>
+							</ul>
+						</li>
+						<li class="pr-5"><a href="03docinfo03.html"><span class="text-white text-opacity-50">醫護人員常見問題</span></a>
+						</li>
+					</ul>
+				</li>
+				<li class="py-1 uk-parent">
+					<a class="p-0" href="04publication.html"><span class="text-white">年度報告及出版品</span></a>
+				</li>
+				<li class="py-1 uk-parent">
+					<a class="p-0" href="05contact.html"><span class="text-white">聯繫方式</span></a>
+				</li>
+
+				{{!-- <li class="py-1 uk-parent">
+					<a class="p-0" href="#"><span class="text-white">Level1</span></a>
+				</li>
+				<li class="py-1 uk-parent">
+					<div class="flex justify-between">
+						<a class="flex flex-1 items-center" href="#"><span class="text-white">Level2</span></a>
+						<a class="flex flex-none items-start justify-end pt-px w-16" href="javascript:void(0)" title="展開/收合選單"><span
+								class="toggle uk-icon" uk-icon="icon: chevron-right"></span><span class="toggle hidden uk-icon"
+								uk-icon="icon: chevron-down"></span class="toggle"></a>
+					</div>
+					<ul class="toggle hidden uk-nav-sub">
+						<li class="pr-5"><a href="#"><span class="text-white text-opacity-50">SubItem</span></a>
+						</li>
+						<li class="pr-5"><a href="#"><span class="text-white text-opacity-50">SubItem</span></a>
+						</li>
+					</ul>
+				</li>
+				<li class="py-1 uk-parent">
+					<div class="flex justify-between">
+						<a class="flex flex-1 items-center" href="#"><span class="text-white">Level3</span></a>
+						<a class="flex flex-none items-start justify-end pt-px w-16" href="javascript:void(0)" title="展開/收合選單"><span
+								class="toggle uk-icon" uk-icon="icon: chevron-right"></span><span class="toggle hidden uk-icon"
+								uk-icon="icon: chevron-down"></span class="toggle"></a>
+					</div>
+					<ul class="toggle hidden uk-nav-sub">
+						<li class="pr-5"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+						</li>
+						<li class="mt-0 uk-nav-header uk-parent">
+							<div class="flex justify-between">
+								<a class="flex flex-1 items-center" href="#"><span class="text-white">Item</span></a>
+								<a class="flex flex-none items-start justify-end pt-px w-16" href="javascript:void(0)"
+									title="展開/收合選單"><span class="toggle uk-icon" uk-icon="icon: chevron-right"></span><span
+										class="toggle hidden uk-icon" uk-icon="icon: chevron-down"></span class="toggle"></a>
+							</div>
+							<ul class="toggle hidden uk-nav-sub">
+								<li class="pr-5"><a href="#"><span class="text-white text-opacity-50">SubItem</span></a>
+								</li>
+								<li class="pr-5"><a href="#"><span class="text-white text-opacity-50">SubItem</span></a>
+								</li>
+								<li class="pr-5"><a href="#"><span class="text-white text-opacity-50">SubItem</span></a>
+								</li>
+							</ul>
+						</li>
+						<li class="pr-5"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+						</li>
+					</ul>
+				</li> --}}
+
+				{{!-- <li class="uk-nav-divider"></li>
+				<li><a href="#">SubMenu</a></li>
+				<li><a href="#">SubMenu</a></li>
+				<li><a href="#">SubMenu</a></li>
+				<li><a href="#">SubMenu</a></li> --}}
+			</ul>
+		</div>
+	</div>
+</header>
+<!-- header -->

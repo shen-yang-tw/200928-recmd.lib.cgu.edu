@@ -1,0 +1,28 @@
+<!-- page main content -->
+<section class="relative" uk-height-viewport="expand: true">
+  <!-- <div class="bg_primary opacity10 uk-position-cover"></div> -->
+  <div class="container_responsive@s uk-container">
+    <div class="uk-clearfix">
+      {{>breadcrumb}}
+      {{#if userOn}}
+      <small class="uk-float-right">帳號：{{user}}<a class="ml-2 color_primary-text!" href="{{linkLogout}}">登出</a></small>
+      {{/if}}
+    </div>
+    {{!-- <div class="s:mb-2 uk-card uk-card-small uk-card-default uk-card-body" uk-height-viewport="min-height: 200"> --}}
+    <div class="min_height-550 s:mb-2 uk-card uk-card-small uk-card-default uk-card-body">
+      <h2 class="btm_line text-2xl">
+        {{pageTitle}}
+        {{#if linkBackOn}}
+        <small class="mt-2 uk-float-right"><a class="no-underline" href="{{linkBack}}"><i
+              class="mr-1 fas fa-angle-left"></i>{{backWhere}}</a></small>
+        {{/if}}
+      </h2>
+      <div id="content">
+        {{> (lookup . 'content') }}
+      </div>
+      <!-- End #content -->
+    </div>
+    <!-- End uk-card -->
+  </div>
+</section>
+<!-- page main content -->

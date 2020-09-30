@@ -1,0 +1,20 @@
+<!-- uk-breadcrumb -->
+<ul class="px-2 s:p-0 uk-float-left uk-breadcrumb">
+	<li><a class="text-xs m:text-sm" href="index.html">首頁</a></li>
+	{{#if breadcrumb1}}
+	{{#if breadcrumbLinkOn}}
+	<li><a class="text-xs m:text-sm" href="{{breadcrumbLink}}">{{breadcrumbLinkTxt}}</a></li>
+	{{else}}
+	<li><span class="text-xs m:text-sm">{{breadcrumbLinkTxt}}</span></li>
+	{{/if}}
+	{{/if}}
+	{{#if breadcrumb2}}
+	{{#if breadcrumbLink2On}}
+	<li><a class="text-xs m:text-sm" href="{{breadcrumbLink2}}">{{breadcrumbLink2Txt}}</a></li>
+	{{else}}
+	<li><span class="text-xs m:text-sm">{{breadcrumbLink2Txt}}</span></li>
+	{{/if}}
+	{{/if}}
+	<li><span class="text-xs m:text-sm">{{breadcrumbCurrent}}</span></li>
+</ul>
+<!-- uk-breadcrumb -->

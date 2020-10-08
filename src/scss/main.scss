@@ -2627,8 +2627,13 @@ $hover-brand-bg:"bg_facebook" $facebook, "bg_twitter" $twitter, "bg_googleplus" 
     border: none;
     background: $color-primary;
   }
-  &#{$tab-buttons-txt-white}>#{$uk-active}>a, &#{$tab-buttons-txt-white}>*>a:hover {
+  &#{$tab-buttons-txt-white}>#{$uk-active}>a, &#{$tab-buttons-txt-white}>*>a:hover, &#{$tab-buttons-txt-white}>*>a:hover>* {
     color: white !important;
+  }
+}
+#{$tab-buttons-noborder} {
+  &::before {
+    border-bottom: none;
   }
 }
 #{$nav-header-dotted} {
@@ -2652,12 +2657,18 @@ $hover-brand-bg:"bg_facebook" $facebook, "bg_twitter" $twitter, "bg_googleplus" 
 #{$reset-indent} {display:inherit;}
 
 /*---------- Width & Height & Scroll ------------------------------*/
+#{$width}auto {width:auto}
+#{$width}auto\! {width:auto !important}
 #{$width} {@include grid-width}
 #{$width} {@include grid-width($important:true)}
 // #{$min-width} {@include min-width}
 // #{$min-width} {@include min-width($important:true)}
 // #{$max-width} {@include max-width}
 // #{$max-width} {@include max-width($important:true)}
+#{$min-width}auto {min-width:auto}
+#{$min-width}auto\! {min-width:auto !important}
+#{$min-width}full {min-width:100%}
+#{$min-width}full\! {min-width:100% !important}
 #{$min-width} {@include grid-width($max:30, $property:min-width)}
 #{$min-width} {@include grid-width($max:30, $property:min-width, $important:true)}
 #{$max-width} {@include grid-width($max:30, $property:max-width)}
@@ -2673,10 +2684,16 @@ $hover-brand-bg:"bg_facebook" $facebook, "bg_twitter" $twitter, "bg_googleplus" 
 
 /*uk-@s*/
 @media (min-width:640px) {
+  #{$width}auto\@s {width:auto}
+  #{$width}auto\!\@s {width:auto !important}
   #{$width} {@include grid-width($media:\@s)}
   #{$width} {@include grid-width($important:true, $media:\@s)}
   // #{$min-width} {@include min-width($media:\@s)}
   // #{$min-width} {@include min-width($important:true, $media:\@s)}
+  #{$min-width}auto\@s {min-width:auto}
+  #{$min-width}auto\!\@s {min-width:auto !important}
+  #{$min-width}full\@s {min-width:100%}
+  #{$min-width}full\!\@s {min-width:100% !important}
   #{$min-width} {@include grid-width($max:30, $property:min-width, $media:\@s)}
   #{$min-width} {@include grid-width($max:30, $property:min-width, $important:true, $media:\@s)}
   #{$max-width} {@include grid-width($max:30, $property:max-width, $media:\@s)}
@@ -2693,10 +2710,16 @@ $hover-brand-bg:"bg_facebook" $facebook, "bg_twitter" $twitter, "bg_googleplus" 
 
 /*uk-@m*/
 @media (min-width:960px) {
+  #{$width}auto\@m {width:auto}
+  #{$width}auto\!\@m {width:auto !important}
   #{$width} {@include grid-width($media:\@m)}
   #{$width} {@include grid-width($important:true, $media:\@m)}
   // #{$min-width} {@include min-width($media:\@m)}
   // #{$min-width} {@include min-width($important:true, $media:\@m)}
+  #{$min-width}auto\@m {min-width:auto}
+  #{$min-width}auto\!\@m {min-width:auto !important}
+  #{$min-width}full\@m {min-width:100%}
+  #{$min-width}full\!\@m {min-width:100% !important}
   #{$min-width} {@include grid-width($max:30, $property:min-width, $media:\@m)}
   #{$min-width} {@include grid-width($max:30, $property:min-width, $important:true, $media:\@m)}
   #{$max-width} {@include grid-width($max:30, $property:max-width, $media:\@m)}
@@ -2713,10 +2736,16 @@ $hover-brand-bg:"bg_facebook" $facebook, "bg_twitter" $twitter, "bg_googleplus" 
 
 /*uk-@l*/
 @media (min-width:1200px) {
+  #{$width}auto\@l {width:auto}
+  #{$width}auto\!\@l {width:auto !important}
   #{$width} {@include grid-width($media:\@l)}
   #{$width} {@include grid-width($important:true, $media:\@l)}
   // #{$min-width} {@include min-width($media:\@l)}
   // #{$min-width} {@include min-width($important:true, $media:\@l)}
+  #{$min-width}auto\@l {min-width:auto}
+  #{$min-width}auto\!\@l {min-width:auto !important}
+  #{$min-width}full\@l {min-width:100%}
+  #{$min-width}full\!\@l {min-width:100% !important}
   #{$min-width} {@include grid-width($max:30, $property:min-width, $media:\@l)}
   #{$min-width} {@include grid-width($max:30, $property:min-width, $important:true, $media:\@l)}
   #{$max-width} {@include grid-width($max:30, $property:max-width, $media:\@l)}
@@ -2733,10 +2762,16 @@ $hover-brand-bg:"bg_facebook" $facebook, "bg_twitter" $twitter, "bg_googleplus" 
 
 /*uk-@xl*/
 @media (min-width:1600px) {
+  #{$width}auto\@xl {width:auto}
+  #{$width}auto\!\@xl {width:auto !important}
   #{$width} {@include grid-width($media:\@xl)}
   #{$width} {@include grid-width($important:true, $media:\@xl)}
   // #{$min-width} {@include min-width($media:\@xl)}
   // #{$min-width} {@include min-width($important:true, $media:\@xl)}
+  #{$min-width}auto\@xl {min-width:auto}
+  #{$min-width}auto\!\@xl {min-width:auto !important}
+  #{$min-width}full\@xl {min-width:100%}
+  #{$min-width}full\!\@xl {min-width:100% !important}
   #{$min-width} {@include grid-width($max:30, $property:min-width, $media:\@xl)}
   #{$min-width} {@include grid-width($max:30, $property:min-width, $important:true, $media:\@xl)}
   #{$max-width} {@include grid-width($max:30, $property:max-width, $media:\@xl)}
@@ -3268,6 +3303,12 @@ address, dl, fieldset, figure, ol, p, pre, ul {
 #{$uk-table-responsive}#{$table-responsive}\@xl #{$uk-table-link}:not(:last-child)>a, #{$uk-table-responsive}#{$table-responsive}\@xl td:not(:last-child):not(#{$uk-table-link}), #{$uk-table-responsive}#{$table-responsive}\@xl th:not(:last-child):not(#{$uk-table-link}) {padding-bottom: 5px!important;}
 #{$uk-table-responsive}#{$table-responsive}\@xl td, #{$uk-table-responsive}#{$table-responsive}\@xl th {width: auto!important; max-width: none!important; min-width: 0!important; overflow: visible!important; white-space: normal!important;}
 #{$uk-table-responsive}#{$table-responsive}\@xl, #{$uk-table-responsive}#{$table-responsive}\@xl tbody, #{$uk-table-responsive}#{$table-responsive}\@xl td, #{$uk-table-responsive}#{$table-responsive}\@xl th, #{$uk-table-responsive}#{$table-responsive}\@xl tr { display: block;}
+}
+#{$table-striped-aler}#{$uk-table}-striped tbody tr#{$uk-alert}, #{$table-striped-aler}#{$uk-table}-striped>tr#{$uk-alert} {
+  background: white;
+}
+#{$table-striped-aler}#{$uk-table}-striped tbody tr:nth-of-type(odd), #{$table-striped-aler}#{$uk-table}-striped>tr:nth-of-type(odd) {
+  background: #f8f8f8;
 }
 
 #{$uk-checkbox}#{$form-white}, #{$uk-radio}#{$form-white} {background-color: white;}

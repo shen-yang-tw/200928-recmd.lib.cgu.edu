@@ -114,6 +114,14 @@ function toggleAllShow(allChildren) {
   }
 }
 
+//toggle all class by selector
+function toggleClasses(el, cls) {
+  var all = document.querySelectorAll(el);
+  for (var i = 0; i < all.length; i++) {
+    all[i].classList.toggle(cls);
+  }
+}
+
 //toggle all class by array - onclick="toggleAllClass(findChildren(findParent(this, 'LI', ''), '.detail'), 'hidden'); return false;"
 //return false - avoid the page jumping straight to the top"
 function toggleAllClass(allChildren, cls1, cls2) {

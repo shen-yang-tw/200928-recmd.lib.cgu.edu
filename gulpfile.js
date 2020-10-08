@@ -39,8 +39,8 @@ var paths = {
     www: './src'
   },
   vendors: {
-    css: ['node_modules/uikit/dist/css/uikit.min.css'],
-    js: ['node_modules/uikit/dist/js/uikit.min.js', 'node_modules/uikit/dist/js/uikit-icons.min.js'],
+    css: ['node_modules/uikit/dist/css/uikit.min.css', 'node_modules/ion-rangeslider/css/ion.rangeSlider.min.css'],
+    js: ['node_modules/jquery/dist/jquery.min.js', 'node_modules/uikit/dist/js/uikit.min.js', 'node_modules/uikit/dist/js/uikit-icons.min.js', 'node_modules/ion-rangeslider/js/ion.rangeSlider.min.js'],
     // js: ['node_modules/uikit/dist/js/uikit.min.js', 'node_modules/uikit/dist/js/uikit-icons.min.js', 'node_modules/FitText-UMD/fittext.js'], //FitText
     fontawesome: ['node_modules/@fortawesome/fontawesome-free/css/all.min.css'],
     fonts: 'node_modules/@fortawesome/fontawesome-free/webfonts/*',
@@ -195,7 +195,7 @@ gulp.task('inject', function() {
     .pipe(inject(gulp.src(paths.src.root + paths.dist.js + '/ui*.js', {
       read: false
     }), {
-      name: 'head',
+      name: 'uk',
       relative: true
     }))
     .pipe(inject(gulp.src([paths.src.root + paths.dist.css + '/uikit*.css'], {
@@ -240,12 +240,19 @@ gulp.task('inject', function() {
       name: 'style2',
       relative: true
     }))
-    // .pipe(inject(gulp.src([paths.src.root + paths.dist.js + '/*.js', '!' + paths.src.root + paths.dist.js + '/ui*.js'], {
+    .pipe(inject(gulp.src([paths.src.root + paths.dist.js + '/jquery*.js', paths.src.root + paths.dist.css + '/ion*.css'], {
+      read: false
+    }), {
+      name: 'head',
+      relative: true
+    }))
+    // .pipe(inject(gulp.src([paths.src.root + paths.dist.css + '/ion*.css'], {
     //   read: false
     // }), {
+    //   name: 'head',
     //   relative: true
     // }))
-    .pipe(inject(gulp.src([paths.src.root + paths.dist.js + '/*.js', '!' + paths.src.root + paths.dist.js + '/ui*.js'], {
+    .pipe(inject(gulp.src([paths.src.root + paths.dist.js + '/*.js', '!' + paths.src.root + paths.dist.js + '/jquery*.js', '!' + paths.src.root + paths.dist.js + '/ui*.js'], {
       read: false
     }), {
       relative: true,
@@ -262,7 +269,7 @@ gulp.task('build-inject', function() {
     .pipe(inject(gulp.src(paths.dist.root + paths.dist.js + '/ui*.js', {
       read: false
     }), {
-      name: 'head',
+      name: 'uk',
       relative: true
     }))
     .pipe(inject(gulp.src([paths.dist.root + paths.dist.css + '/uikit*.css'], {
@@ -307,7 +314,13 @@ gulp.task('build-inject', function() {
       name: 'style2',
       relative: true
     }))
-    .pipe(inject(gulp.src([paths.dist.root + paths.dist.js + '/*.js', '!' + paths.dist.root + paths.dist.js + '/ui*.js'], {
+    .pipe(inject(gulp.src([paths.dist.root + paths.dist.js + '/jquery*.js', paths.dist.root + paths.dist.css + '/ion*.css'], {
+      read: false
+    }), {
+      name: 'head',
+      relative: true
+    }))
+    .pipe(inject(gulp.src([paths.dist.root + paths.dist.js + '/*.js', '!' + paths.dist.root + paths.dist.js + '/jquery*.js', '!' + paths.dist.root + paths.dist.js + '/ui*.js'], {
       read: false
     }), {
       relative: true,
@@ -321,7 +334,7 @@ gulp.task('build-inject', function() {
 
 // Compile SCSS
 gulp.task('sass', function() {
-  return gulp.src([paths.src.scss, '!' + paths.src.root + paths.dist.scss + '/*-i.scss'])
+  return gulp.src([paths.src.scss, '!' + paths.src.root + paths.dist.scss + '/*-i.scss', '!' + paths.src.root + paths.dist.scss + '/*-bak.scss'])
     .pipe(sass({
       outputStyle: 'expanded'
     }).on('error', sass.logError))
@@ -477,7 +490,7 @@ gulp.task('watch', function() {
   gulp.watch(paths.src.js).on('change', browserSync.reload);
   // gulp.watch(paths.src.js, gulp.series('js')).on('change', browserSync.reload);
   // gulp.watch(paths.src.templates, gulp.series('templates')).on('change', browserSync.reload);
-  gulp.watch(paths.src.root + paths.dist.templates + '/**/*.hbs', gulp.series('templates')).on('change', browserSync.reload);
+  gulp.watch(paths.src.root + paths.dist.templates + '/**/*.hbs', gulp.series('templates', 'inject')).on('change', browserSync.reload);
   gulp.watch(paths.src.html).on('change', browserSync.reload);
 });
 
@@ -500,7 +513,7 @@ gulp.task('html', gulp.series('inject', 'build-inject'));
 gulp.task('start', gulp.series('vendors', 'sass', 'js', 'templates', 'inject'));
 
 //1. Preset then watch
-gulp.task('server', gulp.series('vendors', 'templates', 'sass', 'js', 'templates', 'inject', 'watch'));
+gulp.task('server', gulp.series('vendors', 'templates', 'sass', 'js', 'inject', 'watch'));
 
 //3. Prepare all assets for production, run: 'yarn build-nohtml' or 'yarn build'
 gulp.task('build-nohtml', gulp.series('vendors', 'tocss', 'js', 'img'));

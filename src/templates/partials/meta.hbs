@@ -14,6 +14,8 @@
 <!-- fa:css -->
 <link rel="stylesheet" href="css/fontawesome.min.css">
 <!-- endinject -->
+<!-- head:css -->
+<!-- endinject -->
 <!-- main:css -->
 <link rel="stylesheet" href="css/main.css">
 <!-- endinject -->
@@ -23,12 +25,21 @@
 <!-- style:css -->
 <link rel="stylesheet" href="css/style.css">
 <!-- endinject -->
+{{#if moreStyle}}
 <!-- style2:css -->
 <!-- endinject -->
-<!-- head:js -->
+<!-- inject:css -->
+<!-- endinject -->
+{{/if}}
+<!-- uk:js -->
 <script src="js/uikit-icons.min.js"></script>
 <script src="js/uikit.min.js"></script>
 <!-- endinject -->
+{{#if jquery}}
+<!-- head:js -->
+<script src="js/jquery.min.js"></script>
+<!-- endinject -->
+{{/if}}
 <!-- inject:js -->
 <script src="js/nav-menu.js" defer></script>
 <script src="js/script.js" defer></script>

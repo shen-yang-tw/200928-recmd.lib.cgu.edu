@@ -93,7 +93,7 @@ function RemoveAddClassByArray(el, classRemove, classAdd) {
   }
 }
 
-function offcanvas(btn, thisParentTagName, classThisParent, activeParentClassName, classToggle, classHiddenName, inactiveButton, subNavTagName, inactiveSubNav, classActiveName) {
+function navMenu(btn, thisParentTagName, classThisParent, activeParentClassName, classToggle, classHiddenName, inactiveButton, subNavTagName, inactiveSubNav, classActiveName) {
   
   const buttons = document.querySelectorAll(btn);
 
@@ -159,5 +159,5 @@ UIkit.icon.add('chevron-right', '<svg width="20" height="20" viewBox="0 0 20 20"
 UIkit.icon.add('chevron-down', '<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="chevron-down"><polyline fill="none" stroke="#000" stroke-width="1.03" points="16 7 10 13 4 7"></polyline></svg>')
 
 if (allExist(['#offcanvas li>.flex>a:nth-child(2)', 'LI', '.uk-parent', 'py-1', '.toggle', 'hidden', '#offcanvas li.py-1:not(.active) .flex>a:nth-child(2)', 'UL', '#offcanvas li.py-1:not(.active) ul.toggle', 'active']) == true) {
-  offcanvas('#offcanvas li>.flex>a:nth-child(2)', 'LI', '.uk-parent', 'py-1', '.toggle', 'hidden', '#offcanvas li.py-1:not(.active) .flex>a:nth-child(2)', 'UL', '#offcanvas li.py-1:not(.active) ul.toggle', 'active')
+  navMenu('#offcanvas li>.flex>a:nth-child(2)', 'LI', '.uk-parent', 'py-1', '.toggle', 'hidden', '#offcanvas li.py-1:not(.active) .flex>a:nth-child(2)', 'UL', '#offcanvas li.py-1:not(.active) ul.toggle', 'active')
 }

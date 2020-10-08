@@ -8,7 +8,7 @@
       <h2 class="uk-modal-title">{{modal-title}}</h2>
     </div>
     <div class="uk-modal-body">
-      <form>
+      <form onsubmit="return false;">
         <div class="uk-grid-small uk-child-width-expand@m uk-grid" uk-grid>
           <div class="space-y-1 min_width-1/2!@m">
             <input class="uk-input" type="email" placeholder="請輸入個人信箱">
@@ -29,7 +29,9 @@
             <img src="http://fakeimg.pl/150x40/" width="150" height="40" alt="驗證碼" uk-img>
           </div>
           {{/if}}
+          {{#if rememberMe}}
           <div><label class="mr-2"><input class="mr-1 uk-checkbox" type="checkbox">記住我的帳號</label></div>
+          {{/if}}
         </div>
       </form>
     </div>

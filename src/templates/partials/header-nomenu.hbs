@@ -31,11 +31,11 @@
 									<span><a class="px-2" href="#">我要推薦</a></span>
 									<div class="min_width-50 uk-dropdown" uk-dropdown>
 										<ul class="uk-nav uk-dropdown-nav">
-											<li><a class="hover:underline py-2 uk-toggle" href="#search" uk-toggle>推薦資料</a></li>
-											<li><a class="hover:underline py-2" href="#">推薦資料總覽</a></li>
+											<li><a class="hover:underline py-2" href="#search" uk-toggle>推薦資料</a></li>
+											<li><a class="hover:underline py-2" href="00recommend.html">推薦資料總覽</a></li>
 										</ul>
 									</div>
-									<span><a class="px-2" href="#">個人推薦資料</a></span>
+									<span><a class="px-2" href="00person.html">個人推薦資料</a></span>
 									<span><a class="px-2" href="#">English</a></span>
 								</div>
 								{{!-- <span class="text-white">|</span> --}}
@@ -43,8 +43,8 @@
 											class="-mb-1 fas fa-user-circle fa-lg"></i></button></span>
 								<div class="min_width-50 uk-dropdown" uk-dropdown>
 									<ul class="uk-nav uk-dropdown-nav">
-										<li><a class="hover:underline py-2 uk-toggle" href="#register" uk-toggle>註冊</a></li>
-										<li><a class="hover:underline py-2 uk-toggle" href="#login" uk-toggle>登入</a></li>
+										<li><a class="hover:underline py-2" href="#register" uk-toggle>註冊</a></li>
+										<li><a class="hover:underline py-2" href="#login" uk-toggle>登入</a></li>
 										<li><a class="hover:underline py-2" href="index.html">登出</a></li>
 									</ul>
 								</div>
@@ -56,8 +56,8 @@
 									title="註冊/登入/登出"><i class="-mb-1 fas fa-user-circle fa-lg"></i></button>
 								<div class="min_width-50 uk-dropdown" uk-dropdown="pos: bottom-right">
 									<ul class="uk-nav uk-dropdown-nav">
-										<li><a class="hover:underline py-2 uk-toggle" href="#register" uk-toggle>註冊</a></li>
-										<li><a class="hover:underline py-2 uk-toggle" href="#login" uk-toggle>登入</a></li>
+										<li><a class="hover:underline py-2" href="#register" uk-toggle>註冊</a></li>
+										<li><a class="hover:underline py-2" href="#login" uk-toggle>登入</a></li>
 										<li><a class="hover:underline py-2" href="index.html">登出</a></li>
 									</ul>
 								</div>
@@ -115,7 +115,7 @@
 			<h2 class="uk-modal-title">推薦搜尋</h2>
 		</div>
 		<div class="uk-modal-body">
-			<form>
+			<form onsubmit="return false;">
 				<ul class="tab_buttons tab_buttons-txt-white mb-8 uk-tab" uk-tab uk-margin>
 					<li class="uk-active"><a href="#">圖書資料</a></li>
 					<li><a href="#">視聽資料</a></li>

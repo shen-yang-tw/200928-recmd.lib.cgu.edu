@@ -11821,8 +11821,12 @@ a, span, label, strong, small {
   background: #075766;
 }
 
-.tab_buttons.tab_buttons-txt-white > .uk-active > a, .tab_buttons.tab_buttons-txt-white > * > a:hover {
+.tab_buttons.tab_buttons-txt-white > .uk-active > a, .tab_buttons.tab_buttons-txt-white > * > a:hover, .tab_buttons.tab_buttons-txt-white > * > a:hover > * {
   color: white !important;
+}
+
+.tab_buttons-noborder::before {
+  border-bottom: none;
 }
 
 .nav_header-dotted > li.uk-nav-header > *:not(ul) {
@@ -11908,6 +11912,14 @@ a, span, label, strong, small {
 }
 
 /*---------- Width & Height & Scroll ------------------------------*/
+.w-auto {
+  width: auto;
+}
+
+.w-auto\! {
+  width: auto !important;
+}
+
 .w-1\/2 {
   width: calc(100%*1/2);
 }
@@ -12266,6 +12278,22 @@ a, span, label, strong, small {
 
 .w-11\/12\! {
   width: calc(100%*11/12) !important;
+}
+
+.min_width-auto {
+  min-width: auto;
+}
+
+.min_width-auto\! {
+  min-width: auto !important;
+}
+
+.min_width-full {
+  min-width: 100%;
+}
+
+.min_width-full\! {
+  min-width: 100% !important;
 }
 
 .min_width-1\/2 {
@@ -29406,6 +29434,12 @@ a, span, label, strong, small {
 
 /*uk-@s*/
 @media (min-width: 640px) {
+  .w-auto\@s {
+    width: auto;
+  }
+  .w-auto\!\@s {
+    width: auto !important;
+  }
   .w-1\/2\@s {
     width: calc(100%*1/2);
   }
@@ -29675,6 +29709,18 @@ a, span, label, strong, small {
   }
   .w-11\/12\!\@s {
     width: calc(100%*11/12) !important;
+  }
+  .min_width-auto\@s {
+    min-width: auto;
+  }
+  .min_width-auto\!\@s {
+    min-width: auto !important;
+  }
+  .min_width-full\@s {
+    min-width: 100%;
+  }
+  .min_width-full\!\@s {
+    min-width: 100% !important;
   }
   .min_width-1\/2\@s {
     min-width: calc(100%*1/2);
@@ -42532,6 +42578,12 @@ a, span, label, strong, small {
 
 /*uk-@m*/
 @media (min-width: 960px) {
+  .w-auto\@m {
+    width: auto;
+  }
+  .w-auto\!\@m {
+    width: auto !important;
+  }
   .w-1\/2\@m {
     width: calc(100%*1/2);
   }
@@ -42801,6 +42853,18 @@ a, span, label, strong, small {
   }
   .w-11\/12\!\@m {
     width: calc(100%*11/12) !important;
+  }
+  .min_width-auto\@m {
+    min-width: auto;
+  }
+  .min_width-auto\!\@m {
+    min-width: auto !important;
+  }
+  .min_width-full\@m {
+    min-width: 100%;
+  }
+  .min_width-full\!\@m {
+    min-width: 100% !important;
   }
   .min_width-1\/2\@m {
     min-width: calc(100%*1/2);
@@ -55658,6 +55722,12 @@ a, span, label, strong, small {
 
 /*uk-@l*/
 @media (min-width: 1200px) {
+  .w-auto\@l {
+    width: auto;
+  }
+  .w-auto\!\@l {
+    width: auto !important;
+  }
   .w-1\/2\@l {
     width: calc(100%*1/2);
   }
@@ -55927,6 +55997,18 @@ a, span, label, strong, small {
   }
   .w-11\/12\!\@l {
     width: calc(100%*11/12) !important;
+  }
+  .min_width-auto\@l {
+    min-width: auto;
+  }
+  .min_width-auto\!\@l {
+    min-width: auto !important;
+  }
+  .min_width-full\@l {
+    min-width: 100%;
+  }
+  .min_width-full\!\@l {
+    min-width: 100% !important;
   }
   .min_width-1\/2\@l {
     min-width: calc(100%*1/2);
@@ -68784,6 +68866,12 @@ a, span, label, strong, small {
 
 /*uk-@xl*/
 @media (min-width: 1600px) {
+  .w-auto\@xl {
+    width: auto;
+  }
+  .w-auto\!\@xl {
+    width: auto !important;
+  }
   .w-1\/2\@xl {
     width: calc(100%*1/2);
   }
@@ -69053,6 +69141,18 @@ a, span, label, strong, small {
   }
   .w-11\/12\!\@xl {
     width: calc(100%*11/12) !important;
+  }
+  .min_width-auto\@xl {
+    min-width: auto;
+  }
+  .min_width-auto\!\@xl {
+    min-width: auto !important;
+  }
+  .min_width-full\@xl {
+    min-width: 100%;
+  }
+  .min_width-full\!\@xl {
+    min-width: 100% !important;
   }
   .min_width-1\/2\@xl {
     min-width: calc(100%*1/2);
@@ -83058,6 +83158,14 @@ address, dl, fieldset, figure, ol, p, pre, ul {
   .uk-table-responsive.table_responsive\@xl, .uk-table-responsive.table_responsive\@xl tbody, .uk-table-responsive.table_responsive\@xl td, .uk-table-responsive.table_responsive\@xl th, .uk-table-responsive.table_responsive\@xl tr {
     display: block;
   }
+}
+
+.table_striped-alert.uk-table-striped tbody tr.uk-alert, .table_striped-alert.uk-table-striped > tr.uk-alert {
+  background: white;
+}
+
+.table_striped-alert.uk-table-striped tbody tr:nth-of-type(odd), .table_striped-alert.uk-table-striped > tr:nth-of-type(odd) {
+  background: #f8f8f8;
 }
 
 .uk-checkbox.form_white, .uk-radio.form_white {

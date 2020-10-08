@@ -38,7 +38,7 @@ strong {
 }
 
 body::before,
-header::before {
+header::before, header::after {
   content: "";
   display: block;
   position: absolute;
@@ -56,6 +56,9 @@ body::before {
   // opacity: .15;
 }
 
+header::after {
+  position: relative;
+}
 
 @media (min-width: 960px) {
   header::before {
@@ -65,6 +68,21 @@ body::before {
     max-height: 244px;
     // opacity: .15;
   }
+}
+
+@media (min-width: 1100px) {
+  header::after {
+    background: url('data:image/gif;base64,R0lGODlhMgAyAJEAAP///wAAAMDAwAAAACH5BAEAAAIALAAAAAAyADIAAAIzlI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKicFADs=') no-repeat center center;
+    // BASE64 code for blank.gif
+    background-size: contain;
+    background-position: 0 0;
+    padding-top: calc(100%*244/1920 - 120px);
+    height: 100%;
+  }
+}
+
+.page header::before, .page header::after {
+  display: none;
 }
 
 // #footer {
@@ -97,6 +115,16 @@ footer {
 .sub_nav [uk-dropdown] {
   z-index: 2;
 }
+
+//------ Ion.RangeSlider ------------------------
+.irs--flat .irs-bar, .irs--flat .irs-single, .irs--flat .irs-handle>i:first-child, .irs--flat .irs-from, .irs--flat .irs-to, .irs--flat .irs-single {
+  background: $color-primary;
+}
+.irs--flat .irs-from:before, .irs--flat .irs-to:before, .irs--flat .irs-single:before {
+  border-top-color: $color-primary;
+}
+//------ Ion.RangeSlider ------------------------
+
 
 //Small Slideshow
 // .smallslide .uk-overlay-primary {

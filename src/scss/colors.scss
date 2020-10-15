@@ -599,7 +599,7 @@
 
 #{$list-tabs}, #{$list-tabs-bullet} {
   >li {
-    &#{$active}>a, &#{$active}>a:focus, &#{$active}>a:hover, & #{$active}>a, & #{$uk-active}>a {
+    &#{$active}>a, &#{$uk-active}>a, &#{$uk-active}>a::after, &#{$active}>a:focus, &#{$active}>a:hover, &#{$active}>a:hover>*, &#{$uk-active}>a:hover>*, & #{$active}>a, & #{$uk-active}>a {
       background-color:$color-primary !important;
       border-color:$color-primary;
       color:text-color($color-primary) !important;
@@ -608,7 +608,7 @@
 }
 #{$list-tabs-secondary}, #{$list-tabs-bullet}#{$list-tabs-secondary} {
   >li {
-    &#{$active}>a, &#{$active}>a:focus, &#{$active}>a:hover, & #{$active}>a, & #{$uk-active}>a {
+    &#{$active}>a, &#{$uk-active}>a, &#{$uk-active}>a::after, &#{$active}>a:focus, &#{$active}>a:hover, &#{$active}>a:hover>*, &#{$uk-active}>a:hover>*, & #{$active}>a, & #{$uk-active}>a {
       background-color:$color-secondary;
       border-color:$color-secondary;
       color:text-color($color-secondary);
@@ -617,7 +617,7 @@
 }
 #{$list-tabs-color3}, #{$list-tabs-bullet}#{$list-tabs-color3} {
   >li {
-    &#{$active}>a, &#{$active}>a:focus, &#{$active}>a:hover, & #{$active}>a, & #{$uk-active}>a {
+    &#{$active}>a, &#{$uk-active}>a, &#{$uk-active}>a::after, &#{$active}>a:focus, &#{$active}>a:hover, &#{$active}>a:hover>*, &#{$uk-active}>a:hover>*, & #{$active}>a, & #{$uk-active}>a {
       background-color:$color3;
       border-color:$color3;
       color:text-color($color3);
@@ -626,13 +626,27 @@
 }
 #{$list-tabs-color4}, #{$list-tabs-bullet}#{$list-tabs-color4} {
   >li {
-    &#{$active}>a, &#{$active}>a:focus, &#{$active}>a:hover, & #{$active}>a, & #{$uk-active}>a {
+    &#{$active}>a, &#{$uk-active}>a, &#{$uk-active}>a::after, &#{$active}>a:focus, &#{$active}>a:hover, &#{$active}>a:hover>*, &#{$uk-active}>a:hover>*, & #{$active}>a, & #{$uk-active}>a {
       background-color:$color4;
       border-color:$color4;
       color:text-color($color4);
     }
   }
 }
+#{$list-tabs}#{$list-tabs-icon-active-white}.uk-nav-parent-icon {
+  >#{$uk-parent}#{$active}>a::after, >#{$uk-parent}#{$uk-active}>a::after {
+    background-image: url(data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2214%22%20height%3D%2214%22%20viewBox%3D%220%200%2014%2014%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolyline%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%221.1%22%20points%3D%2210%201%204%207%2010%2013%22%20%2F%3E%0A%3C%2Fsvg%3E);
+  }
+  >#{$uk-parent}#{$uk-open}#{$active}>a::after, >#{$uk-parent}#{$uk-open}#{$uk-active}>a::after {
+    background-image: url(data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2214%22%20height%3D%2214%22%20viewBox%3D%220%200%2014%2014%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolyline%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%221.1%22%20points%3D%221%204%207%2010%2013%204%22%20%2F%3E%0A%3C%2Fsvg%3E);
+  }
+}
+// #{$list-tabs}#{$list-tabs-icon-active-white}.uk-nav-parent-icon>#{$uk-parent}#{$active}>a::after, #{$list-tabs}#{$list-tabs-icon-active-white}.uk-nav-parent-icon>#{$uk-parent}#{$uk-active}>a::after {
+//   background-image: url(data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2214%22%20height%3D%2214%22%20viewBox%3D%220%200%2014%2014%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolyline%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%221.1%22%20points%3D%2210%201%204%207%2010%2013%22%20%2F%3E%0A%3C%2Fsvg%3E);
+// }
+// #{$list-tabs}#{$list-tabs-icon-active-white}.uk-nav-parent-icon>#{$uk-parent}#{$uk-open}#{$active}>a::after, #{$list-tabs}#{$list-tabs-icon-active-white}.uk-nav-parent-icon>#{$uk-parent}#{$uk-open}#{$uk-active}>a::after {
+//   background-image: url(data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2214%22%20height%3D%2214%22%20viewBox%3D%220%200%2014%2014%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolyline%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%221.1%22%20points%3D%221%204%207%2010%2013%204%22%20%2F%3E%0A%3C%2Fsvg%3E);
+// }
 
 /* Uikit 3 Style
 ---------------------------------------------------- */

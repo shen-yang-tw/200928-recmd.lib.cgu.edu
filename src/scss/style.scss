@@ -1,4 +1,4 @@
-@import 'functions', 'variables', 'mixin';
+@import 'functions', 'variables', 'colors-variables', 'color', 'mixin';
 
 // body {background-color: #FEFDF9;} //light yellow
 
@@ -114,6 +114,10 @@ footer {
 
 .sub_nav [uk-dropdown] {
   z-index: 2;
+}
+
+#gototop {
+  bottom: 40px;
 }
 
 //------ Ion.RangeSlider ------------------------

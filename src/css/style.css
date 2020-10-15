@@ -83,6 +83,10 @@ footer * {
   z-index: 2;
 }
 
+#gototop {
+  bottom: 40px;
+}
+
 .irs--flat .irs-bar, .irs--flat .irs-single, .irs--flat .irs-handle > i:first-child, .irs--flat .irs-from, .irs--flat .irs-to, .irs--flat .irs-single {
   background: #075766;
 }

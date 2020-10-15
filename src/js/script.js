@@ -333,8 +333,7 @@ function showOption(thisSelect, index, sl) {
 function toggleCheckAll(thisClick, inputClass) {
   //thisClick means the "owner" and CANNOT use "this" that means the Global object "Window"
   thisClick.classList.toggle('checked')
-  var i,
-    el = document.querySelectorAll(inputClass)
+  var i, el = document.querySelectorAll(inputClass)
   //--set all input checked & unchecked--
   if (thisClick.classList.contains('checked')) {
     //if 'select all' checked
@@ -349,6 +348,116 @@ function toggleCheckAll(thisClick, inputClass) {
       el[i].checked = false
       el[i].offsetParent.classList.remove('checked')
       //parent el<li> remove class "checked" when input unchecked
+    }
+  }
+}
+
+// checkedSum(".listCheck", ".checkAll", ".uncheckAll", ".checkedNumber")
+function checkedSum(inputCheck, checkAll, resetButton, textSum) {
+  var checkAll = document.querySelectorAll(checkAll)
+  var resetButton = document.querySelectorAll(resetButton)
+  var inputCheck = document.querySelectorAll(inputCheck)
+  var textSum = document.querySelectorAll(textSum)
+  var sum = 0
+  textSum.innerHTML = sum
+
+  // function checkAllSum() {
+  //   for (var j = 0; j < inputCheck.length; j++) {
+  //     inputCheck[j].checked = true
+  //     sum = sum + 1
+  //   }
+  //   for (var k = 0; k < textSum.length; k++) {
+  //     textSum.innerHTML = sum
+  //   }
+  // }
+
+  for (var i = 0; i < inputCheck.length; i++) {
+    inputCheck[i].addEventListener('change', (event) => {
+      if (event.target.checked) {
+        sum = sum + 1
+        for (var j = 0; j < textSum.length; j++) {
+          textSum[j].innerHTML = sum
+        }
+      } else {
+        sum = sum - 1
+        for (var k = 0; k < textSum.length; k++) {
+          textSum[k].innerHTML = sum
+        }
+      }
+    })
+  }
+  for (var i = 0; i < checkAll.length; i++) {
+    if (checkAll[i].getAttribute('type') == 'checkbox') {
+      checkAll[i].addEventListener('change', (event) => {
+        if (event.target.checked) {
+          for (var i = 0; i < checkAll.length; i++) {
+            checkAll[i].checked = true
+          }
+          for (var j = 0; j < inputCheck.length; j++) {
+            inputCheck[j].checked = true
+            // sum = sum + 1
+          }
+          sum = inputCheck.length
+          for (var k = 0; k < textSum.length; k++) {
+            textSum[k].innerHTML = sum
+          }
+        } else {
+          for (var i = 0; i < checkAll.length; i++) {
+            checkAll[i].checked = false
+          }
+          for (var j = 0; j < inputCheck.length; j++) {
+            inputCheck[j].checked = false
+            // sum = sum - 1
+          }
+          sum = 0
+          for (var k = 0; k < textSum.length; k++) {
+            textSum[k].innerHTML = sum
+          }
+        }
+      })
+    }
+    if (checkAll[i].getAttribute('type') == 'button') {
+      checkAll[i].onclick = function() {
+        if (checkAll[i].classList.contains('checked')) {
+          for (var i = 0; i < checkAll.length; i++) {
+            checkAll[i].classList.toggle('checked')
+          }
+          for (var j = 0; j < inputCheck.length; j++) {
+            inputCheck[j].checked = true
+            // sum = sum + 1
+          }
+          sum = inputCheck.length
+          for (var k = 0; k < textSum.length; k++) {
+            textSum[k].innerHTML = sum
+          }
+        } else {
+          for (var i = 0; i < checkAll.length; i++) {
+            checkAll[i].classList.toggle('checked')
+          }
+          for (var j = 0; j < inputCheck.length; j++) {
+            inputCheck[j].checked = false
+            // sum = sum - 1
+          }
+          sum = 0
+          for (var k = 0; k < textSum.length; k++) {
+            textSum[k].innerHTML = sum
+          }
+        }
+      }
+    }
+  }
+  for (var i = 0; i < resetButton.length; i++) {
+    resetButton[i].onclick = function() {
+      for (var j = 0; j < checkAll.length; j++) {
+        checkAll[j].checked = false
+      }
+      for (var k = 0; k < inputCheck.length; k++) {
+        inputCheck[k].checked = false
+      }
+      sum = 0
+      for (var l = 0; l < textSum.length; l++) {
+        textSum[l].innerHTML = sum
+      }
     }
   }
 }
@@ -419,6 +528,10 @@ if (oneExist("#gototop") == true) {
 
 if (oneExist(".text_size") == true) {
   fontResize("text-m", "text-l", "text_size", "text_size-s", "text_size-m", "text_size-l", "active");
+}
+
+if (allExist([".listCheck", ".checkAll", ".uncheckAll", ".checkedNumber"]) == true) {
+  checkedSum(".listCheck", ".checkAll", ".uncheckAll", ".checkedNumber");
 }
 
 //The two functions below must be togther

@@ -6,10 +6,12 @@
 </head>
 
 <body id="top" class="page">
-	{{>header-modal}}
+	{{>header-modal 06active='true'}}
 
 	{{>pageContent breadcrumbCurrent='檢視資料' userOn='true' user='陳大天' linkLogout='index.html' content='detail' pageTitle='檢視資料' linkBackOn='true' linkBack='#' backWhere='回上頁'}}
 
+	{{>confirm-modal id='confirm' modal-title='確定儲存？'}}
+	
 	{{>footer}}
 </body>
 

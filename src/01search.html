@@ -52,7 +52,7 @@
 			<nav>
 				<div class="relative">
 					<div class="bg-white opacity-85 uk-position-cover"></div>
-					<div class="px-4 py-1 uk-container">
+					<div class="px-4 m:py-1 uk-container">
 						<div class="uk-flex-middle uk-grid uk-grid-small uk-grid-match uk-child-width-expand" uk-grid>
 							<div class="uk-position-z-index">
 								<h1 class="m-0 uk-flex uk-flex-middle">
@@ -65,14 +65,9 @@
 								<div class="sub_nav text-sm uk-flex uk-flex-middle">
 									<div>
 										<span><a class="px-2" href="index.html">首頁</a></span>
-										<span><a class="px-2" href="#">我要推薦</a></span>
-										<div class="min_width-50 uk-dropdown" uk-dropdown>
-											<ul class="uk-nav uk-dropdown-nav">
-												<li><a class="hover:underline py-2" href="#search" uk-toggle>推薦資料</a></li>
-												<li><a class="hover:underline py-2" href="00recommend.html">推薦資料總覽</a></li>
-											</ul>
-										</div>
-										<span><a class="px-2" href="00person.html">個人推薦資料</a></span>
+										<span><a class="px-2" href="http://library.cgu.edu.tw/" target="_blank">圖書館</a></span>
+										<span><a class="px-2" href="http://aleph.cgu.edu.tw/F?func=find-b-0&local_base=fly03"
+												target="_blank">明志科大館藏目錄</a></span>
 										<span><a class="px-2" href="#">English</a></span>
 									</div>
 									<span><button class="color_primary border-none l:pr-0 uk-button uk-button-default" type="button"
@@ -110,57 +105,42 @@
 						<div class="uk-navbar-center">
 							<ul class="nav_bar nav_bar-secondary m-0 uk-tab uk-light">
 								<li hidden></li>
-								<li>
-									<a class="text-base font-bold text-white" href="#"
+								<li class="uk-active">
+									<a class="text-base font-bold text-white" href="01search.html"
 										onmouseover="viewHeight('.nav_bar [uk-dropdown]', 'header')">館藏查詢</a>
 								</li>
 								<li>
-									<a class="text-base font-bold text-white" href="#"
+									<a class="text-base font-bold text-white" href="02journals.html"
 										onmouseover="viewHeight('.nav_bar [uk-dropdown]', 'header')">期刊</a>
-									<div class="bg_white_opacity-90 uk-overflow-auto uk-dropdown" uk-dropdown="offset: 0">
-										<ul class="nav_header-dotted uk-nav uk-dropdown-nav">
-											<li class="mt-0 uk-nav-header">
-												<a class="hover:underline text-base" href="#">Item</a>
-											</li>
-											<li class="mt-0 uk-nav-header">
-												<a class="hover:underline text-base" href="#">Item</a>
-											</li>
-										</ul>
-									</div>
 								</li>
 								<li>
-									<a class="text-base font-bold text-white" href="#"
+									<a class="text-base font-bold text-white" href="03reference.html"
 										onmouseover="viewHeight('.nav_bar [uk-dropdown]', 'header')">教師指定用書</a>
+								</li>
+								<li><a class="text-base font-bold text-white" href="04latest.html"
+										onmouseover="viewHeight('.nav_bar [uk-dropdown]', 'header')">新書目錄</a></li>
+								<li><a class="text-base font-bold text-white" href="05hot.html"
+										onmouseover="viewHeight('.nav_bar [uk-dropdown]', 'header')">熱門排行</a></li>
+								<li>
+									<a class="text-base font-bold text-white" href="#"
+										onmouseover="viewHeight('.nav_bar [uk-dropdown]', 'header')">我要推薦</a>
 									<div class="bg_white_opacity-90 uk-overflow-auto uk-dropdown" uk-dropdown="offset: 0">
 										<ul class="nav_header-dotted uk-nav uk-dropdown-nav">
 											<li class="mt-0 uk-nav-header">
-												<a class="hover:underline text-base" href="#">Item</a>
+												<a class="hover:underline text-base" href="#search" uk-toggle>推薦資料</a>
 											</li>
 											<li class="mt-0 uk-nav-header">
-												<a class="hover:underline text-base" href="#">Item</a>
-												<ul class="hidden_ie uk-nav-sub">
-													<li><a class="hover:underline text-base" href="#">SubItem</a></li>
-													<li><a class="hover:underline text-base" href="#">SubItem</a></li>
-												</ul>
+												<a class="hover:underline text-base" href="06recommend.html">推薦資料總覽</a>
 											</li>
 											<li class="mt-0 uk-nav-header">
-												<a class="hover:underline text-base" href="#">Item</a>
-											</li>
-											<li class="mt-0 uk-nav-header">
-												<a class="hover:underline text-base" href="#">Item</a>
+												<a class="hover:underline text-base" href="06person.html">個人推薦資料</a>
 											</li>
 										</ul>
 									</div>
 								</li>
-								<li><a class="text-base font-bold text-white" href="#"
-										onmouseover="viewHeight('.nav_bar [uk-dropdown]', 'header')">新書目錄</a></li>
-								<li><a class="text-base font-bold text-white" href="#"
-										onmouseover="viewHeight('.nav_bar [uk-dropdown]', 'header')">熱門排行</a></li>
-								<li><a class="text-base font-bold text-white" href="#"
-										onmouseover="viewHeight('.nav_bar [uk-dropdown]', 'header')">我要推薦</a></li>
-								<li><a class="text-base font-bold text-white" href="#"
-										onmouseover="viewHeight('.nav_bar [uk-dropdown]', 'header')">討論室/設備預約</a></li>
-								<li><a class="text-base font-bold text-white" href="#"
+								<li><a class="text-base font-bold text-white" href="http://primo.lib.cgu.edu.tw:8991/pds?func=load-login&calling_system=aleph&institute=FLY51&url=http://aleph.cgu.edu.tw/F?func=find-b-0&local_base=space&CON_LNG=chi"
+										onmouseover="viewHeight('.nav_bar [uk-dropdown]', 'header')" target="_blank">討論室/設備預約</a></li>
+								<li><a class="text-base font-bold text-white" href="http://web20.lib.cgu.edu.tw/accounts/login/" target="_blank"
 										onmouseover="viewHeight('.nav_bar [uk-dropdown]', 'header')">個人化服務</a></li>
 							</ul>
 						</div>
@@ -174,72 +154,46 @@
 				<button class="uk-offcanvas-close" type="button" title="刪除" uk-close></button>
 				<ul class="pt-6 uk-nav uk-nav-default">
 					<li class="py-1 uk-parent">
-						<a class="p-0" href="#"><span class="text-white">館藏查詢</span></a>
+						<a class="p-0" href="01search.html"><span class="text-white">館藏查詢</span></a>
+					</li>
+					<li class="py-1 uk-parent">
+						<a class="p-0" href="02journals.html"><span class="text-white">期刊</span></a>
+					</li>
+					<li class="py-1 uk-parent">
+						<a class="p-0" href="03reference.html"><span class="text-white">教師指定用書</span></a>
+					</li>
+					<li class="py-1 uk-parent">
+						<a class="p-0" href="04latest.html"><span class="text-white">新書目錄</span></a>
+					</li>
+					<li class="py-1 uk-parent">
+						<a class="p-0" href="05hot.html"><span class="text-white">熱門排行</span></a>
 					</li>
 					<li class="py-1 uk-parent">
 						<div class="flex justify-between">
-							<a class="flex flex-1 items-center" href="#"><span class="text-white">期刊</span></a>
+							<a class="flex flex-1 items-center" href="#"><span class="text-white">我要推薦</span></a>
 							<a class="flex flex-none items-start justify-end pt-px w-16" href="javascript:void(0)" title="展開/收合選單"><span
 									class="toggle uk-icon" uk-icon="icon: chevron-right"></span><span class="toggle hidden uk-icon"
 									uk-icon="icon: chevron-down"></span class="toggle"></a>
 						</div>
 						<ul class="toggle hidden uk-nav-sub">
-							<li class="pr-5"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+							<li class="pr-5"><a href="#search" uk-toggle><span class="text-white text-opacity-50">推薦資料</span></a>
 							</li>
-							<li class="pr-5"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+							<li class="pr-5"><a href="06recommend.html"><span class="text-white text-opacity-50">推薦資料總覽</span></a>
 							</li>
-						</ul>
-					</li>
-					<li class="py-1 uk-parent">
-						<div class="flex justify-between">
-							<a class="flex flex-1 items-center" href="#"><span class="text-white">教師指定用書</span></a>
-							<a class="flex flex-none items-start justify-end pt-px w-16" href="javascript:void(0)" title="展開/收合選單"><span
-									class="toggle uk-icon" uk-icon="icon: chevron-right"></span><span class="toggle hidden uk-icon"
-									uk-icon="icon: chevron-down"></span class="toggle"></a>
-						</div>
-						<ul class="toggle hidden uk-nav-sub">
-							<li class="pr-5"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
-							</li>
-							<li class="mt-0 uk-nav-header uk-parent">
-								<div class="flex justify-between">
-									<a class="flex flex-1 items-center" href="#"><span class="text-white">Item</span></a>
-									<a class="flex flex-none items-start justify-end pt-px w-16" href="javascript:void(0)"
-										title="展開/收合選單"><span class="toggle uk-icon" uk-icon="icon: chevron-right"></span><span
-											class="toggle hidden uk-icon" uk-icon="icon: chevron-down"></span class="toggle"></a>
-								</div>
-								<ul class="toggle hidden uk-nav-sub">
-									<li class="pr-5"><a href="#"><span class="text-white text-opacity-50">SubItem</span></a>
-									</li>
-									<li class="pr-5"><a href="#"><span class="text-white text-opacity-50">SubItem</span></a>
-									</li>
-									<li class="pr-5"><a href="#"><span class="text-white text-opacity-50">SubItem</span></a>
-									</li>
-								</ul>
-							</li>
-							<li class="pr-5"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+							<li class="pr-5"><a href="06person.html"><span class="text-white text-opacity-50">個人推薦資料</span></a>
 							</li>
 						</ul>
 					</li>
 					<li class="py-1 uk-parent">
-						<a class="p-0" href="#"><span class="text-white">新書目錄</span></a>
+						<a class="p-0" href="http://primo.lib.cgu.edu.tw:8991/pds?func=load-login&calling_system=aleph&institute=FLY51&url=http://aleph.cgu.edu.tw/F?func=find-b-0&local_base=space&CON_LNG=chi" target="_blank"><span class="text-white">討論室/設備預約</span></a>
 					</li>
 					<li class="py-1 uk-parent">
-						<a class="p-0" href="#"><span class="text-white">熱門排行</span></a>
-					</li>
-					<li class="py-1 uk-parent">
-						<a class="p-0" href="#"><span class="text-white">我要推薦</span></a>
-					</li>
-					<li class="py-1 uk-parent">
-						<a class="p-0" href="#"><span class="text-white">討論室/設備預約</span></a>
-					</li>
-					<li class="py-1 uk-parent">
-						<a class="p-0" href="#"><span class="text-white">個人化服務</span></a>
+						<a class="p-0" href="http://web20.lib.cgu.edu.tw/accounts/login/" target="_blank"><span class="text-white">個人化服務</span></a>
 					</li>
 					<li class="uk-nav-divider"></li>
-					<li><a href="#">首頁</a></li>
-					<li><a href="#search" uk-toggle>推薦資料</a></li>
-					<li><a href="00recommend.html">推薦資料總覽</a></li>
-					<li><a href="00person.html">個人推薦資料</a></li>
+					<li><a href="index.html">首頁</a></li>
+					<li><a href="http://library.cgu.edu.tw/" target="_blank">圖書館</a></li>
+					<li><a href="http://aleph.cgu.edu.tw/F?func=find-b-0&local_base=fly03" target="_blank">明志科大館藏目錄</a></li>
 					<li><a href="#">English</a></li>
 				</ul>
 			</div>
@@ -503,69 +457,54 @@
 	<!-- header -->
 	
 	<!-- page main content -->
-	<section class="relative" uk-height-viewport="expand: true">
+	<section class="p-0 m:py-2 relative" uk-height-viewport="expand: true">
 	  <!-- <div class="bg_primary opacity10 uk-position-cover"></div> -->
-	  <div class="container_responsive@s uk-container">
+	  <div class="container_responsive@s uk-container uk-container-xlarge">
 	
 	    <!-- Breadcrumb & User -->
-	    <div class="px-2 mb-2 justify-between uk-grid uk-grid-small uk-grid-match uk-flex-middle" uk-grid uk-height-match="target: > div">
+	    <div class="px-2 mb-2 justify-between uk-grid uk-grid-small uk-grid-match uk-flex-middle" uk-grid>
 	      <!-- Child <div> Default to class="uk-width-auto" -->
-	      <div class="m-0">
+	      <div class="m-0 uk-visible@m">
 	        <!-- uk-breadcrumb -->
 	        <ul class="m-0 p-0 uk-float-left uk-breadcrumb">
 	        	<li><a class="text-xs m:text-sm" href="index.html">首頁</a></li>
-	        	<li><span class="text-xs m:text-sm">資料查詢</span></li>
+	        	<li><span class="text-xs m:text-sm">館藏查詢</span></li>
 	        </ul>
 	        <!-- uk-breadcrumb -->      </div>
-	      <div class="text-xs m:text-sm content-center m-0">
+	      <div class="text-xs m:text-sm content-center m-0 uk-visible@m">
 	        <span class="mr-2 uk-width-auto">帳號：陳大天</span>
 	        <a class="color_primary-text! uk-width-auto" href="index.html">登出</a>
 	      </div>
 	    </div>
 	    <!-- Breadcrumb & User -->
 	
-	    <div class="min_height-550 s:mb-2 uk-card uk-card-small uk-card-default uk-card-body">
-	      <h2 class="btm_line text-2xl mt-0">
-	        資料查詢
+	    <div class="min_height-550 pt-0 s:pt-2 s:mb-2 uk-card uk-card-small uk-card-default uk-card-body">
+	      <h2 class="btm_line text-base s:text-2xl mt-0">
+	        館藏查詢
 	      </h2>
 	      <div id="content">
-	        <div id="boundary" class="bg_grey-100 p-2 mt-2 relative">
-	        	<a class="btn_primary m-0 uk-button uk-hidden@m" onclick="toggleClasses('.option', 'hidden'); return false;">篩選</a>
-	        	<!-- <button class="btn_secondary color_white! uk-button" type="button">篩選</button> -->
-	        	<div class="mt-2 mr-2 uk-position-top-right uk-hidden@m">
-	        		<button class="uk-button uk-button-default" type="button">細分搜尋結果</button>
-	        		<div class="uk-dropdown uk-position-z-index" uk-dropdown="boundary:#boundary; pos:bottom-right">
-	        			<ul class="uk-nav uk-nav-dropdown uk-text-left">
-	        				<li class="m-0 uk-nav-header">Type</li>
-	        				<li class="px-2 py-1">
-	        					<label class="m-0 w-full"><input class="listCheck bg-white mr-1" type="checkbox">Option<span
-	        							class="pseudo:parentheses uk-text-small">999</span></label>
-	        				</li>
-	        				<li class="m-0 uk-nav-header">Type</li>
-	        				<li class="px-2 py-1">
-	        					<label class="m-0 w-full"><input class="listCheck bg-white mr-1" type="checkbox">Option<span
-	        							class="pseudo:parentheses uk-text-small">999</span></label>
-	        				</li>
-	        				<li class="px-2 py-1"><span class="w-full"><a
-	        							class="btn_primary w-full uk-button uk-button-small uk-dropdown-close" href="#"
-	        							role="button">套用篩選</a></span></li>
-	        			</ul>
-	        		</div>
-	        	</div>
+	        <!-- id="boundary" -->
+	        <div id="boundary" class="bg-gray-100 p-2 mt-2 relative">
+	        	<a class="btn_white m-0 w-full uk-button uk-button-small uk-hidden@m"
+	        		onclick="toggleClasses('.option', 'hidden'); return false;">篩選<span class="option ml-2"><i
+	        				class="fas fa-angle-right fa-fw"></i></span><span class="option ml-2 hidden"><i
+	        				class="fas fa-angle-down fa-fw"></i></span></a>
+	        
+	        	<!-- uk-tab-switcher -->
 	        	<div class="option mt-2 hidden m:block">
 	        		<ul class="tab_buttons tab_buttons-txt-white tab_buttons-noborder my-0 uk-tab" uk-tab="connect: #switcher">
 	        			<li>
-	        				<a href="#" title="#">簡易查詢</a>
+	        				<a href="" title="#">簡易查詢</a>
 	        			</li>
 	        			<li>
-	        				<a href="#" title="#">進階查詢</a>
+	        				<a href="" title="#">進階查詢</a>
 	        			</li>
 	        			<li>
-	        				<a href="#" title="#">縮小查詢</a>
+	        				<a href="" title="#">縮小查詢</a>
 	        			</li>
 	        		</ul>
 	        		<div class="border border-solid bg-white border-t-0">
-	        			<ul id="switcher" class="uk-switcher" uk-height-match>
+	        			<ul id="switcher" class="uk-switcher">
 	        				<li>
 	        					<div class="p-2 m:p-3">
 	        						<form onsubmit="return false;">
@@ -596,11 +535,12 @@
 	        									<button class="btn_primary min_width-100! w-full uk-button">搜尋</button>
 	        								</div>
 	        								<div class="uk-width-expand">
-	        									<a class="btn_secondary color_white! min_width-100! w-full uk-button" href="#">檢索歷史</a>
+	        									<a class="btn_secondary color_white! min_width-100! w-full uk-button" href="">檢索歷史</a>
 	        								</div>
 	        								<div class="m-0 uk-width-1-1">
-	        									<div class="uk-flex uk-flex-wrap uk-flex-between@m">
-	        										<div class="min_width-120"><label class="uk-margin-right"><input class="uk-margin-small-right"
+	        									<div class="uk-flex uk-flex-wrap uk-flex-between">
+	        										<div class="min_width-120">
+	        											<label class="uk-margin-right"><input class="form_white uk-checkbox mr-1"
 	        													type="checkbox">精確檢索</label>
 	        										</div>
 	        										<div><small>查詢 isn:147986143X OR isn:9781479861439 ，共 1 筆</small></div>
@@ -618,8 +558,7 @@
 	        									<div class="uk-alert">
 	        										<div class="uk-grid uk-grid-small" uk-grid>
 	        											<div class="uk-width-2-5@s">
-	        												<input id="search" class="uk-input uk-width-1-1"
-	        													type="text" placeholder="請輸入檢索詞">
+	        												<input id="search" class="uk-input uk-width-1-1" type="text" placeholder="請輸入檢索詞">
 	        											</div>
 	        											<div class="uk-width-3-6 uk-width-expand@s">
 	        												<select class="uk-select uk-width-1-1">
@@ -639,7 +578,8 @@
 	        											</div>
 	        											<div class="uk-width-1-6">
 	        												<button
-	        													class="btn_primary opacity-100 static py-1 uk-flex-center uk-flex uk-flex-middle uk-button uk-alert-close uk-width-1-1" title="刪除">
+	        													class="btn_primary opacity-100 static py-1 uk-flex-center uk-flex uk-flex-middle uk-button uk-alert-close uk-width-1-1"
+	        													title="刪除">
 	        													<i class="fas fa-times fa-2x"></i>
 	        												</button>
 	        											</div>
@@ -647,14 +587,16 @@
 	        									</div>
 	        								</div>
 	        								<div class="uk-width-1-6@s">
-	        									<button id="add" class="btn_secondary color_white! py-1 uk-flex-center uk-flex uk-flex-middle uk-button uk-width-1-1">
+	        									<button id="add"
+	        										class="btn_secondary color_white! py-1 uk-flex-center uk-flex uk-flex-middle uk-button uk-width-1-1">
 	        										<i class="fas fa-plus fa-2x"></i>
 	        									</button>
 	        								</div>
 	        							</div>
 	        							<div class="my-2">
-	        								<button class="btn_secondary color_white! uk-button uk-margin-remove" uk-toggle="target: .range">查詢篩選</button>
-	        								<div class="range bg_grey-100 p-2" hidden>
+	        								<button class="btn_secondary color_white! uk-button uk-margin-remove"
+	        									uk-toggle="target: .range">查詢篩選</button>
+	        								<div class="range bg-gray-100 p-2" hidden>
 	        									<div class="px-4 uk-position-relative">
 	        										<input id="range" class="uk-input" type="text" name="range">
 	        									</div>
@@ -675,7 +617,7 @@
 	        										</div>
 	        										<div class="min_width-1/3">
 	        											<label class="w-full">
-	        												<input class="uk-checkbox uk-margin-small-right" name="watch" type="checkbox">只查被收藏的書目
+	        												<input class="form_white uk-checkbox mr-1" name="watch" type="checkbox">只查被收藏的書目
 	        											</label>
 	        										</div>
 	        									</div>
@@ -683,12 +625,12 @@
 	        							</div>
 	        							<div class="uk-flex-center@s uk-grid uk-grid-small" uk-grid>
 	        								<div class="uk-width-1-2 uk-width-1-4@s">
-	        									<a href="#" class="btn_primary uk-margin-small-bottom uk-button uk-width-1-1">
-	        										<i class="fas fa-search uk-margin-small-right"></i>搜尋
+	        									<a href="" class="btn_primary uk-margin-small-bottom uk-button uk-width-1-1">
+	        										<i class="fas fa-search mr-1"></i>搜尋
 	        									</a>
 	        								</div>
 	        								<div class="uk-width-1-2 uk-width-1-4@s">
-	        									<a class="btn_secondary color_white! uk-button uk-width-1-1" href="#">歷史</a>
+	        									<a class="btn_secondary color_white! uk-button uk-width-1-1" href="">歷史</a>
 	        								</div>
 	        							</div>
 	        						</form>
@@ -730,73 +672,293 @@
 	        			</ul>
 	        		</div>
 	        	</div>
+	        	<!-- uk-tab-switcher -->
 	        </div>
 	        <!-- id="boundary" -->
 	        
 	        <div class="uk-grid-medium uk-grid" uk-grid>
+	        	<!-- Side Menu -->
 	        	<div class="uk-width-1-4@m uk-width-1-5@l">
-	        		<div class="uk-visible@m" style="height: 11px"></div>
-	        		<div class="listMenu max_height-200 max_height-700@m uk-overflow-auto uk-visible@m">
-	        			<ul class="list_tabs uk-nav uk-nav-default">
-	        				<li class="py-1 uk-parent">
-	        					<a class="p-0" href="#"><span class="text-white">Level1</span></a>
-	        				</li>
-	        				<li class="py-1 uk-parent">
-	        					<div class="flex justify-between">
-	        						<a class="flex flex-1 items-center" href="#"><span class="text-white">Level2</span></a>
-	        						<a class="flex flex-none items-start justify-end pt-px w-16" href="javascript:void(0)" title="展開/收合選單"><span
-	        								class="toggle uk-icon" uk-icon="icon: chevron-right"></span><span class="toggle hidden uk-icon"
-	        								uk-icon="icon: chevron-down"></span class="toggle"></a>
-	        					</div>
-	        					<ul class="toggle hidden uk-nav-sub">
-	        						<li class="pr-5"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+	        		<div class="uk-visible@m" style="height: 4px"></div>
+	        		<p class="btm_line uk-visible@m">查詢再細分</p>
+	        		<!-- List Menu -->
+	        		<div class="listMenu uk-visible@m">
+	        			<ul class="list_tabs list_tabs-icon-active-white uk-nav-parent-icon uk-nav"
+	        				uk-nav="multiple: true; animation: false">
+	        				<li class="uk-nav-header uk-parent uk-open">
+	        					<a class="break-all" href="#maincontent">Item</a>
+	        					<ul>
+	        						<li><a class="break-all" href="#maincontent">subItem<small class="pseudo:parentheses">999</small></a></li>
+	        						<li>
+	        							<a class="listMore text-xs text-right"
+	        								onclick="toggleAllClass(findChildren(findParent(this, 'LI', 'uk-parent'), '.listMore'), 'hidden'); return false">More</a>
 	        						</li>
-	        						<li class="pr-5"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+	        						<li class="listMore hidden">
+	        							<a class="break-all" href="#maincontent">subItem<small
+	        									class="pseudo:parentheses ">999</small></a>
 	        						</li>
-	        					</ul>
-	        				</li>
-	        				<li class="py-1 uk-parent">
-	        					<div class="flex justify-between">
-	        						<a class="flex flex-1 items-center" href="#"><span class="text-white">Level3</span></a>
-	        						<a class="flex flex-none items-start justify-end pt-px w-16" href="javascript:void(0)" title="展開/收合選單"><span
-	        								class="toggle uk-icon" uk-icon="icon: chevron-right"></span><span class="toggle hidden uk-icon"
-	        								uk-icon="icon: chevron-down"></span class="toggle"></a>
-	        					</div>
-	        					<ul class="toggle hidden uk-nav-sub">
-	        						<li class="pr-5"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
-	        						</li>
-	        						<li class="mt-0 uk-nav-header uk-parent">
-	        							<div class="flex justify-between">
-	        								<a class="flex flex-1 items-center" href="#"><span class="text-white">Item</span></a>
-	        								<a class="flex flex-none items-start justify-end pt-px w-16" href="javascript:void(0)"
-	        									title="展開/收合選單"><span class="toggle uk-icon" uk-icon="icon: chevron-right"></span><span
-	        										class="toggle hidden uk-icon" uk-icon="icon: chevron-down"></span class="toggle"></a>
-	        							</div>
-	        							<ul class="toggle hidden uk-nav-sub">
-	        								<li class="pr-5"><a href="#"><span class="text-white text-opacity-50">SubItem</span></a>
-	        								</li>
-	        								<li class="pr-5"><a href="#"><span class="text-white text-opacity-50">SubItem</span></a>
-	        								</li>
-	        								<li class="pr-5"><a href="#"><span class="text-white text-opacity-50">SubItem</span></a>
-	        								</li>
-	        							</ul>
-	        						</li>
-	        						<li class="pr-5"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
+	        						<li class="listMore hidden">
+	        							<a class="break-all" href="#maincontent">subItem<small
+	        									class="pseudo:parentheses ">999</small></a>
 	        						</li>
 	        					</ul>
 	        				</li>
-	        				<li class="py-1 uk-parent">
-	        					<a class="p-0" href="#"><span class="text-white">Level1</span></a>
+	        				<li class="uk-nav-header uk-parent uk-open">
+	        					<a class="break-all" href="#maincontent">Item</a>
+	        					<ul>
+	        						<li><a class="break-all" href="#maincontent">subItem<small class="pseudo:parentheses">999</small></a></li>
+	        						<li>
+	        							<a class="listMore text-xs text-right"
+	        								onclick="toggleAllClass(findChildren(findParent(this, 'LI', 'uk-parent'), '.listMore'), 'hidden'); return false">More</a>
+	        						</li>
+	        						<li class="listMore hidden">
+	        							<a class="break-all" href="#maincontent">subItem<small
+	        									class="pseudo:parentheses ">999</small></a>
+	        						</li>
+	        						<li class="listMore hidden">
+	        							<a class="break-all" href="#maincontent">subItem<small
+	        									class="pseudo:parentheses ">999</small></a>
+	        						</li>
+	        					</ul>
 	        				</li>
 	        			</ul>
-	        
 	        		</div>
+	        		<!-- List Menu -->
 	        	</div>
-	        	<div class="uk-width-expand@m">
-	        		<div id="maincontent">
+	        	<!-- Side Menu -->
 	        
-	        			<!-- End #maincontent -->
-	        			<!-- pagination / select number -->
+	        	<!-- Main Content -->
+	        	<div class="uk-width-expand@m">
+	        		<!-- id="maincontent" -->
+	        		<div id="maincontent">
+	        			<!-- Options Bar -->
+	        			<div class="btm_line mt-3">
+	        				<span>共20筆</span>
+	        				<!-- uk-hidden@m -->
+	        				<div class="uk-float-right uk-flex uk-flex-middle uk-hidden@m" style="margin-top: -5px;">
+	        					<a class="uk-flex uk-flex-middle uk-hidden@s" href="#email" uk-toggle="target: #email"><i
+	        							class="color_grey-400 fas fa-envelope fa-fw fa-2x"></i></a>
+	        					<!-- uk-button-dropdown -->
+	        					<button class="uk-button uk-button-default uk-button-small" type="button">細分搜尋結果 <i
+	        							uk-icon="icon: triangle-down"></i></button>
+	        					<div class="min_width-100" uk-dropdown="pos: bottom-right">
+	        						<ul class="uk-nav uk-dropdown-nav">
+	        							<li class="uk-parent">
+	        								<span>資源類型</span>
+	        								<ul class="pl-0 uk-nav-sub">
+	        									<li>
+	        										<a href="" title="#"><i class="fas fa-angle-right fa-fw"></i>Item<span
+	        												class="pseudo:parentheses break-all">999</span></a>
+	        									</li>
+	        									<li>
+	        										<a href="" title="#"><i class="fas fa-angle-right fa-fw"></i>Item<span
+	        												class="pseudo:parentheses break-all">999</span></a>
+	        									</li>
+	        								</ul>
+	        							</li>
+	        							<li class="uk-parent">
+	        								<span>出版年</span>
+	        								<ul class="pl-0 uk-nav-sub">
+	        									<li>
+	        										<a href="" title="#"><i class="fas fa-angle-right fa-fw"></i>Item<span
+	        												class="pseudo:parentheses break-all">999</span></a>
+	        									</li>
+	        									<li>
+	        										<a href="" title="#"><i class="fas fa-angle-right fa-fw"></i>Item<span
+	        												class="pseudo:parentheses break-all">999</span></a>
+	        									</li>
+	        								</ul>
+	        							</li>
+	        						</ul>
+	        					</div>
+	        					<!-- uk-button-dropdown -->
+	        				</div>
+	        				<!-- uk-hidden@m -->
+	        			</div>
+	        			<!-- Options Bar -->
+	        			<div class="grid_m grid_l@m uk-flex-middle uk-grid uk-grid-small" uk-grid uk-margin>
+	        				<div class="min_width-1/3 uk-visible@s">
+	        					<div class="uk-button-group">
+	        						<button class="uk-button uk-button-default uk-button-small" uk-toggle="target: #save"><i
+	        								class="fas fa-save fa-fw"></i><span class="ml-1">儲存</span></button>
+	        						<button class="uk-button uk-button-default uk-button-small" uk-toggle="target: #print"><i
+	        								class="fas fa-print fa-fw"></i><span class="ml-1">列印</span></button>
+	        						<button class="uk-button uk-button-default uk-button-small" uk-toggle="target: #email"><i
+	        								class="fas fa-envelope fa-fw"></i><span class="ml-1">E-Mail</span></button>
+	        					</div>
+	        					
+	        					<!-- uk-modal-save -->
+	        					<div id="save" class="uk-flex-top uk-modal" uk-modal>
+	        						<div class="uk-modal-dialog uk-margin-auto-vertical">
+	        							<button class="uk-modal-close-default" type="button" title="刪除" uk-close></button>
+	        							<div class="uk-modal-header">
+	        								<h2 class="uk-modal-title">儲存</h2>
+	        							</div>
+	        							<div class="uk-modal-body">
+	        								<form onsubmit="return false;">
+	        									<div class="margin_y_child-even-m uk-grid uk-grid-collapse uk-flex-middle uk-child-width-expand@s"
+	        										uk-grid uk-height-match="target: .match">
+	        										<div class="match min_width-1/3!@s flex uk-flex-middle">
+	        											<label class="font_size-10 font-bold uk-form-label" for="form_type">格　　式</label>
+	        										</div>
+	        										<div class="space-y-1 min_width-2/3!@s">
+	        											<select id="form_type" class="match uk-select" name="type">
+	        					              <option value="simple" selected="selected">簡目</option>
+	        					              <option value="adv">詳目</option>
+	        					              <option value="endnote">EndNote</option>
+	        					              <option value="refworks">RefWorks</option>
+	        					            </select>
+	        										</div>
+	        										<div class="match min_width-1/3!@s flex uk-flex-middle">
+	        											<label class="font_size-10 font-bold uk-form-label" for="form_format">資料類型</label>
+	        										</div>
+	        										<div class="space-y-1 min_width-2/3!@s">
+	        											<select id="form_format" class="match uk-select" name="format">
+	        					              <option value="simple" selected="selected">CSV</option>
+	        					              <option value="excel">Excel</option>
+	        					              <option value="html">HTML</option>
+	        					            </select>
+	        										</div>
+	        									</div>
+	        								</form>
+	        							</div>
+	        							<div class="text-center uk-margin uk-modal-footer" uk-margin>
+	        								<a href="#" class="btn_primary min_width-100 m-0 uk-button uk-button-primary">送　　出</a>
+	        								<button class="min_width-100 uk-button uk-button-default uk-modal-close" type="button">取　　消</button>
+	        							</div>
+	        						</div>
+	        					</div>
+	        					<!-- uk-modal-save -->
+	        					
+	        					<!-- uk-modal-print -->
+	        					<div id="print" class="uk-flex-top uk-modal" uk-modal>
+	        						<div class="uk-modal-dialog uk-margin-auto-vertical">
+	        							<button class="uk-modal-close-default" type="button" title="刪除" uk-close></button>
+	        							<div class="uk-modal-header">
+	        								<h2 class="uk-modal-title">列印</h2>
+	        							</div>
+	        							<div class="uk-modal-body">
+	        								<form onsubmit="return false;">
+	        									<div class="margin_y_child-even-m uk-grid uk-grid-collapse uk-flex-middle uk-child-width-expand@s"
+	        										uk-grid uk-height-match="target: .match">
+	        										<div class="match min_width-1/3!@s flex uk-flex-middle">
+	        											<label class="font_size-10 font-bold uk-form-label" for="form_type">格　　式</label>
+	        										</div>
+	        										<div class="space-y-1 min_width-2/3!@s">
+	        											<select id="form_type" class="match uk-select" name="type">
+	        					              <option value="simple" selected="selected">簡目</option>
+	        					              <option value="adv">詳目</option>
+	        					              <option value="endnote">EndNote</option>
+	        					              <option value="refworks">RefWorks</option>
+	        					            </select>
+	        										</div>
+	        									</div>
+	        								</form>
+	        							</div>
+	        							<div class="text-center uk-margin uk-modal-footer" uk-margin>
+	        								<a href="#" class="btn_primary min_width-100 m-0 uk-button uk-button-primary">送　　出</a>
+	        								<button class="min_width-100 uk-button uk-button-default uk-modal-close" type="button">取　　消</button>
+	        							</div>
+	        						</div>
+	        					</div>
+	        					<!-- uk-modal-print -->
+	        					
+	        					<!-- uk-modal-email -->
+	        					<div id="email" class="uk-flex-top uk-modal" uk-modal>
+	        						<div class="uk-modal-dialog uk-margin-auto-vertical">
+	        							<button class="uk-modal-close-default" type="button" title="刪除" uk-close></button>
+	        							<div class="uk-modal-header">
+	        								<h2 class="uk-modal-title">電子信箱</h2>
+	        							</div>
+	        							<div class="uk-modal-body">
+	        								<form onsubmit="return false;">
+	        									<div class="margin_y_child-even-m uk-grid uk-grid-collapse uk-flex-middle uk-child-width-expand@s"
+	        										uk-grid uk-height-match="target: .match">
+	        										<div class="match min_width-1/3!@s flex uk-flex-middle">
+	        											<label class="font_size-10 font-bold uk-form-label" for="form_type">格　　式</label>
+	        										</div>
+	        										<div class="space-y-1 min_width-2/3!@s">
+	        											<select id="form_type" class="match uk-select" name="type">
+	        					              <option value="simple" selected="selected">簡目</option>
+	        					              <option value="adv">詳目</option>
+	        					              <option value="endnote">EndNote</option>
+	        					              <option value="refworks">RefWorks</option>
+	        					            </select>
+	        										</div>
+	        										<div class="match min_width-1/3!@s flex uk-flex-middle">
+	        											<label class="font_size-10 font-bold uk-form-label" for="form_email">收件者</label>
+	        										</div>
+	        										<div class="space-y-1 min_width-2/3!@s">
+	        											<input id="form_email" class="match uk-input" type="email" placeholder="請輸入Email">
+	        										</div>
+	        										<div class="match min_width-1/3!@s flex uk-flex-middle">
+	        											<label class="font_size-10 font-bold uk-form-label" for="form_subject">主旨</label>
+	        										</div>
+	        										<div class="space-y-1 min_width-2/3!@s">
+	        											<input id="form_subject" class="match uk-input" type="email" placeholder="">
+	        										</div>
+	        									</div>
+	        								</form>
+	        							</div>
+	        							<div class="text-center uk-margin uk-modal-footer" uk-margin>
+	        								<a href="#" class="btn_primary min_width-100 m-0 uk-button uk-button-primary">送　　出</a>
+	        								<button class="min_width-100 uk-button uk-button-default uk-modal-close" type="button">取　　消</button>
+	        							</div>
+	        						</div>
+	        					</div>
+	        					<!-- uk-modal-email -->
+	        				</div>
+	        				<div class="min_width-1/3 space-x-2 uk-flex uk-flex-center uk-visible@s">
+	        					<label>
+	        						<input class="checkAll mr-1 uk-checkbox" type="checkbox"><small>本頁全選</small>
+	        					</label>
+	        					<label>
+	        						<input class="uk-radio" type="radio" checked>
+	        						<small>已選<span class="checkedNumber pseudo:parentheses">0</span></small>
+	        					</label>
+	        					<button class="uncheckAll uk-button uk-button-default uk-button-small" type="button">取消所選</button>
+	        				</div>
+	        				<div class="min_width-1/3 space-x-1 uk-flex uk-flex-right@s" uk-margin>
+	        					<div class="flex uk-flex-middle">
+	        						<button class="uk-button uk-button-default uk-button-small" type="button">顯示方式 <i
+	        								uk-icon="icon: triangle-down"></i></button>
+	        						<div class="min_width-100" uk-dropdown>
+	        							<ul class="uk-nav uk-dropdown-nav">
+	        								<li class="uk-active"><a href="01search.html">圖文並列</a></li>
+	        								<li><a href="01search-txt.html">文字列表</a></li>
+	        							</ul>
+	        						</div>
+	        					</div>
+	        					<div class="flex uk-flex-middle">
+	        						<button class="uk-button uk-button-default uk-button-small" type="button">排序方式 <i
+	        								uk-icon="icon: triangle-down"></i></button>
+	        						<div class="min_width-100" uk-dropdown>
+	        							<ul class="uk-nav uk-dropdown-nav">
+	        								<li><a href="">檢索符合率 ↑</a></li>
+	        								<li><a href="">檢索符合率 ↓</a></li>
+	        								<li><a href="">題名 ↑</a></li>
+	        								<li><a href="">題名 ↓</a></li>
+	        								<li><a href="">作者 ↑</a></li>
+	        								<li><a href="">作者 ↓</a></li>
+	        								<li><a href="">出版年 ↑</a></li>
+	        								<li><a href="">出版年 ↓</a></li>
+	        								<li><a href="">更新時間</a></li>
+	        							</ul>
+	        						</div>
+	        					</div>
+	        					<div class="flex uk-flex-middle">
+	        						<label class="mr-1 text-xs" for="id_num">筆數</label>
+	        						<select class="min_width-50 w-auto uk-select uk-form-small" id="id_num" name="num">
+	        							<option value="10">10</option>
+	        							<option value="20">20</option>
+	        							<option value="50">50</option>
+	        							<option value="100">100</option>
+	        						</select>
+	        					</div>
+	        				</div>
+	        			</div>
+	        			<!-- Options Bar -->
+	        			<!-- pagination -->
 	        			<div class="pagination">
 	        				<div class="uk-grid uk-grid-collapse uk-child-width-auto uk-flex-auto uk-flex-middle uk-flex-center">
 	        					<div>
@@ -828,8 +990,414 @@
 	        					</div>
 	        				</div>
 	        			</div>
-	        			<!-- pagination / select number -->		</div>
-	        	</div>      </div>
+	        			<!-- pagination -->			<!-- uk-list -->
+	        			<ul class="text-sm uk-list uk-list-striped uk-grid-width-1-1 uk-grid-match" data-uk-grid-margin
+	        				data-uk-grid-match="{target:'.uk-panel'}">
+	        				<li>
+	        					<label class="w-full">
+	        						<input class="listCheck uk-checkbox" type="checkbox">
+	        						<!-- uk-card -->
+	        						<div class="p-2 border border-solid border-gray-100 bg-white uk-card uk-card-hover">
+	        							<!-- uk-grid -->
+	        							<div class="uk-grid uk-grid-small" uk-grid>
+	        								<!-- List Image -->
+	        								<div class="min_width-1/5 min_width-1/7@xl">
+	        									<div class="aspect ratio-3/4 bg-white">
+	        										<div class="uk-background-contain uk-flex uk-flex-center uk-flex-middle"
+	        											style="background-image: url(img/book.svg);"></div>
+	        									</div>
+	        								</div>
+	        								<!-- List Image -->
+	        								<!-- List Contents -->
+	        								<div class="uk-width-expand">
+	        									<h2 class="mt-0 pt-1 text-lg"><a class="color_primary" href="#">日本第一</a></h2>
+	        									<!-- List Items -->
+	        									<ul class="pl-0 uk-grid uk-grid-small" uk-grid>
+	        										<li class="min_width-1/2! min_width-1/3!@m min_width-1/5!@l uk-flex-auto">
+	        											<div class="items-start s:flex-no-wrap uk-flex uk-flex-wrap">
+	        												<div class="mr-1 inline s:flex uk-flex-nowrap uk-flex-none">
+	        													<span class="mr-1">•</span>
+	        													<span class="mr-1 uk-flex-none">項目名稱：</span>
+	        												</div>
+	        												<div class="mr-2 break-all inline">
+	        													<span class="pseudo:comma_ch">單一項目內容</span>
+	        												</div>
+	        												<small class="bg_secondary color_white! min_width-65 text-xs px-1">外借中<span
+	        														class="ml-1">0</span></small>
+	        											</div>
+	        										</li>
+	        										<li class="min_width-1/2! min_width-1/3!@m min_width-1/5!@l uk-flex-auto">
+	        											<div class="items-start s:flex-no-wrap uk-flex uk-flex-wrap">
+	        												<div class="mr-1 inline s:flex uk-flex-nowrap uk-flex-none">
+	        													<span class="mr-1">•</span>
+	        													<span class="mr-1 uk-flex-none">項目名稱：</span>
+	        												</div>
+	        												<div class="mr-2 break-all inline">
+	        													<span class="pseudo:comma_ch">單一項目內容</span>
+	        													<span class="pseudo:comma_ch">單一項目內容</span>
+	        												</div>
+	        												<small class="bg_secondary color_white! min_width-65 text-xs px-1">外借中<span
+	        														class="ml-1">0</span></small>
+	        											</div>
+	        										</li>
+	        										<li class="min_width-1/2! min_width-1/3!@m min_width-1/5!@l uk-flex-auto">
+	        											<div class="items-start s:flex-no-wrap uk-flex uk-flex-wrap">
+	        												<div class="mr-1 inline s:flex uk-flex-nowrap uk-flex-none">
+	        													<span class="mr-1">•</span>
+	        													<span class="mr-1 uk-flex-none">項目名稱：</span>
+	        												</div>
+	        												<div class="mr-2 break-all inline">
+	        													<span class="w-full">1. 項目內容 (單獨佔一列)：法嚴直強友上上形父上原天一更看片聯，上子痛結，著心隊那古康拉聽會及聯減體口們有，使難人要級總校</span>
+	        													<span class="w-full">2. 項目內容 (單獨佔一列)：一區形了主此進那上著父願、德身來些軍力標無他事的命</span>
+	        												</div>
+	        												<small class="bg_secondary color_white! min_width-65 text-xs px-1">外借中<span
+	        														class="ml-1">0</span></small>
+	        											</div>
+	        										</li>
+	        									</ul>
+	        									<!-- List Items -->
+	        									<!-- List Icons -->
+	        									<div class="border-gray-200 border-t border-solid mt-2 pt-2 uk-visible@m">
+	        										<small class="mr-2 uk-text-small"><i class="text-gray-600 mr-1 fas fa-eye fa-fw"></i><span
+	        												title="點閱">123</span></small>
+	        										<small class="mr-2 uk-text-small"><i class="text-gray-600 mr-1 fas fa-heart fa-fw"></i><span
+	        												title="收藏">123</span></small>
+	        										<small class="mr-2 uk-text-small"><i class="text-gray-600 mr-1 fas fa-star fa-fw"></i><span
+	        												title="評分">123</span></small>
+	        										<small class="mr-2 uk-text-small"><i class="text-gray-600 mr-1 fas fa-comment-alt fa-fw"></i><span
+	        												title="引用">123</span></small>
+	        										<small class="mr-2 uk-text-small"><i class="text-gray-600 mr-1 fas fa-envelope fa-fw"></i><span
+	        												title="轉寄">123</span></small>
+	        									</div>
+	        									<!-- List Icons -->
+	        								</div>
+	        								<!-- List Contents -->
+	        							</div>
+	        							<!-- uk-grid -->
+	        						</div>
+	        						<!-- uk-card -->
+	        					</label>
+	        				</li>
+	        				<li>
+	        					<label class="w-full">
+	        						<input class="listCheck uk-checkbox" type="checkbox">
+	        						<!-- uk-card -->
+	        						<div class="p-2 border border-solid border-gray-100 bg-white uk-card uk-card-hover">
+	        							<!-- uk-grid -->
+	        							<div class="uk-grid uk-grid-small" uk-grid>
+	        								<!-- List Image -->
+	        								<div class="min_width-1/5 min_width-1/7@xl">
+	        									<div class="aspect ratio-3/4 bg-white">
+	        										<div class="uk-background-contain uk-flex uk-flex-center uk-flex-middle"
+	        											style="background-image: url(https://fakeimg.pl/300x400/);"></div>
+	        									</div>
+	        								</div>
+	        								<!-- List Image -->
+	        								<!-- List Contents -->
+	        								<div class="uk-width-expand">
+	        									<h2 class="mt-0 pt-1 text-lg"><a class="color_primary" href="#">日本第一</a></h2>
+	        									<!-- List Items -->
+	        									<ul class="pl-0 uk-grid uk-grid-small" uk-grid>
+	        										<li class="min_width-1/2! min_width-1/3!@m min_width-1/5!@l uk-flex-auto">
+	        											<div class="items-start s:flex-no-wrap uk-flex uk-flex-wrap">
+	        												<div class="mr-1 inline s:flex uk-flex-nowrap uk-flex-none">
+	        													<span class="mr-1">•</span>
+	        													<span class="mr-1 uk-flex-none">項目名稱：</span>
+	        												</div>
+	        												<div class="mr-2 break-all inline">
+	        													<span class="pseudo:comma_ch">單一項目內容</span>
+	        												</div>
+	        												<small class="bg_secondary color_white! min_width-65 text-xs px-1">外借中<span
+	        														class="ml-1">0</span></small>
+	        											</div>
+	        										</li>
+	        										<li class="min_width-1/2! min_width-1/3!@m min_width-1/5!@l uk-flex-auto">
+	        											<div class="items-start s:flex-no-wrap uk-flex uk-flex-wrap">
+	        												<div class="mr-1 inline s:flex uk-flex-nowrap uk-flex-none">
+	        													<span class="mr-1">•</span>
+	        													<span class="mr-1 uk-flex-none">項目名稱：</span>
+	        												</div>
+	        												<div class="mr-2 break-all inline">
+	        													<span class="pseudo:comma_ch">單一項目內容</span>
+	        													<span class="pseudo:comma_ch">單一項目內容</span>
+	        												</div>
+	        												<small class="bg_secondary color_white! min_width-65 text-xs px-1">外借中<span
+	        														class="ml-1">0</span></small>
+	        											</div>
+	        										</li>
+	        										<li class="min_width-1/2! min_width-1/3!@m min_width-1/5!@l uk-flex-auto">
+	        											<div class="items-start s:flex-no-wrap uk-flex uk-flex-wrap">
+	        												<div class="mr-1 inline s:flex uk-flex-nowrap uk-flex-none">
+	        													<span class="mr-1">•</span>
+	        													<span class="mr-1 uk-flex-none">項目名稱：</span>
+	        												</div>
+	        												<div class="mr-2 break-all inline">
+	        													<span class="w-full">1. 項目內容 (單獨佔一列)：法嚴直強友上上形父上原天一更看片聯，上子痛結，著心隊那古康拉聽會及聯減體口們有，使難人要級總校</span>
+	        													<span class="w-full">2. 項目內容 (單獨佔一列)：一區形了主此進那上著父願、德身來些軍力標無他事的命</span>
+	        												</div>
+	        												<small class="bg_secondary color_white! min_width-65 text-xs px-1">外借中<span
+	        														class="ml-1">0</span></small>
+	        											</div>
+	        										</li>
+	        									</ul>
+	        									<!-- List Items -->
+	        									<!-- List Icons -->
+	        									<div class="border-gray-200 border-t border-solid mt-2 pt-2 uk-visible@m">
+	        										<small class="mr-2 uk-text-small"><i class="text-gray-600 mr-1 fas fa-eye fa-fw"></i><span
+	        												title="點閱">123</span></small>
+	        										<small class="mr-2 uk-text-small"><i class="text-gray-600 mr-1 fas fa-heart fa-fw"></i><span
+	        												title="收藏">123</span></small>
+	        										<small class="mr-2 uk-text-small"><i class="text-gray-600 mr-1 fas fa-star fa-fw"></i><span
+	        												title="評分">123</span></small>
+	        										<small class="mr-2 uk-text-small"><i class="text-gray-600 mr-1 fas fa-comment-alt fa-fw"></i><span
+	        												title="引用">123</span></small>
+	        										<small class="mr-2 uk-text-small"><i class="text-gray-600 mr-1 fas fa-envelope fa-fw"></i><span
+	        												title="轉寄">123</span></small>
+	        									</div>
+	        									<!-- List Icons -->
+	        								</div>
+	        								<!-- List Contents -->
+	        							</div>
+	        							<!-- uk-grid -->
+	        						</div>
+	        						<!-- uk-card -->
+	        					</label>
+	        				</li>
+	        			</ul>
+	        			<!-- uk-list -->
+	        			<!-- pagination -->
+	        			<div class="pagination">
+	        				<div class="uk-grid uk-grid-collapse uk-child-width-auto uk-flex-auto uk-flex-middle uk-flex-center">
+	        					<div>
+	        						<a class="color_grey hover:bg-transparent btn btn-flat disabled" href="#" title="首頁"><i
+	        								class="fas fa-angle-double-left fa-fw"></i></a>
+	        						<a class="color_grey hover:bg-transparent btn btn-flat" href="#" title="首頁" hidden><i
+	        								class="fas fa-angle-double-left fa-fw"></i></a>
+	        						<a class="color_grey hover:bg-transparent btn btn-flat disabled" href="#" title="上一頁"><i
+	        								class="fas fa-angle-left fa-fw"></i></a>
+	        						<a class="color_grey hover:bg-transparent btn btn-flat" href="#" title="上一頁" hidden><i
+	        								class="fas fa-angle-left fa-fw"></i></a>
+	        					</div>
+	        					<div class="uk-grid uk-grid-collapse uk-child-width-auto uk-flex-middle uk-margin">
+	        						<select class="w-auto uk-select uk-form-small" onChange="window.location.href=this.value">
+	        							<option value="#" selected>1</option>
+	        							<option value="#">2</option>
+	        						</select>
+	        						<span class="mx-1">/<span class="pl-1">2</span></span>
+	        					</div>
+	        					<div>
+	        						<a class="color_grey hover:bg-transparent btn btn-flat" href="#" title="下一頁"><i
+	        								class="fas fa-angle-right fa-fw"></i></a>
+	        						<a class="color_grey hover:bg-transparent btn btn-flat disabled" href="#" title="下一頁" hidden><i
+	        								class="fas fa-chevron-right fa-fw"></i></a>
+	        						<a class="color_grey hover:bg-transparent btn btn-flat" href="#" title="末頁"><i
+	        								class="fas fa-angle-double-right fa-fw"></i></a>
+	        						<a class="color_grey hover:bg-transparent btn btn-flat disabled" href="#" title="末頁" hidden><i
+	        								class="fas fa-chevron-double-right fa-fw"></i></a>
+	        					</div>
+	        				</div>
+	        			</div>
+	        			<!-- pagination -->			<!-- Options Bar -->
+	        			<div class="grid_m grid_l@m uk-flex-middle uk-grid uk-grid-small" uk-grid uk-margin>
+	        				<div class="min_width-1/3 uk-visible@s">
+	        					<div class="uk-button-group">
+	        						<button class="uk-button uk-button-default uk-button-small" uk-toggle="target: #save"><i
+	        								class="fas fa-save fa-fw"></i><span class="ml-1">儲存</span></button>
+	        						<button class="uk-button uk-button-default uk-button-small" uk-toggle="target: #print"><i
+	        								class="fas fa-print fa-fw"></i><span class="ml-1">列印</span></button>
+	        						<button class="uk-button uk-button-default uk-button-small" uk-toggle="target: #email"><i
+	        								class="fas fa-envelope fa-fw"></i><span class="ml-1">E-Mail</span></button>
+	        					</div>
+	        					
+	        					<!-- uk-modal-save -->
+	        					<div id="save" class="uk-flex-top uk-modal" uk-modal>
+	        						<div class="uk-modal-dialog uk-margin-auto-vertical">
+	        							<button class="uk-modal-close-default" type="button" title="刪除" uk-close></button>
+	        							<div class="uk-modal-header">
+	        								<h2 class="uk-modal-title">儲存</h2>
+	        							</div>
+	        							<div class="uk-modal-body">
+	        								<form onsubmit="return false;">
+	        									<div class="margin_y_child-even-m uk-grid uk-grid-collapse uk-flex-middle uk-child-width-expand@s"
+	        										uk-grid uk-height-match="target: .match">
+	        										<div class="match min_width-1/3!@s flex uk-flex-middle">
+	        											<label class="font_size-10 font-bold uk-form-label" for="form_type">格　　式</label>
+	        										</div>
+	        										<div class="space-y-1 min_width-2/3!@s">
+	        											<select id="form_type" class="match uk-select" name="type">
+	        					              <option value="simple" selected="selected">簡目</option>
+	        					              <option value="adv">詳目</option>
+	        					              <option value="endnote">EndNote</option>
+	        					              <option value="refworks">RefWorks</option>
+	        					            </select>
+	        										</div>
+	        										<div class="match min_width-1/3!@s flex uk-flex-middle">
+	        											<label class="font_size-10 font-bold uk-form-label" for="form_format">資料類型</label>
+	        										</div>
+	        										<div class="space-y-1 min_width-2/3!@s">
+	        											<select id="form_format" class="match uk-select" name="format">
+	        					              <option value="simple" selected="selected">CSV</option>
+	        					              <option value="excel">Excel</option>
+	        					              <option value="html">HTML</option>
+	        					            </select>
+	        										</div>
+	        									</div>
+	        								</form>
+	        							</div>
+	        							<div class="text-center uk-margin uk-modal-footer" uk-margin>
+	        								<a href="#" class="btn_primary min_width-100 m-0 uk-button uk-button-primary">送　　出</a>
+	        								<button class="min_width-100 uk-button uk-button-default uk-modal-close" type="button">取　　消</button>
+	        							</div>
+	        						</div>
+	        					</div>
+	        					<!-- uk-modal-save -->
+	        					
+	        					<!-- uk-modal-print -->
+	        					<div id="print" class="uk-flex-top uk-modal" uk-modal>
+	        						<div class="uk-modal-dialog uk-margin-auto-vertical">
+	        							<button class="uk-modal-close-default" type="button" title="刪除" uk-close></button>
+	        							<div class="uk-modal-header">
+	        								<h2 class="uk-modal-title">列印</h2>
+	        							</div>
+	        							<div class="uk-modal-body">
+	        								<form onsubmit="return false;">
+	        									<div class="margin_y_child-even-m uk-grid uk-grid-collapse uk-flex-middle uk-child-width-expand@s"
+	        										uk-grid uk-height-match="target: .match">
+	        										<div class="match min_width-1/3!@s flex uk-flex-middle">
+	        											<label class="font_size-10 font-bold uk-form-label" for="form_type">格　　式</label>
+	        										</div>
+	        										<div class="space-y-1 min_width-2/3!@s">
+	        											<select id="form_type" class="match uk-select" name="type">
+	        					              <option value="simple" selected="selected">簡目</option>
+	        					              <option value="adv">詳目</option>
+	        					              <option value="endnote">EndNote</option>
+	        					              <option value="refworks">RefWorks</option>
+	        					            </select>
+	        										</div>
+	        									</div>
+	        								</form>
+	        							</div>
+	        							<div class="text-center uk-margin uk-modal-footer" uk-margin>
+	        								<a href="#" class="btn_primary min_width-100 m-0 uk-button uk-button-primary">送　　出</a>
+	        								<button class="min_width-100 uk-button uk-button-default uk-modal-close" type="button">取　　消</button>
+	        							</div>
+	        						</div>
+	        					</div>
+	        					<!-- uk-modal-print -->
+	        					
+	        					<!-- uk-modal-email -->
+	        					<div id="email" class="uk-flex-top uk-modal" uk-modal>
+	        						<div class="uk-modal-dialog uk-margin-auto-vertical">
+	        							<button class="uk-modal-close-default" type="button" title="刪除" uk-close></button>
+	        							<div class="uk-modal-header">
+	        								<h2 class="uk-modal-title">電子信箱</h2>
+	        							</div>
+	        							<div class="uk-modal-body">
+	        								<form onsubmit="return false;">
+	        									<div class="margin_y_child-even-m uk-grid uk-grid-collapse uk-flex-middle uk-child-width-expand@s"
+	        										uk-grid uk-height-match="target: .match">
+	        										<div class="match min_width-1/3!@s flex uk-flex-middle">
+	        											<label class="font_size-10 font-bold uk-form-label" for="form_type">格　　式</label>
+	        										</div>
+	        										<div class="space-y-1 min_width-2/3!@s">
+	        											<select id="form_type" class="match uk-select" name="type">
+	        					              <option value="simple" selected="selected">簡目</option>
+	        					              <option value="adv">詳目</option>
+	        					              <option value="endnote">EndNote</option>
+	        					              <option value="refworks">RefWorks</option>
+	        					            </select>
+	        										</div>
+	        										<div class="match min_width-1/3!@s flex uk-flex-middle">
+	        											<label class="font_size-10 font-bold uk-form-label" for="form_email">收件者</label>
+	        										</div>
+	        										<div class="space-y-1 min_width-2/3!@s">
+	        											<input id="form_email" class="match uk-input" type="email" placeholder="請輸入Email">
+	        										</div>
+	        										<div class="match min_width-1/3!@s flex uk-flex-middle">
+	        											<label class="font_size-10 font-bold uk-form-label" for="form_subject">主旨</label>
+	        										</div>
+	        										<div class="space-y-1 min_width-2/3!@s">
+	        											<input id="form_subject" class="match uk-input" type="email" placeholder="">
+	        										</div>
+	        									</div>
+	        								</form>
+	        							</div>
+	        							<div class="text-center uk-margin uk-modal-footer" uk-margin>
+	        								<a href="#" class="btn_primary min_width-100 m-0 uk-button uk-button-primary">送　　出</a>
+	        								<button class="min_width-100 uk-button uk-button-default uk-modal-close" type="button">取　　消</button>
+	        							</div>
+	        						</div>
+	        					</div>
+	        					<!-- uk-modal-email -->
+	        				</div>
+	        				<div class="min_width-1/3 space-x-2 uk-flex uk-flex-center uk-visible@s">
+	        					<label>
+	        						<input class="checkAll mr-1 uk-checkbox" type="checkbox"><small>本頁全選</small>
+	        					</label>
+	        					<label>
+	        						<input class="uk-radio" type="radio" checked>
+	        						<small>已選<span class="checkedNumber pseudo:parentheses">0</span></small>
+	        					</label>
+	        					<button class="uncheckAll uk-button uk-button-default uk-button-small" type="button">取消所選</button>
+	        				</div>
+	        				<div class="min_width-1/3 space-x-1 uk-flex uk-flex-right@s" uk-margin>
+	        					<div class="flex uk-flex-middle">
+	        						<button class="uk-button uk-button-default uk-button-small" type="button">顯示方式 <i
+	        								uk-icon="icon: triangle-down"></i></button>
+	        						<div class="min_width-100" uk-dropdown>
+	        							<ul class="uk-nav uk-dropdown-nav">
+	        								<li class="uk-active"><a href="01search.html">圖文並列</a></li>
+	        								<li><a href="01search-txt.html">文字列表</a></li>
+	        							</ul>
+	        						</div>
+	        					</div>
+	        					<div class="flex uk-flex-middle">
+	        						<button class="uk-button uk-button-default uk-button-small" type="button">排序方式 <i
+	        								uk-icon="icon: triangle-down"></i></button>
+	        						<div class="min_width-100" uk-dropdown>
+	        							<ul class="uk-nav uk-dropdown-nav">
+	        								<li><a href="">檢索符合率 ↑</a></li>
+	        								<li><a href="">檢索符合率 ↓</a></li>
+	        								<li><a href="">題名 ↑</a></li>
+	        								<li><a href="">題名 ↓</a></li>
+	        								<li><a href="">作者 ↑</a></li>
+	        								<li><a href="">作者 ↓</a></li>
+	        								<li><a href="">出版年 ↑</a></li>
+	        								<li><a href="">出版年 ↓</a></li>
+	        								<li><a href="">更新時間</a></li>
+	        							</ul>
+	        						</div>
+	        					</div>
+	        					<div class="flex uk-flex-middle">
+	        						<label class="mr-1 text-xs" for="num">筆數</label>
+	        						<select class="min_width-50 w-auto uk-select uk-form-small" id="num" name="num">
+	        							<option value="10">10</option>
+	        							<option value="20">20</option>
+	        							<option value="50">50</option>
+	        							<option value="100">100</option>
+	        						</select>
+	        					</div>
+	        				</div>
+	        			</div>
+	        			<!-- Options Bar -->
+	        			<!-- Fixed bottom bar for mobile -->
+	        			<div
+	        				class="text-center space-x-2 fixed left-0 bottom-0 w-full bg-white p-1 uk-box-shadow-medium uk-position-z-index uk-hidden@m">
+	        				<label>
+	        					<input class="checkAll mr-1 uk-checkbox" type="checkbox"><small>本頁全選</small>
+	        				</label>
+	        				<label>
+	        					<input class="uk-radio" type="radio" checked>
+	        					<small>已選<span class="checkedNumber pseudo:parentheses">0</span></small>
+	        				</label>
+	        				<button class="uncheckAll uk-button uk-button-default uk-button-small" type="button">取消所選</button>
+	        			</div>
+	        			<!-- Fixed bottom bar for mobile -->
+	        		</div>
+	        		<!-- id="maincontent" -->
+	        	</div>
+	        	<!-- Main Content -->
+	        </div>      </div>
 	      <!-- End #content -->
 	    </div>
 	    <!-- End uk-card -->
@@ -876,9 +1444,6 @@
 	
 	<a id="gototop"
 		class="color_white bg_black_opacity-50 hover:bg_black_opacity-70 opacity-0 no-underline p-2 rounded uk-text-center uk-position-fixed uk-position-small uk-position-bottom-right"
-		href="#top" title="回到最上" uk-scroll uk-totop><span class="sr-only">回到最上</span></a></body>
-
-</html>ity-0 no-underline p-2 rounded uk-text-center uk-position-fixed uk-position-small uk-position-bottom-right"
 		href="#top" title="回到最上" uk-scroll uk-totop><span class="sr-only">回到最上</span></a></body>
 
 </html>

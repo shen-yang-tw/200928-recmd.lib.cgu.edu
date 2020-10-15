@@ -463,6 +463,8 @@ $list-btmline:".list_btmline" !default;
 $list-collapse:".list_collapse" !default;
 $list-small:".list_small" !default;
 $list-tabs:".list_tabs" !default;
+$list-tabs-icon-active-white:".list_tabs-icon-active-white" !default;
+$list-tabs-link:".list_tabs-link" !default;
 $list-tabs-bullet:".list_tabs-bullet" !default;
 $list-tabs-header:".list_tabs-header" !default;
 $list-tabs-secondary:".list_tabs-secondary" !default;
@@ -507,8 +509,11 @@ $quotes-ch:".quotes" !default;
 $quotes-dashes:".dashes" !default;
 $checkbox:".checkbox" !default;
 $checkbox-circle:".checkbox_circle" !default;
-$grid-xsmall:".grid_xs" !default;
-$grid-xxsmall:".grid_xxs" !default;
+$grid-xl:".grid_xl" !default;
+$grid-l:".grid_l" !default;
+$grid-m:".grid_m" !default;
+$grid-s:".grid_s" !default;
+$grid-xs:".grid_xs" !default;
 $grid-divider-stack-remove:".grid_divider_stack_remove" !default;
 $container-responsive:".container_responsive" !default;
 $container-expand:".container_expand" !default;
@@ -552,6 +557,7 @@ $tab-btn-secondary:".tab_btn-secondary" !default;
 $tab-btn-active-white:".tab_btn-active-white" !default;
 $tab-btn-space-s:".tab_btn-space-s" !default;
 $tab-btn-space-xs:".tab_btn-space-xs" !default;
+$slidenav-thick:".slidenav_thick" !default;
 
 $mc-card:".card" !default;
 $mc-card-content:".card-content" !default;
@@ -635,7 +641,7 @@ $height-ie:".height_ie" !default;
 $not-fa:":not([class^=fa-])" !default;
 $fa-exclude:":not(.fa-layers-text):not(.font_default)" !default;
 $uk-icon-exclude:":not([class*=uk-icon]):not(svg):not(polyline)" !default;
-$color-exclude:":not([class^=bg_]):not([class^=btn_]):not([class^=color_]):not([class^=text-]):not([class^=uk-button])" !default;
+$color-exclude:":not([class^=bg_]):not([class^=btn_]):not([class^=color_]):not([class^=uk-button]):not([class^=text-trans]):not([class^=text-current]):not([class^=text-black]):not([class^=text-white]):not([class^=text-gray]):not([class^=text-red]):not([class^=text-orange]):not([class^=text-yellow]):not([class^=text-green]):not([class^=text-teal]):not([class^=text-blue]):not([class^=text-indigo]):not([class^=text-purple]):not([class^=text-pink])" !default;
 $not-bg:":not([class^=bg_]):not([class^=btn_])" !default;
 $not-uk-width:":not([class*=uk-width])" !default;
 
@@ -784,19 +790,21 @@ $focus-ouline:0 !default;
 
 //### Space ###------------------------------------------------//
 // $space-1px:1px !default; //=1px
-$space-s:2px !default; //=2px
+$space-xs:2px !default; //=2px
 $space:5px !default; //=5px
+$space-s:5px !default; //=5px
 $space-m:10px !default; //=10px
 $space-l:15px !default; //=15px
 $space-xl:20px !default;
 // $space-1px-negative:-#{$space-1px} !default; //=1px
-$space-s-negative:-#{$space-s} !default; //=2px
+$space-xs-negative:-#{$space-xs} !default; //=2px
 $space-negative:-#{$space} !default; //=5px
+$space-s-negative:-#{$space-s} !default; //=5px
 $space-m-negative:-#{$space-m} !default; //=10px
 $space-l-negative:-#{$space-l} !default; //=15px
-$space-l-negative:-#{$space-xl} !default; //=15px
+$space-xl-negative:-#{$space-xl} !default; //=20px
 // $space-1px-px:1px !default;
-// $space-s-px:2px !default;
+// $space-xs-px:2px !default;
 // $space-px:5px !default;
 // $space-m-px:10px !default;
 // $space-l-px:15px !default;

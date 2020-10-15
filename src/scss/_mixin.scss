@@ -17,7 +17,7 @@
   font-family:'Material Icons';
   font-weight:normal;
   font-style:normal;
-  font-size:24px;  /* Preferred icon size */
+  font-size:calc(24rem/16);  /* Preferred icon size: 24px */
   display:inline-block;
   line-height:1;
   text-transform:none;
@@ -235,7 +235,7 @@
     text-transform: none;
     text-decoration: none;
     @if $s {
-      padding: $space-s $space;
+      padding: $space-xs $space;
     } @else if $l {
       padding: $space-m $space-l;
     } @else {

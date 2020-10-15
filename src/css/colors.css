@@ -2398,28 +2398,36 @@ a.bg_color4-darkest\!:hover, a.bg_color4-darkest\!:hover > *, button.bg_color4-d
   border-color: #103d39 !important;
 }
 
-.list_tabs > li.active > a, .list_tabs > li.active > a:focus, .list_tabs > li.active > a:hover, .list_tabs > li .active > a, .list_tabs > li .uk-active > a, .list_tabs-bullet > li.active > a, .list_tabs-bullet > li.active > a:focus, .list_tabs-bullet > li.active > a:hover, .list_tabs-bullet > li .active > a, .list_tabs-bullet > li .uk-active > a {
+.list_tabs > li.active > a, .list_tabs > li.uk-active > a, .list_tabs > li.uk-active > a::after, .list_tabs > li.active > a:focus, .list_tabs > li.active > a:hover, .list_tabs > li.active > a:hover > *, .list_tabs > li.uk-active > a:hover > *, .list_tabs > li .active > a, .list_tabs > li .uk-active > a, .list_tabs-bullet > li.active > a, .list_tabs-bullet > li.uk-active > a, .list_tabs-bullet > li.uk-active > a::after, .list_tabs-bullet > li.active > a:focus, .list_tabs-bullet > li.active > a:hover, .list_tabs-bullet > li.active > a:hover > *, .list_tabs-bullet > li.uk-active > a:hover > *, .list_tabs-bullet > li .active > a, .list_tabs-bullet > li .uk-active > a {
   background-color: #075766 !important;
   border-color: #075766;
   color: #f2f2f2 !important;
 }
 
-.list_tabs-secondary > li.active > a, .list_tabs-secondary > li.active > a:focus, .list_tabs-secondary > li.active > a:hover, .list_tabs-secondary > li .active > a, .list_tabs-secondary > li .uk-active > a, .list_tabs-bullet.list_tabs-secondary > li.active > a, .list_tabs-bullet.list_tabs-secondary > li.active > a:focus, .list_tabs-bullet.list_tabs-secondary > li.active > a:hover, .list_tabs-bullet.list_tabs-secondary > li .active > a, .list_tabs-bullet.list_tabs-secondary > li .uk-active > a {
+.list_tabs-secondary > li.active > a, .list_tabs-secondary > li.uk-active > a, .list_tabs-secondary > li.uk-active > a::after, .list_tabs-secondary > li.active > a:focus, .list_tabs-secondary > li.active > a:hover, .list_tabs-secondary > li.active > a:hover > *, .list_tabs-secondary > li.uk-active > a:hover > *, .list_tabs-secondary > li .active > a, .list_tabs-secondary > li .uk-active > a, .list_tabs-bullet.list_tabs-secondary > li.active > a, .list_tabs-bullet.list_tabs-secondary > li.uk-active > a, .list_tabs-bullet.list_tabs-secondary > li.uk-active > a::after, .list_tabs-bullet.list_tabs-secondary > li.active > a:focus, .list_tabs-bullet.list_tabs-secondary > li.active > a:hover, .list_tabs-bullet.list_tabs-secondary > li.active > a:hover > *, .list_tabs-bullet.list_tabs-secondary > li.uk-active > a:hover > *, .list_tabs-bullet.list_tabs-secondary > li .active > a, .list_tabs-bullet.list_tabs-secondary > li .uk-active > a {
   background-color: #fa7832;
   border-color: #fa7832;
   color: #5f2302;
 }
 
-.list_tabs-color3 > li.active > a, .list_tabs-color3 > li.active > a:focus, .list_tabs-color3 > li.active > a:hover, .list_tabs-color3 > li .active > a, .list_tabs-color3 > li .uk-active > a, .list_tabs-bullet.list_tabs-color3 > li.active > a, .list_tabs-bullet.list_tabs-color3 > li.active > a:focus, .list_tabs-bullet.list_tabs-color3 > li.active > a:hover, .list_tabs-bullet.list_tabs-color3 > li .active > a, .list_tabs-bullet.list_tabs-color3 > li .uk-active > a {
+.list_tabs-color3 > li.active > a, .list_tabs-color3 > li.uk-active > a, .list_tabs-color3 > li.uk-active > a::after, .list_tabs-color3 > li.active > a:focus, .list_tabs-color3 > li.active > a:hover, .list_tabs-color3 > li.active > a:hover > *, .list_tabs-color3 > li.uk-active > a:hover > *, .list_tabs-color3 > li .active > a, .list_tabs-color3 > li .uk-active > a, .list_tabs-bullet.list_tabs-color3 > li.active > a, .list_tabs-bullet.list_tabs-color3 > li.uk-active > a, .list_tabs-bullet.list_tabs-color3 > li.uk-active > a::after, .list_tabs-bullet.list_tabs-color3 > li.active > a:focus, .list_tabs-bullet.list_tabs-color3 > li.active > a:hover, .list_tabs-bullet.list_tabs-color3 > li.active > a:hover > *, .list_tabs-bullet.list_tabs-color3 > li.uk-active > a:hover > *, .list_tabs-bullet.list_tabs-color3 > li .active > a, .list_tabs-bullet.list_tabs-color3 > li .uk-active > a {
   background-color: #8a7215;
   border-color: #8a7215;
   color: #fefcf6;
 }
 
-.list_tabs-color4 > li.active > a, .list_tabs-color4 > li.active > a:focus, .list_tabs-color4 > li.active > a:hover, .list_tabs-color4 > li .active > a, .list_tabs-color4 > li .uk-active > a, .list_tabs-bullet.list_tabs-color4 > li.active > a, .list_tabs-bullet.list_tabs-color4 > li.active > a:focus, .list_tabs-bullet.list_tabs-color4 > li.active > a:hover, .list_tabs-bullet.list_tabs-color4 > li .active > a, .list_tabs-bullet.list_tabs-color4 > li .uk-active > a {
+.list_tabs-color4 > li.active > a, .list_tabs-color4 > li.uk-active > a, .list_tabs-color4 > li.uk-active > a::after, .list_tabs-color4 > li.active > a:focus, .list_tabs-color4 > li.active > a:hover, .list_tabs-color4 > li.active > a:hover > *, .list_tabs-color4 > li.uk-active > a:hover > *, .list_tabs-color4 > li .active > a, .list_tabs-color4 > li .uk-active > a, .list_tabs-bullet.list_tabs-color4 > li.active > a, .list_tabs-bullet.list_tabs-color4 > li.uk-active > a, .list_tabs-bullet.list_tabs-color4 > li.uk-active > a::after, .list_tabs-bullet.list_tabs-color4 > li.active > a:focus, .list_tabs-bullet.list_tabs-color4 > li.active > a:hover, .list_tabs-bullet.list_tabs-color4 > li.active > a:hover > *, .list_tabs-bullet.list_tabs-color4 > li.uk-active > a:hover > *, .list_tabs-bullet.list_tabs-color4 > li .active > a, .list_tabs-bullet.list_tabs-color4 > li .uk-active > a {
   background-color: #4fd1c5;
   border-color: #4fd1c5;
   color: #16554f;
+}
+
+.list_tabs.list_tabs-icon-active-white.uk-nav-parent-icon > .uk-parent.active > a::after, .list_tabs.list_tabs-icon-active-white.uk-nav-parent-icon > .uk-parent.uk-active > a::after {
+  background-image: url(data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2214%22%20height%3D%2214%22%20viewBox%3D%220%200%2014%2014%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolyline%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%221.1%22%20points%3D%2210%201%204%207%2010%2013%22%20%2F%3E%0A%3C%2Fsvg%3E);
+}
+
+.list_tabs.list_tabs-icon-active-white.uk-nav-parent-icon > .uk-parent.uk-open.active > a::after, .list_tabs.list_tabs-icon-active-white.uk-nav-parent-icon > .uk-parent.uk-open.uk-active > a::after {
+  background-image: url(data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2214%22%20height%3D%2214%22%20viewBox%3D%220%200%2014%2014%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolyline%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%221.1%22%20points%3D%221%204%207%2010%2013%204%22%20%2F%3E%0A%3C%2Fsvg%3E);
 }
 
 /* Uikit 3 Style

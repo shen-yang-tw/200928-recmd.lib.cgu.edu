@@ -151,6 +151,8 @@ gulp.task('copyjs', function() {
 });
 gulp.task('copycss', function() {
   return gulp.src(paths.vendors.css)
+    // Find digits between "font-size:" and "px" in Visual Studio Code using: "font-size:(\d+)px" or "font-size:\s+(\d+)px"
+    //\d+ means one or more digits, \s means one or more whitespaces
     .pipe(replace('font-size:12px', 'font-size:calc(12rem/16)'))
     .pipe(replace('font-size:16px', 'font-size:calc(16rem/16)'))
     .pipe(replace('font-size:500px', 'font-size:calc(500rem/16)'))
@@ -478,6 +480,11 @@ gulp.task('clean', function() {
   return del(['dist/**', '!dist']);
 });
 
+// clean dist and keep the directory
+gulp.task('delhtml', function() {
+  return del([paths.src.root + '*.html']);
+});
+
 // Watch (SASS, CSS, JS, and HTML) reload browser on change
 gulp.task('watch', function() {
   browserSync.init({
@@ -490,7 +497,7 @@ gulp.task('watch', function() {
   gulp.watch(paths.src.js).on('change', browserSync.reload);
   // gulp.watch(paths.src.js, gulp.series('js')).on('change', browserSync.reload);
   // gulp.watch(paths.src.templates, gulp.series('templates')).on('change', browserSync.reload);
-  gulp.watch(paths.src.root + paths.dist.templates + '/**/*.hbs', gulp.series('templates', 'inject')).on('change', browserSync.reload);
+  gulp.watch(paths.src.root + paths.dist.templates + '/**/*.hbs', gulp.series('delhtml', 'templates', 'inject')).on('change', browserSync.reload);
   gulp.watch(paths.src.html).on('change', browserSync.reload);
 });
 

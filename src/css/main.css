@@ -11739,16 +11739,19 @@ a, span, label, strong, small {
   border: 1px solid rgba(0, 0, 0, 0.12);
 }
 
-[class*=list_tabs] > li:first-child {
+[class*=list_tabs] > li:last-child {
+  margin-bottom: 0;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.12);
+}
+
+[class*=list_tabs] > li.tab_buttons-rounded:first-child {
   border-top-left-radius: .25rem;
   border-top-right-radius: .25rem;
 }
 
-[class*=list_tabs] > li:last-child {
-  margin-bottom: 0;
+[class*=list_tabs] > li.tab_buttons-rounded:last-child {
   border-bottom-right-radius: .25rem;
   border-bottom-left-radius: .25rem;
-  border-bottom: 3px solid rgba(0, 0, 0, 0.12);
 }
 
 [class*=list_tabs] > li a {
@@ -82722,6 +82725,10 @@ nav.nav_reset {
 /*---------- Pagination ------------------------------*/
 .pagination a {
   padding: 0 10px;
+}
+
+.pagination a:not(.disabled):hover, .pagination a:not(.disabled):hover * {
+  color: black;
 }
 
 @media (min-width: 640px) {

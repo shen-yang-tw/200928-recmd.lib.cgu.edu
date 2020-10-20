@@ -2571,15 +2571,17 @@ $hover-brand-bg:"bg_facebook" $facebook, "bg_twitter" $twitter, "bg_googleplus" 
     margin-bottom: -1px;
     background-color: white;
     border: 1px solid $color-border;
-    &:first-child {
+    &:last-child {
+      margin-bottom: 0;
+      border-bottom: 3px solid $color-border;
+    }
+    &#{$tab-buttons-rounded}:first-child {
       border-top-left-radius: .25rem;
       border-top-right-radius: .25rem;
     }
-    &:last-child {
-      margin-bottom: 0;
+    &#{$tab-buttons-rounded}:last-child {
       border-bottom-right-radius: .25rem;
       border-bottom-left-radius: .25rem;
-      border-bottom: 3px solid $color-border;
     }
     a {color:$color-text;}
     &>*:not(ul), a {padding:$space-m}
@@ -3108,6 +3110,9 @@ $logo-ratio:floor(128/65*100)/100;
 
 /*---------- Pagination ------------------------------*/
 #{$pagination} a {
+  &:not(.disabled):hover, &:not(.disabled):hover * {
+    color: black;
+  }
   padding: 0 10px;
   @media (min-width:640px) {
     padding: 0 $space-l;

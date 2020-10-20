@@ -604,13 +604,13 @@
       border-color:$color-primary;
       color:text-color($color-primary) !important;
     }
-    &:first-child {
+    &#{$tab-buttons-rounded}:first-child {
       &#{$active}>a, &#{$uk-active}>a, &#{$uk-active}>a::after, &#{$active}>a:focus, &#{$active}>a:hover, &#{$active}>a:hover>*, &#{$uk-active}>a:hover>*, & #{$active}>a, & #{$uk-active}>a {
         border-top-left-radius: .25rem;
         border-top-right-radius: .25rem;
       }
     }
-    &:last-child {
+    &#{$tab-buttons-rounded}:last-child {
       &#{$active}>a, &#{$uk-active}>a, &#{$uk-active}>a::after, &#{$active}>a:focus, &#{$active}>a:hover, &#{$active}>a:hover>*, &#{$uk-active}>a:hover>*, & #{$active}>a, & #{$uk-active}>a {
         border-bottom-right-radius: .25rem;
         border-bottom-left-radius: .25rem;
@@ -625,13 +625,13 @@
       border-color:$color-secondary;
       color:text-color($color-secondary);
     }
-    &:first-child {
+    &#{$tab-buttons-rounded}:first-child {
       &#{$active}>a, &#{$uk-active}>a, &#{$uk-active}>a::after, &#{$active}>a:focus, &#{$active}>a:hover, &#{$active}>a:hover>*, &#{$uk-active}>a:hover>*, & #{$active}>a, & #{$uk-active}>a {
         border-top-left-radius: .25rem;
         border-top-right-radius: .25rem;
       }
     }
-    &:last-child {
+    &#{$tab-buttons-rounded}:last-child {
       &#{$active}>a, &#{$uk-active}>a, &#{$uk-active}>a::after, &#{$active}>a:focus, &#{$active}>a:hover, &#{$active}>a:hover>*, &#{$uk-active}>a:hover>*, & #{$active}>a, & #{$uk-active}>a {
         border-bottom-right-radius: .25rem;
         border-bottom-left-radius: .25rem;
@@ -646,13 +646,13 @@
       border-color:$color3;
       color:text-color($color3);
     }
-    &:first-child {
+    &#{$tab-buttons-rounded}:first-child {
       &#{$active}>a, &#{$uk-active}>a, &#{$uk-active}>a::after, &#{$active}>a:focus, &#{$active}>a:hover, &#{$active}>a:hover>*, &#{$uk-active}>a:hover>*, & #{$active}>a, & #{$uk-active}>a {
         border-top-left-radius: .25rem;
         border-top-right-radius: .25rem;
       }
     }
-    &:last-child {
+    &#{$tab-buttons-rounded}:last-child {
       &#{$active}>a, &#{$uk-active}>a, &#{$uk-active}>a::after, &#{$active}>a:focus, &#{$active}>a:hover, &#{$active}>a:hover>*, &#{$uk-active}>a:hover>*, & #{$active}>a, & #{$uk-active}>a {
         border-bottom-right-radius: .25rem;
         border-bottom-left-radius: .25rem;
@@ -667,13 +667,13 @@
       border-color:$color4;
       color:text-color($color4);
     }
-    &:first-child {
+    &#{$tab-buttons-rounded}:first-child {
       &#{$active}>a, &#{$uk-active}>a, &#{$uk-active}>a::after, &#{$active}>a:focus, &#{$active}>a:hover, &#{$active}>a:hover>*, &#{$uk-active}>a:hover>*, & #{$active}>a, & #{$uk-active}>a {
         border-top-left-radius: .25rem;
         border-top-right-radius: .25rem;
       }
     }
-    &:last-child {
+    &#{$tab-buttons-rounded}:last-child {
       &#{$active}>a, &#{$uk-active}>a, &#{$uk-active}>a::after, &#{$active}>a:focus, &#{$active}>a:hover, &#{$active}>a:hover>*, &#{$uk-active}>a:hover>*, & #{$active}>a, & #{$uk-active}>a {
         border-bottom-right-radius: .25rem;
         border-bottom-left-radius: .25rem;

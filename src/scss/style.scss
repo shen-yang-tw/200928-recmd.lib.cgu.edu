@@ -25,7 +25,7 @@ strong {
 .logo>* {
   min-width: 200px;
   max-height: 70px;
-  width: calc(1313px/141*70) !important; //Original aspact:1313/141, Final needed height:70px
+  width: calc(1313px/141*70) !important; //Fix Firefox - Original aspact:1313/141, Final needed height:70px
 }
 
 /*---------- IE10+ ------------------------------*/
@@ -68,16 +68,19 @@ header::after {
     max-height: 244px;
     // opacity: .15;
   }
-}
-
-@media (min-width: 1100px) {
   header::after {
     background: url('data:image/gif;base64,R0lGODlhMgAyAJEAAP///wAAAMDAwAAAACH5BAEAAAIALAAAAAAyADIAAAIzlI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKicFADs=') no-repeat center center;
     // BASE64 code for blank.gif
     background-size: contain;
     background-position: 0 0;
-    padding-top: calc(100%*244/1920 - 120px);
+    padding-top: calc(100%*244/1920 - 67px);
     height: 100%;
+  }
+}
+
+@media (min-width: 1100px) {
+  header::after {
+    padding-top: calc(100%*244/1920 - 80px);
   }
 }
 

@@ -604,6 +604,18 @@
       border-color:$color-primary;
       color:text-color($color-primary) !important;
     }
+    &:first-child {
+      &#{$active}>a, &#{$uk-active}>a, &#{$uk-active}>a::after, &#{$active}>a:focus, &#{$active}>a:hover, &#{$active}>a:hover>*, &#{$uk-active}>a:hover>*, & #{$active}>a, & #{$uk-active}>a {
+        border-top-left-radius: .25rem;
+        border-top-right-radius: .25rem;
+      }
+    }
+    &:last-child {
+      &#{$active}>a, &#{$uk-active}>a, &#{$uk-active}>a::after, &#{$active}>a:focus, &#{$active}>a:hover, &#{$active}>a:hover>*, &#{$uk-active}>a:hover>*, & #{$active}>a, & #{$uk-active}>a {
+        border-bottom-right-radius: .25rem;
+        border-bottom-left-radius: .25rem;
+      }
+    }
   }
 }
 #{$list-tabs-secondary}, #{$list-tabs-bullet}#{$list-tabs-secondary} {
@@ -612,6 +624,18 @@
       background-color:$color-secondary;
       border-color:$color-secondary;
       color:text-color($color-secondary);
+    }
+    &:first-child {
+      &#{$active}>a, &#{$uk-active}>a, &#{$uk-active}>a::after, &#{$active}>a:focus, &#{$active}>a:hover, &#{$active}>a:hover>*, &#{$uk-active}>a:hover>*, & #{$active}>a, & #{$uk-active}>a {
+        border-top-left-radius: .25rem;
+        border-top-right-radius: .25rem;
+      }
+    }
+    &:last-child {
+      &#{$active}>a, &#{$uk-active}>a, &#{$uk-active}>a::after, &#{$active}>a:focus, &#{$active}>a:hover, &#{$active}>a:hover>*, &#{$uk-active}>a:hover>*, & #{$active}>a, & #{$uk-active}>a {
+        border-bottom-right-radius: .25rem;
+        border-bottom-left-radius: .25rem;
+      }
     }
   }
 }
@@ -622,6 +646,18 @@
       border-color:$color3;
       color:text-color($color3);
     }
+    &:first-child {
+      &#{$active}>a, &#{$uk-active}>a, &#{$uk-active}>a::after, &#{$active}>a:focus, &#{$active}>a:hover, &#{$active}>a:hover>*, &#{$uk-active}>a:hover>*, & #{$active}>a, & #{$uk-active}>a {
+        border-top-left-radius: .25rem;
+        border-top-right-radius: .25rem;
+      }
+    }
+    &:last-child {
+      &#{$active}>a, &#{$uk-active}>a, &#{$uk-active}>a::after, &#{$active}>a:focus, &#{$active}>a:hover, &#{$active}>a:hover>*, &#{$uk-active}>a:hover>*, & #{$active}>a, & #{$uk-active}>a {
+        border-bottom-right-radius: .25rem;
+        border-bottom-left-radius: .25rem;
+      }
+    }
   }
 }
 #{$list-tabs-color4}, #{$list-tabs-bullet}#{$list-tabs-color4} {
@@ -630,6 +666,18 @@
       background-color:$color4;
       border-color:$color4;
       color:text-color($color4);
+    }
+    &:first-child {
+      &#{$active}>a, &#{$uk-active}>a, &#{$uk-active}>a::after, &#{$active}>a:focus, &#{$active}>a:hover, &#{$active}>a:hover>*, &#{$uk-active}>a:hover>*, & #{$active}>a, & #{$uk-active}>a {
+        border-top-left-radius: .25rem;
+        border-top-right-radius: .25rem;
+      }
+    }
+    &:last-child {
+      &#{$active}>a, &#{$uk-active}>a, &#{$uk-active}>a::after, &#{$active}>a:focus, &#{$active}>a:hover, &#{$active}>a:hover>*, &#{$uk-active}>a:hover>*, & #{$active}>a, & #{$uk-active}>a {
+        border-bottom-right-radius: .25rem;
+        border-bottom-left-radius: .25rem;
+      }
     }
   }
 }

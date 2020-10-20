@@ -19,8 +19,6 @@
 	<link rel="stylesheet" href="../dist/css/fontawesome.min.css">
 	<!-- endinject -->
 	<!-- head:css -->
-	<link rel="stylesheet" href="../dist/css/ion.rangeSlider.min.css">
-	<link rel="stylesheet" href="../dist/css/ion.rangeSlider.min.min.css">
 	<!-- endinject -->
 	<!-- main:css -->
 	<link rel="stylesheet" href="../dist/css/main.min.css">
@@ -36,17 +34,12 @@
 	<script src="../dist/js/uikit.min.js"></script>
 	<!-- endinject -->
 	<!-- head:js -->
-	<script src="../dist/js/jquery.min.js"></script>
-	<script src="../dist/js/jquery.min.min.js"></script>
+	<script src="../dist/js/script.min.js" defer></script>
 	<!-- endinject -->
 	<!-- inject:js -->
-	<script src="../dist/js/advanced-search.min.js" defer></script>
-	<script src="../dist/js/ion.rangeSlider.min.js" defer></script>
-	<script src="../dist/js/ion.rangeSlider.min.min.js" defer></script>
 	<script src="../dist/js/nav-menu-basic.min.js" defer></script>
-	<script src="../dist/js/nav-menu.min.js" defer></script>
-	<script src="../dist/js/script.min.js" defer></script>
-	<!-- endinject --></head>
+	<!-- endinject -->
+</head>
 
 <body id="top" class="page">
 	<!-- header -->
@@ -68,13 +61,18 @@
 								<div class="sub_nav text-sm uk-flex uk-flex-middle">
 									<div>
 										<span><a class="px-2" href="index.html">首頁</a></span>
-										<span><a class="px-2" href="http://library.cgu.edu.tw/" target="_blank">圖書館</a></span>
-										<span><a class="px-2" href="http://aleph.cgu.edu.tw/F?func=find-b-0&local_base=fly03"
-												target="_blank">明志科大館藏目錄</a></span>
+										<span><a class="px-2" href="#">我要推薦</a></span>
+										<div class="min_width-50 uk-dropdown" uk-dropdown>
+											<ul class="uk-nav uk-dropdown-nav">
+												<li><a class="hover:underline py-2" href="#search" uk-toggle>推薦資料</a></li>
+												<li><a class="hover:underline py-2" href="00recommend.html">推薦資料總覽</a></li>
+											</ul>
+										</div>
+										<span><a class="px-2" href="00person.html">個人推薦資料</a></span>
 										<span><a class="px-2" href="#">English</a></span>
 									</div>
-									<span><button class="color_primary border-none l:pr-0 uk-button uk-button-default" type="button"
-											title="註冊/登入/登出"><i class="-mb-1 fas fa-user-circle fa-lg"></i></button></span>
+									<span><button class="color_primary border-none l:pr-0 uk-button uk-button-default" type="button" title="註冊/登入/登出"><i
+												class="-mb-1 fas fa-user-circle fa-lg"></i></button></span>
 									<div class="min_width-50 uk-dropdown" uk-dropdown>
 										<ul class="uk-nav uk-dropdown-nav">
 											<li><a class="hover:underline py-2" href="#register" uk-toggle>註冊</a></li>
@@ -102,53 +100,6 @@
 						</div>
 					</div>
 				</div>
-				<div class="relative">
-					<div class="bg_primary opacity-85 uk-position-cover"></div>
-					<div class="container_responsive@s uk-flex uk-visible@m uk-container uk-navbar" uk-navbar>
-						<div class="uk-navbar-center">
-							<ul class="nav_bar nav_bar-secondary m-0 uk-tab uk-light">
-								<li hidden></li>
-								<li>
-									<a class="text-base font-bold text-white" href="01search.html"
-										onmouseover="viewHeight('.nav_bar [uk-dropdown]', 'header')">館藏查詢</a>
-								</li>
-								<li>
-									<a class="text-base font-bold text-white" href="02journals.html"
-										onmouseover="viewHeight('.nav_bar [uk-dropdown]', 'header')">期刊</a>
-								</li>
-								<li>
-									<a class="text-base font-bold text-white" href="03reference.html"
-										onmouseover="viewHeight('.nav_bar [uk-dropdown]', 'header')">教師指定用書</a>
-								</li>
-								<li><a class="text-base font-bold text-white" href="04latest.html"
-										onmouseover="viewHeight('.nav_bar [uk-dropdown]', 'header')">新書目錄</a></li>
-								<li><a class="text-base font-bold text-white" href="05hot.html"
-										onmouseover="viewHeight('.nav_bar [uk-dropdown]', 'header')">熱門排行</a></li>
-								<li>
-									<a class="text-base font-bold text-white" href="#"
-										onmouseover="viewHeight('.nav_bar [uk-dropdown]', 'header')">我要推薦</a>
-									<div class="bg_white_opacity-90 uk-overflow-auto uk-dropdown" uk-dropdown="offset: 0">
-										<ul class="nav_header-dotted uk-nav uk-dropdown-nav">
-											<li class="mt-0 uk-nav-header">
-												<a class="hover:underline text-base" href="#search" uk-toggle>推薦資料</a>
-											</li>
-											<li class="mt-0 uk-nav-header">
-												<a class="hover:underline text-base" href="00recommend.html">推薦資料總覽</a>
-											</li>
-											<li class="mt-0 uk-nav-header">
-												<a class="hover:underline text-base" href="00person.html">個人推薦資料</a>
-											</li>
-										</ul>
-									</div>
-								</li>
-								<li><a class="text-base font-bold text-white" href="http://primo.lib.cgu.edu.tw:8991/pds?func=load-login&calling_system=aleph&institute=FLY51&url=http://aleph.cgu.edu.tw/F?func=find-b-0&local_base=space&CON_LNG=chi"
-										onmouseover="viewHeight('.nav_bar [uk-dropdown]', 'header')" target="_blank">討論室/設備預約</a></li>
-								<li><a class="text-base font-bold text-white" href="http://web20.lib.cgu.edu.tw/accounts/login/" target="_blank"
-										onmouseover="viewHeight('.nav_bar [uk-dropdown]', 'header')">個人化服務</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
 			</nav>
 			<hr class="border_black_opacity-20 m-0">
 		</div>
@@ -157,19 +108,7 @@
 				<button class="uk-offcanvas-close" type="button" title="刪除" uk-close></button>
 				<ul class="pt-6 uk-nav uk-nav-default">
 					<li class="py-1 uk-parent">
-						<a class="p-0" href="01search.html"><span class="text-white">館藏查詢</span></a>
-					</li>
-					<li class="py-1 uk-parent">
-						<a class="p-0" href="02journals.html"><span class="text-white">期刊</span></a>
-					</li>
-					<li class="py-1 uk-parent">
-						<a class="p-0" href="03reference.html"><span class="text-white">教師指定用書</span></a>
-					</li>
-					<li class="py-1 uk-parent">
-						<a class="p-0" href="04latest.html"><span class="text-white">新書目錄</span></a>
-					</li>
-					<li class="py-1 uk-parent">
-						<a class="p-0" href="05hot.html"><span class="text-white">熱門排行</span></a>
+						<a class="p-0" href="index.html"><span class="text-white">首頁</span></a>
 					</li>
 					<li class="py-1 uk-parent">
 						<div class="flex justify-between">
@@ -179,24 +118,17 @@
 									uk-icon="icon: chevron-down"></span class="toggle"></a>
 						</div>
 						<ul class="toggle hidden uk-nav-sub">
-							<li class="pr-5"><a href="#search" uk-toggle><span class="text-white text-opacity-50">推薦資料</span></a>
+							<li class="pr-5"><a class="uk-toggle" href="#search" uk-toggle><span
+										class="text-white text-opacity-50">推薦資料</span></a>
 							</li>
-							<li class="pr-5"><a href="00recommend.html"><span class="text-white text-opacity-50">推薦資料總覽</span></a>
-							</li>
-							<li class="pr-5"><a href="00person.html"><span class="text-white text-opacity-50">個人推薦資料</span></a>
+							<li class="pr-5"><a href="#"><span class="text-white text-opacity-50">推薦資料總覽</span></a>
 							</li>
 						</ul>
 					</li>
 					<li class="py-1 uk-parent">
-						<a class="p-0" href="http://primo.lib.cgu.edu.tw:8991/pds?func=load-login&calling_system=aleph&institute=FLY51&url=http://aleph.cgu.edu.tw/F?func=find-b-0&local_base=space&CON_LNG=chi" target="_blank"><span class="text-white">討論室/設備預約</span></a>
-					</li>
-					<li class="py-1 uk-parent">
-						<a class="p-0" href="http://web20.lib.cgu.edu.tw/accounts/login/" target="_blank"><span class="text-white">個人化服務</span></a>
+						<a class="p-0" href="#"><span class="text-white">個人推薦資料</span></a>
 					</li>
 					<li class="uk-nav-divider"></li>
-					<li><a href="index.html">首頁</a></li>
-					<li><a href="http://library.cgu.edu.tw/" target="_blank">圖書館</a></li>
-					<li><a href="http://aleph.cgu.edu.tw/F?func=find-b-0&local_base=fly03" target="_blank">明志科大館藏目錄</a></li>
 					<li><a href="#">English</a></li>
 				</ul>
 			</div>
@@ -232,8 +164,8 @@
 	          <a class="" href="#">忘記密碼</a>
 	        </div>
 	        <div class="margin_y_child-all min_width-1/2!@m s:text-right">
-	          <a href="#" class="btn_primary min_width-120 uk-button uk-button-primary">登　　入</a>
-	          <button class="min_width-120 uk-button uk-button-default uk-modal-close" type="button">取　　消</button>
+	          <a href="#" class="btn_primary min_width-100 uk-button uk-button-primary">登　　入</a>
+	          <button class="min_width-100 uk-button uk-button-default uk-modal-close" type="button">取　　消</button>
 	        </div>
 	      </div>
 	    </div>
@@ -460,29 +392,29 @@
 	<!-- header -->
 	
 	<!-- page main content -->
-	<section class="relative" uk-height-viewport="expand: true">
+	<section class="p-0 m:py-2 relative" uk-height-viewport="expand: true">
 	  <!-- <div class="bg_primary opacity10 uk-position-cover"></div> -->
-	  <div class="container_responsive@s uk-container">
+	  <div class="container_responsive@s uk-container uk-container-xlarge">
 	
 	    <!-- Breadcrumb & User -->
-	    <div class="px-2 mb-2 justify-between uk-grid uk-grid-small uk-grid-match uk-flex-middle" uk-grid uk-height-match="target: > div">
+	    <div class="px-2 mb-2 justify-between uk-grid uk-grid-small uk-grid-match uk-flex-middle" uk-grid>
 	      <!-- Child <div> Default to class="uk-width-auto" -->
-	      <div class="m-0">
+	      <div class="m-0 uk-visible@m">
 	        <!-- uk-breadcrumb -->
 	        <ul class="m-0 p-0 uk-float-left uk-breadcrumb">
 	        	<li><a class="text-xs m:text-sm" href="index.html">首頁</a></li>
 	        	<li><span class="text-xs m:text-sm">推薦列表</span></li>
 	        </ul>
 	        <!-- uk-breadcrumb -->      </div>
-	      <div class="text-xs m:text-sm content-center m-0">
+	      <div class="text-xs m:text-sm content-center m-0 uk-visible@m">
 	        <span class="mr-2 uk-width-auto">帳號：陳大天</span>
 	        <a class="color_primary-text! uk-width-auto" href="index.html">登出</a>
 	      </div>
 	    </div>
 	    <!-- Breadcrumb & User -->
 	
-	    <div class="min_height-550 s:mb-2 uk-card uk-card-small uk-card-default uk-card-body">
-	      <h2 class="btm_line text-2xl mt-0">
+	    <div class="min_height-550 pt-0 s:pt-2 s:mb-2 uk-card uk-card-small uk-card-default uk-card-body">
+	      <h2 class="btm_line text-base s:text-2xl mt-0">
 	        推薦列表
 	      </h2>
 	      <div id="content">
@@ -631,39 +563,31 @@
 	        		</tr>
 	        	</tbody>
 	        </table>
-	        <!-- pagination / select number -->
+	        <!-- pagination -->
 	        <div class="pagination">
 	        	<div class="uk-grid uk-grid-collapse uk-child-width-auto uk-flex-auto uk-flex-middle uk-flex-center">
 	        		<div>
-	        			<a class="color_grey hover:bg-transparent btn btn-flat disabled" href="#" title="首頁"><i
-	        					class="fas fa-angle-double-left fa-fw"></i></a>
-	        			<a class="color_grey hover:bg-transparent btn btn-flat" href="#" title="首頁" hidden><i
-	        					class="fas fa-angle-double-left fa-fw"></i></a>
-	        			<a class="color_grey hover:bg-transparent btn btn-flat disabled" href="#" title="上一頁"><i
-	        					class="fas fa-angle-left fa-fw"></i></a>
-	        			<a class="color_grey hover:bg-transparent btn btn-flat" href="#" title="上一頁" hidden><i
-	        					class="fas fa-angle-left fa-fw"></i></a>
+	        			<a class="color_grey hover:bg-transparent btn btn-flat disabled" href="#" title="首頁"><i class="fas fa-angle-double-left fa-fw"></i></a>
+	        			<a class="color_grey hover:bg-transparent btn btn-flat" href="#" title="首頁" hidden><i class="fas fa-angle-double-left fa-fw"></i></a>
+	        			<a class="color_grey hover:bg-transparent btn btn-flat disabled" href="#" title="上一頁"><i class="fas fa-angle-left fa-fw"></i></a>
+	        			<a class="color_grey hover:bg-transparent btn btn-flat" href="#" title="上一頁" hidden><i class="fas fa-angle-left fa-fw"></i></a>
 	        		</div>
-	        		<div class="uk-grid uk-grid-collapse uk-child-width-auto uk-flex-middle uk-margin">
-	        			<select class="w-auto uk-select uk-form-small" onChange="window.location.href=this.value">
-	        				<option value="#" selected>1</option>
-	        				<option value="#">2</option>
-	        			</select>
-	        			<span class="mx-1">/<span class="pl-1">2</span></span>
-	        		</div>
+	        				<div class="uk-grid uk-grid-collapse uk-child-width-auto uk-flex-middle uk-margin">
+	        					<select class="w-auto uk-select uk-form-small" onChange="window.location.href=this.value">
+	        						<option value="#" selected>1</option>
+	        						<option value="#">2</option>
+	        					</select>
+	        					<span class="mx-1">/<span class="pl-1">2</span></span>
+	        				</div>
 	        		<div>
-	        			<a class="color_grey hover:bg-transparent btn btn-flat" href="#" title="下一頁"><i
-	        					class="fas fa-angle-right fa-fw"></i></a>
-	        			<a class="color_grey hover:bg-transparent btn btn-flat disabled" href="#" title="下一頁" hidden><i
-	        					class="fas fa-chevron-right fa-fw"></i></a>
-	        			<a class="color_grey hover:bg-transparent btn btn-flat" href="#" title="末頁"><i
-	        					class="fas fa-angle-double-right fa-fw"></i></a>
-	        			<a class="color_grey hover:bg-transparent btn btn-flat disabled" href="#" title="末頁" hidden><i
-	        					class="fas fa-chevron-double-right fa-fw"></i></a>
+	        			<a class="color_grey hover:bg-transparent btn btn-flat" href="#" title="下一頁"><i class="fas fa-angle-right fa-fw"></i></a>
+	        			<a class="color_grey hover:bg-transparent btn btn-flat disabled" href="#" title="下一頁" hidden><i class="fas fa-chevron-right fa-fw"></i></a>
+	        			<a class="color_grey hover:bg-transparent btn btn-flat" href="#" title="末頁"><i class="fas fa-angle-double-right fa-fw"></i></a>
+	        			<a class="color_grey hover:bg-transparent btn btn-flat disabled" href="#" title="末頁" hidden><i class="fas fa-chevron-double-right fa-fw"></i></a>
 	        		</div>
 	        	</div>
 	        </div>
-	        <!-- pagination / select number -->      </div>
+	        <!-- pagination -->      </div>
 	      <!-- End #content -->
 	    </div>
 	    <!-- End uk-card -->

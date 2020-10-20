@@ -36,16 +36,13 @@
 <script src="js/uikit.min.js"></script>
 <!-- endinject -->
 <!-- head:js -->
-{{#if jquery}}
-<script src="js/jquery.min.js"></script>
-{{else}}
 <script src="js/script.js" defer></script>
-{{/if}}
 <!-- endinject -->
-<!-- inject:js -->
-{{#if navMenu}}
-<script src="js/nav-menu.js" defer></script>
-{{else}}
-<script src="js/nav-menu-basic.js" defer></script>
+{{#if jquery}}
+<!-- head:js -->
+<script src="js/jquery.min.js"></script>
+<!-- endinject -->
 {{/if}}
+<!-- inject:js -->
+<script src="js/nav-menu.js" defer></script>
 <!-- endinject -->

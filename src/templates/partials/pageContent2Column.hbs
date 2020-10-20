@@ -3,7 +3,7 @@
 <!-- page main content -->
 <section class="relative" uk-height-viewport="expand: true">
   <!-- <div class="bg_primary opacity10 uk-position-cover"></div> -->
-  <div class="container_responsive@s uk-container">
+  <div class="container_responsive@s uk-container{{#if containerXlarge}} uk-container-xlarge{{/if}}">
     {{!-- <div class="uk-clearfix">
       {{>breadcrumb}}
       {{#if userOn}}
@@ -12,17 +12,16 @@
     </div> --}}
 
     <!-- Breadcrumb & User -->
-    <div class="px-2 mb-2 justify-between uk-grid uk-grid-small uk-grid-match uk-flex-middle" uk-grid
-     >
+    <div class="px-2 mb-2 justify-between uk-grid uk-grid-small uk-grid-match uk-flex-middle" uk-grid>
       <!-- Child <div> Default to class="uk-width-auto" -->
       <div class="m-0">
         {{>breadcrumb}}
       </div>
       {{#if userOn}}
-      <div class="text-xs m:text-sm content-center m-0">
-        <span class="mr-2 uk-width-auto">帳號：{{user}}</span>
-        <a class="color_primary-text! uk-width-auto" href="{{linkLogout}}">登出</a>
-      </div>
+        <div class="text-xs m:text-sm content-center m-0">
+          <span class="mr-2 uk-width-auto">帳號：{{user}}</span>
+          <a class="color_primary-text! uk-width-auto" href="{{linkLogout}}">登出</a>
+        </div>
       {{/if}}
     </div>
     <!-- Breadcrumb & User -->
@@ -33,13 +32,13 @@
         <div class="uk-width-1-4@m uk-width-1-5@l">
           <div class="uk-visible@m" style="height: 11px"></div>
           {{#if tab}}
-          <ul class="border2 border_primary-dark mb-3 uk-tab" uk-tab>
-            <li class="uk-active"><a href="#">依科部</a></li>
-            <li><a href="#">依病症</a></li>
-          </ul>
+            <ul class="border2 border_primary-dark mb-3 uk-tab" uk-tab>
+              <li class="uk-active"><a href="#">依科部</a></li>
+              <li><a href="#">依病症</a></li>
+            </ul>
           {{/if}}
           {{#if navMenuTitle}}
-          <p class="btm_line">查詢再細分</p>
+            <p class="btm_line">查詢再細分</p>
           {{/if}}
           <div class="listMenu max_height-200 max_height-700@m uk-overflow-auto">
             <ul class="list_tabs uk-nav uk-nav-default">
@@ -49,9 +48,7 @@
               <li class="py-1 uk-parent">
                 <div class="flex justify-between">
                   <a class="flex flex-1 items-center" href="#"><span class="text-white">Level2</span></a>
-                  <a class="flex flex-none items-start justify-end pt-px w-16" href="javascript:void(0)"
-                    title="展開/收合選單"><span class="toggle uk-icon" uk-icon="icon: chevron-right"></span><span
-                      class="toggle hidden uk-icon" uk-icon="icon: chevron-down"></span class="toggle"></a>
+                  <a class="flex flex-none items-start justify-end pt-px w-16" href="javascript:void(0)" title="展開/收合選單"><span class="toggle uk-icon" uk-icon="icon: chevron-right"></span><span class="toggle hidden uk-icon" uk-icon="icon: chevron-down"></span class="toggle"></a>
                 </div>
                 <ul class="toggle hidden uk-nav-sub">
                   <li class="pr-5"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
@@ -63,9 +60,7 @@
               <li class="py-1 uk-parent">
                 <div class="flex justify-between">
                   <a class="flex flex-1 items-center" href="#"><span class="text-white">Level3</span></a>
-                  <a class="flex flex-none items-start justify-end pt-px w-16" href="javascript:void(0)"
-                    title="展開/收合選單"><span class="toggle uk-icon" uk-icon="icon: chevron-right"></span><span
-                      class="toggle hidden uk-icon" uk-icon="icon: chevron-down"></span class="toggle"></a>
+                  <a class="flex flex-none items-start justify-end pt-px w-16" href="javascript:void(0)" title="展開/收合選單"><span class="toggle uk-icon" uk-icon="icon: chevron-right"></span><span class="toggle hidden uk-icon" uk-icon="icon: chevron-down"></span class="toggle"></a>
                 </div>
                 <ul class="toggle hidden uk-nav-sub">
                   <li class="pr-5"><a href="#"><span class="text-white text-opacity-50">Item</span></a>
@@ -73,9 +68,7 @@
                   <li class="mt-0 uk-nav-header uk-parent">
                     <div class="flex justify-between">
                       <a class="flex flex-1 items-center" href="#"><span class="text-white">Item</span></a>
-                      <a class="flex flex-none items-start justify-end pt-px w-16" href="javascript:void(0)"
-                        title="展開/收合選單"><span class="toggle uk-icon" uk-icon="icon: chevron-right"></span><span
-                          class="toggle hidden uk-icon" uk-icon="icon: chevron-down"></span class="toggle"></a>
+                      <a class="flex flex-none items-start justify-end pt-px w-16" href="javascript:void(0)" title="展開/收合選單"><span class="toggle uk-icon" uk-icon="icon: chevron-right"></span><span class="toggle hidden uk-icon" uk-icon="icon: chevron-down"></span class="toggle"></a>
                     </div>
                     <ul class="toggle hidden uk-nav-sub">
                       <li class="pr-5"><a href="#"><span class="text-white text-opacity-50">SubItem</span></a>
@@ -117,26 +110,24 @@
           <h2 class="btm_line text-2xl mt-0">
             {{pageTitle}}
             {{#if linkBackOn}}
-            <small class="mt-2 uk-float-right"><a class="no-underline" href="{{linkBack}}"><i
-                  class="mr-1 fas fa-angle-left"></i>{{backWhere}}</a></small>
+              <small class="mt-2 uk-float-right"><a class="no-underline" href="{{linkBack}}"><i class="mr-1 fas fa-angle-left"></i>{{backWhere}}</a></small>
             {{/if}}
             {{#if h2button}}
-            <a class="btn_primary mt-2 uk-float-right uk-button uk-button-small uk-button-primary" href="#search"
-              uk-toggle>{{!-- <i class="mr-2 fas fa-search"></i> --}}{{h2buttonName}}</a>
+              <a class="btn_primary mt-2 uk-float-right uk-button uk-button-small uk-button-primary" href="#search" uk-toggle>{{!-- <i class="mr-2 fas fa-search"></i> --}}{{h2buttonName}}</a>
             {{/if}}
           </h2>
           {{#if form}}
-          <div id="content">
-            <form onsubmit="return false;">
+            <div id="content">
+              <form onsubmit="return false;">
+                {{> (lookup . 'content') }}
+                {{!-- <!-- Look up partial:content='' --> --}}
+              </form>
+            </div>
+          {{else}}
+            <div id="content">
               {{> (lookup . 'content') }}
               {{!-- <!-- Look up partial:content='' --> --}}
-            </form>
-          </div>
-          {{else}}
-          <div id="content">
-            {{> (lookup . 'content') }}
-            {{!-- <!-- Look up partial:content='' --> --}}
-          </div>
+            </div>
           {{/if}}
           <!-- End #content -->
         </div>

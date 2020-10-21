@@ -59,6 +59,7 @@ var paths = {
   dist: {
     root: './dist/',
     templates: 'templates',
+    html: 'dist/*.html',
     scss: 'scss',
     css: 'css',
     js: 'js',
@@ -189,6 +190,7 @@ gulp.task('templates', async function() {
       extname: ".html"
     }))
     .pipe(gulp.dest(paths.src.root))
+    .pipe(gulp.dest(paths.dist.root))
 });
 
 // clean dist and keep the directory
@@ -269,7 +271,7 @@ gulp.task('inject', function() {
 });
 
 gulp.task('build-inject', function() {
-  return gulp.src(paths.src.html)
+  return gulp.src(paths.dist.html)
     .pipe(inject(gulp.src(paths.dist.root + paths.dist.js + '/ui*.js', {
       read: false
     }), {
